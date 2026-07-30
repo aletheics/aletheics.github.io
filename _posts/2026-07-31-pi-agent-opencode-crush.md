@@ -251,4 +251,159 @@ Pi 原生只带 4 个指令，所有代码操作都靠它们组合完成：
 
 ---
 
+## 七、Pi 原版的性能短板详解
+
+先说结论：原版 Pi 在架构层本身几乎没有代码性能 bug，它的所有慢，都是**设计取舍**带来的瓶颈，不是代码写得差。
+
+### 4 个核心性能短板
+
+**1. 进程外部调用开销（最大硬瓶颈）**
+
+原版 Pi 基于 Node.js，所有文件搜索、grep、目录遍历、shell 执行，全都调用系统外部二进制（rg、find、bash），每次调用都要 fork 新进程：
+
+- 小文件修改无感
+- 大型项目遍历文件：频繁创建销毁进程，耗时比内存内原生实现慢 2~3 倍
+- 跨轮 bash 环境不保留，每次新开终端，状态丢失
+
+**2. 无内置代码索引 / 语义检索**
+
+只有基础 `read` 读文件，没有 LSP、AST 解析、代码向量索引：
+
+- 找全项目所有同名函数：只能一遍遍 read 整份文件
+- 大仓库（10 万行 +）任务会疯狂堆轮次，越跑越慢
+- 只能靠你手动装扩展补检索能力
+
+**3. 对小参数量本地模型极度不友好（最容易踩坑）**
+
+Pi 的极简提示词设计是为顶尖云端大模型设计的：
+
+- 7B/12B 本地小模型很容易写错工具格式、分不清工作目录、重复循环调用同一个命令
+- 一旦工具调用出错，就会多轮重试，整体耗时直接翻倍
+- 没有内置容错重试逻辑，错了就从头再来
+
+**4. Node.js 运行时的先天短板**
+
+- 冷启动虽快，但长时间长会话后 GC 卡顿明显
+- 没有并行子代理能力，所有任务串行执行
+- 会话历史只有基础压缩，超长对话 KV 缓存会持续膨胀，容易 OOM
+
+### 它没有的性能问题
+
+- 没有冗余循环、没有多余 Token 打印、没有臃肿依赖逻辑
+- 系统提示词极短，预填充速度是天生优势
+- 内存空闲占用极低（30~50MB）
+
+### 怎么让原版 Pi 变快
+
+1. 安装 `smart-at` 文件检索扩展，替换系统 rg 遍历
+2. 开启会话自动压缩：`pi config set session.compress true`
+3. 本地使用至少 24B 及以上代码模型，避免 7B 模型反复报错重试
+4. 用 Bun 代替 Node 运行 Pi，单轮调度速度提升 30%
+
+### 提速结论
+
+- 云端用：全网最快的通用编码 Agent 之一，省 token = 省时间 + 省钱
+- 本地用：目前本地大模型适配速度最优的 Agent 框架
+- 如果你经常用本地 Ollama 跑编码 Agent，Pi 的速度体验会断层领先其他方案
+
+---
+
+## 八、腾讯 CodeBuddy 接入指南
+
+腾讯 CodeBuddy 可以接入 Crush、Pi、Oh-My-Pi 所有兼容 OpenAI 接口的 Agent。需要分清两个概念：
+
+- **网页/VSCode 登录账号**：扫码登录的个人 CodeBuddy 账号不能直接复用登录态
+- **CodeBuddy OpenAI 兼容 API**：在腾讯云后台拿到专属 API Key + 接口地址，所有兼容 OpenAI 格式的 Agent 全都能接入
+
+### 获取接入凭证
+
+1. 进入腾讯云 CodeBuddy 控制台
+2. 进入【API 密钥管理】，生成专属 SecretID/SecretKey
+3. CodeBuddy 国内标准 OpenAI 兼容端点格式：
+
+```
+https://api.coze.cn/v1
+```
+
+4. 可用模型 ID（原生支持工具调用）：
+
+| 模型 ID | 说明 |
+|---------|------|
+| `codebuddy-coder-pro` | 主力代码大模型 |
+| `codebuddy-coder-fast` | 高速轻量版 |
+| `codebuddy-ultra` | 全能增强版 |
+
+### 在 Crush 中配置 CodeBuddy
+
+**配置文件方式**（推荐）：
+
+打开 Crush 全局配置文件：
+
+- macOS/Linux：`~/.config/crush/crush.json`
+- Windows：`%USERPROFILE%\.config\crush\crush.json`
+
+```json
+{
+  "providers": {
+    "codebuddy": {
+      "name": "CodeBuddy",
+      "api_key": "你的API Key",
+      "base_url": "https://api.coze.cn/v1"
+    }
+  },
+  "models": {
+    "default": {
+      "provider": "codebuddy",
+      "model": "codebuddy-coder-pro"
+    }
+  }
+}
+```
+
+**交互式界面配置**：
+
+1. 终端输入 `crush` 启动
+2. 按 `Ctrl+L` 打开模型列表
+3. 选择【Add Custom Provider】填入上述信息
+4. 保存即可随时切换
+
+### 在 Pi / Oh-My-Pi 中配置
+
+配置文件路径：
+
+- Pi：`~/.pi/agent/models.json`
+- Oh-My-Pi：`~/.omp/providers.json`
+
+```json
+{
+  "providers": {
+    "codebuddy": {
+      "name": "CodeBuddy",
+      "api_key": "你的API Key",
+      "base_url": "https://api.coze.cn/v1"
+    }
+  },
+  "default": "codebuddy"
+}
+```
+
+### 关键限制说明
+
+1. **网页扫码账号无法直接登录**：Crush/Pi 不能读取 CodeBuddy 网页端的登录 Cookie，只能走 API 计费额度，网页端免费额度和 API 额度是分开两套额度
+2. **工具调用兼容性极强**：CodeBuddy 全系模型原生支持 Function Call，在 LSP、子代理、文件编辑场景下报错率比很多国内模型更低
+3. **国内网络优势**：不用科学网络即可稳定调用，延迟远低于 GPT/Claude
+4. **不能反向集成**：Crush/Pi 没法作为插件塞进 CodeBuddy 客户端，只能是 CodeBuddy 作为模型算力供给给这些终端 Agent
+
+### 进阶玩法：复用 CodeBuddy 本地服务
+
+如果安装了 CodeBuddy CLI，可以启动本地代理服务，让 Crush 对接本地地址：
+
+```bash
+codebuddy proxy --port 8123
+```
+
+然后在配置里把 `base_url` 改为 `http://localhost:8123/v1`，可复用本地登录的账号权限。
+
+---
+
 *参考资料：Terminal-Bench 2.0 编码基准测试、各项目 GitHub 仓库及官方文档*
