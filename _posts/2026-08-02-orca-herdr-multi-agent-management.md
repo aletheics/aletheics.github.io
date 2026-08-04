@@ -69,33 +69,33 @@ StablyAI Orca 是硅谷创业公司Stably（YC 孵化）在 2026 年推出的开
 * 开发工作流深度集成：GitHub / Linear 原生对接；SSH 远程 Worktree；文件拖拽交互等等
 * Orca CLI 命令行工具，支持脚本化自动化编排，支持以Skill由Agent调度
 
-### 3.1. Orca vs Herdr 对比
+### 2.3. Orca vs Herdr 对比
 
-| 对比维度 | Herdr | Orca |
-|---------|-------|------|
-| 界面形态 | 终端 TUI（纯命令行） | 桌面 GUI 图形界面 |
-| 开发语言 | Rust（极致轻量） | TypeScript |
-| 核心定位 | AI 专用终端多路复用器 | 多 Agent 集成开发 IDE |
-| 资源占用 | 极低，适合服务器常驻 | 偏高，本地桌面运行 |
-| 上手难度 | 需要熟悉终端快捷键 | 开箱即用，IDE 逻辑零学习成本 |
-| 核心优势 | 会话保活、SSH 远程、资源节约 | 可视化编排、调试、多 Agent 任务流水线 |
+| 对比维度 | Herdr                                | Orca                                    |
+| -------- | ------------------------------------ | --------------------------------------- |
+| 界面形态 | 终端 TUI（纯命令行）                 | 桌面 GUI 图形界面                       |
+| 开发语言 | Rust（极致轻量）                     | TypeScript                              |
+| 核心定位 | AI 专用终端多路复用器                | 多 Agent 集成开发 IDE                   |
+| 资源占用 | 极低，适合服务器常驻                 | 偏高，本地桌面运行                      |
+| 上手难度 | 需要熟悉终端快捷键                   | 开箱即用，IDE 逻辑零学习成本            |
+| 核心优势 | 会话保活、SSH 远程、资源节约         | 可视化编排、调试、多 Agent 任务流水线   |
 | 典型场景 | 服务器长时间跑 AI 脚本、纯终端工作流 | 本地多 Agent 对比测试、复杂 AI 任务编排 |
 
-## 4. 实际使用
+## 3. 实际使用
 
-### 4.1. 安装
+### 3.1. 安装
 
 直接到Github上下载发布产物即可，均有Windows版本。
 
 orca和herdr中都可以创建多个worktree来进行并行AI任务，若要使用herdr的鼠标右键功能，在orca里有点冲突，可组合prefix前缀键使用。
 
-### 4.2. 实际使用界面
+### 3.2. 实际使用界面
 
 ![orca使用界面](/images/2026-08-02-orca.png)
 
 ![herdr使用界面](/images/2026-08-02-herdr-remote.png)
 
-### 4.3. orca远程headless启动
+### 3.3. orca远程headless启动
 
 支持远程服务器启动orca服务端，我本地有一台PC机安装了Linux系统，上面跑着OpenClaw、Hermes等，准备在这台运行一个server端，和手机配对，这样在手机上可以控制orca。
 
@@ -113,7 +113,7 @@ AppImage 的特点就是不需要安装——它是一个自包含的可执行�
 
 `dnf install -y xorg-x11-server-Xvfb`
 
-3、启动
+3、测试启动（先试下本地运行是否正常，后面重新用tailscale重新启动）
 
 > 注意：用 root 运行需要加 `--no-sandbox` 参数，否则会报错：Running as root without --no-sandbox is not supported. 
 
@@ -134,58 +134,15 @@ Pairing URL: orca://pair?code=eyJ2IjoyLCJlbmRwb2ludCI6IndzOi8vMTI3LjAuMC4xOjY3Nj
 ...
 ```
 
-方式2：提取后运行，`./squashfs-root/AppRun --no-sandbox serve --port 6768`
+### 3.4. 手机通过Tailscale控制Linux上的orca服务
 
-如果你不想装 FUSE，用 extraction 模式完全不依赖 FUSE。
-* 提取：`./orca-linux.AppImage --appimage-extract`
-* 之后直接运行提取出的`AppRun`：`./squashfs-root/AppRun serve --port 6768`
-
-提取出来的`squashfs-root/`目录（默认目录就是这个）可以留在任何位置，不影响运行。
-
-```sh
-[root@xdlinux ➜ /home ]$ ./orca-linux.AppImage --appimage-extract
-squashfs-root/.DirIcon
-squashfs-root/AppRun
-squashfs-root/LICENSE.electron.txt
-squashfs-root/LICENSES.chromium.html
-...
-```
-
-提取出来的内容结构如下：
-
-```sh
-[root@xdlinux ➜ squashfs-root ]$ ls -ltrh
-total 266M
--rw-r--r--  1 root root 1.1K Aug  2 22:38 LICENSE.electron.txt
--rwxr-xr-x  1 root root 3.5K Aug  2 22:38 AppRun
--rw-r--r--  1 root root  20M Aug  2 22:38 LICENSES.chromium.html
--rwxr-xr-x  1 root root  15K Aug  2 22:38 chrome-sandbox
--rw-r--r--  1 root root 118K Aug  2 22:38 chrome_100_percent.pak
--rw-r--r--  1 root root 194K Aug  2 22:38 chrome_200_percent.pak
--rwxr-xr-x  1 root root 1.8M Aug  2 22:38 chrome_crashpad_handler
--rw-r--r--  1 root root  11M Aug  2 22:38 icudtl.dat
--rwxr-xr-x  1 root root 254K Aug  2 22:38 libEGL.so
--rwxr-xr-x  1 root root 6.2M Aug  2 22:38 libGLESv2.so
--rwxr-xr-x  1 root root 2.7M Aug  2 22:38 libffmpeg.so
--rwxr-xr-x  1 root root 4.5M Aug  2 22:38 libvk_swiftshader.so
--rwxr-xr-x  1 root root 2.4M Aug  2 22:38 libvulkan.so.1
-drwx------  2 root root 4.0K Aug  2 22:38 locales
-lrwxrwxrwx  1 root root   49 Aug  2 22:38 orca-ide.png -> usr/share/icons/hicolor/512x512/apps/orca-ide.png
--rw-r--r--  1 root root  221 Aug  2 22:38 orca-ide.desktop
--rwxr-xr-x  1 root root 210M Aug  2 22:38 orca-ide
-drwx------ 10 root root 4.0K Aug  2 22:38 resources
--rw-r--r--  1 root root 7.0M Aug  2 22:38 resources.pak
--rw-r--r--  1 root root 357K Aug  2 22:38 snapshot_blob.bin
-drwx------  4 root root   30 Aug  2 22:38 usr
--rw-r--r--  1 root root  107 Aug  2 22:38 vk_swiftshader_icd.json
--rw-r--r--  1 root root 723K Aug  2 22:38 v8_context_snapshot.bin
-```
-
-4、配对方式：Tailscale
+配对方式：使用 Tailscale
 
 内核：[tailscale](https://github.com/tailscale/tailscale)，各平台的应用包基本时在此基础上包装了一层。
-* 对应的安卓版本在：[tailscale-android](https://github.com/tailscale/tailscale-android/releases)。
-* Linux安装：`curl -fsSL https://tailscale.com/install.sh | sh`
+
+1、安装对应的安卓版本：[tailscale-android](https://github.com/tailscale/tailscale-android/releases)。
+
+2、Linux安装：`curl -fsSL https://tailscale.com/install.sh | sh`
 
 ```sh
 [root@xdlinux ➜ /home ]$ curl -fsSL https://tailscale.com/install.sh | sh
@@ -198,34 +155,51 @@ Dependencies resolved.
 ...
 ```
 
-安装完成后启动 tailscaled 并申请接入网络：
+3、Linux安装完成后会自动设置tailscaled 自启动。获取登录链接，在本地电脑浏览器打开，登录你的 Tailscale 账号，授权设备接入。
 
 ```sh
-[root@xdlinux ➜ ~ ]$ systemctl start tailscaled
+[root@xdlinux ➜ repo ]$ tailscale up
+
+To authenticate, visit:
+
+        https://login.tailscale.com/a/1a319186xxxx
+
+Success.
 ```
 
-方式1：用户账号密码认证（推荐多台设备长期使用）
+4、手机上的tailscale也用同一账号登录，status即可看到两者在同一 Tailnet 网络内。
 
 ```sh
-[根@xdlinux ➜ ~]$ tailscale up --accept-routes
+[root@xdlinux ➜ local ]$ tailscale status
+100.78.178.1x  xdlinux  xiaodongQ@  linux    -
+100.96.178.7x   jx-xd    xiaodongQ@  android  -  
 ```
 
-会提示输入 Tailscale 账号密码认证。
+5、Linux重新运行：使用`--mobile-pairing`会生成手机端可扫描的二维码
 
-方式2：获取登录链接，在本地电脑浏览器打开（单台临时部署）
-
-执行命令输出登录URL，复制链接到你电脑浏览器登录授权：
-
-```sh
-[根@xdlinux ➜ ~]$ tailscale up --operator=$USER --accept-routes
-```
-
-终端会打印：
+`./orca-linux.AppImage --no-sandboxserve --port 6768 --pairing-address 100.78.178.10x --mobile-pairing`
 
 ```
-https://login.tailscale.com/a/xxxxxxx
+[root@xdlinux ➜ local ]$ ./orca-linux.AppImage --no-sandboxserve --port 6768 --pairing-address 100.78.178.10x --mobile-pairing
+[serve] orca CLI install: installed (/root/.local/bin/orca-ide)
+[serve] bare orca dispatcher installed: /root/.local/bin/orca -> /home/workspace/local/orca-linux.AppImage
+Orca server ready
+Bound endpoint: ws://0.0.0.0:6768
+Advertised endpoint: ws://100.78.178.10x:6768
+Web client URL: http://100.78.178.10x:6768/web-index.html#pairing=orca%3A%2F%2Fpair%3Fcode%3DeyJ2IjoyLCJlbmRwb2ludCI6IndzOi8vMTAwLjc4LjE3OC4xMDY6Njc2OCIsImRldmljZVRva2VuIjoiOWI4NzM4NzdiNmI5MjBhYjBkZjAxODBiNzAyOGRjZDQ2NWEwZTYwNGU1NGEwYjliIiwixxx
+Pairing URL: orca://pair?code=eyJ2IjoyLCJlbmRwb2ludCI6IndzOi8vMTAwLjc4LjE3OC4xMDY6Njc2OCIsImRldmljZVRva2VuIjoiOWI4NzM4NzdiNmI5MjBhYjBkZjAxODBiNzAyOGRjZDQ2NWEwZTYwNGU1NGEwYjliIiwicxxx
 ```
 
-复制此链接在任意浏览器登录你的 Tailscale 账号，授权设备接入。
+6、复制`Web client URL`里的链接，手机里用`Orca`进行扫码配对。
 
+### 3.5. 安装orcacli 和 skill 到headless Linux
+
+```
+❯ 把/Users/xd/.agents/skills下的orca-cli和orchestration，scp
+  到192.168.1.150的 ~/.claude/skills和~/.codebuddy/skills
+```
+
+而后可以到远程上用claude让orca-cli开终端。
+
+### 3.6. 手机控制截图
 
