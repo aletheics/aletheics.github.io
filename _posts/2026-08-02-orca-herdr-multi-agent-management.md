@@ -203,3 +203,12 @@ Pairing URL: orca://pair?code=eyJ2IjoyLCJlbmRwb2ludCI6IndzOi8vMTAwLjc4LjE3OC4xMD
 
 ### 3.6. 手机控制截图
 
+> ⚠️ **前提条件**：手机必须开着 Tailscale 才能连通 Linux 上的 Orca 服务。Tailscale 需要保持后台运行，并使用与 Linux 同一账号登录。
+
+![Orca 手机端主机管理界面](/images/2026-08-02-orca-mobile-host.webp)
+
+上图是手机 Orca App 的主机管理界面，可以看到已配对的 `WORKSPACE 1` 和 `XWORKBENCH 1` 两个工作区。
+
+![Orca 手机端终端视图](/images/2026-08-02-orca-mobile-terminal.webp)
+
+上图是手机切换到 `XWORKBENCH 1` 里的 `main` 会话，直接在手机上操作远程 Linux 主机，运行着 Claude Code。
