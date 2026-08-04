@@ -198,4 +198,34 @@ Dependencies resolved.
 ...
 ```
 
+安装完成后启动 tailscaled 并申请接入网络：
+
+```sh
+[root@xdlinux ➜ ~ ]$ systemctl start tailscaled
+```
+
+方式1：用户账号密码认证（推荐多台设备长期使用）
+
+```sh
+[根@xdlinux ➜ ~]$ tailscale up --accept-routes
+```
+
+会提示输入 Tailscale 账号密码认证。
+
+方式2：获取登录链接，在本地电脑浏览器打开（单台临时部署）
+
+执行命令输出登录URL，复制链接到你电脑浏览器登录授权：
+
+```sh
+[根@xdlinux ➜ ~]$ tailscale up --operator=$USER --accept-routes
+```
+
+终端会打印：
+
+```
+https://login.tailscale.com/a/xxxxxxx
+```
+
+复制此链接在任意浏览器登录你的 Tailscale 账号，授权设备接入。
+
 
