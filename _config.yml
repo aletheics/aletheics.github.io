@@ -24,10 +24,10 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://xiaodongq.github.io"
+url: "https://aletheics.github.io"
 
 github:
-  username: xiaodongQ # change to your GitHub username
+  username: aletheics # change to your GitHub username
 
 twitter:
   username:  # change to your Twitter username
@@ -35,11 +35,11 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: xiaodongQ
+  name: aletheic
   email: xiaodong0795@163.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/xiaodongQ # change to your GitHub homepage
+    - https://github.com/aletheics # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://twitter.com/username # change to your Twitter homepage
     # - https://www.facebook.com/username
@@ -120,7 +120,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: 'xiaodongQ/xiaodongq.github.io' # <gh-username>/<repo>
+    repo: 'aletheics/aletheics.github.io' # <gh-username>/<repo>
     repo_id: 'MDEwOlJlcG9zaXRvcnk1ODc5NjkyMw=='
     category: 'Announcements'
     category_id: 'DIC_kwDOA4Ere84CpB3B'
