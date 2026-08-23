@@ -8,7 +8,7 @@ tags: [TCP, Wireshark, 接收缓冲区]
 
 ## 1. 引言
 
-[上一篇博客](https://xiaodongq.github.io/2024/06/30/tcp-wireshark-tcp-graphs/)中介绍了Wireshark里的TCP Stream Graghs可视化功能并查看了几种典型的图形，本篇进行实验观察TCP性能和窗口、Buffer的关系，并分析一些参考文章中的案例。
+[上一篇博客](https://aletheics.github.io/2024/06/30/tcp-wireshark-tcp-graphs/)中介绍了Wireshark里的TCP Stream Graghs可视化功能并查看了几种典型的图形，本篇进行实验观察TCP性能和窗口、Buffer的关系，并分析一些参考文章中的案例。
 
 一些相关文章：
 
@@ -28,7 +28,7 @@ tags: [TCP, Wireshark, 接收缓冲区]
 * [云网络丢包故障定位全景指南](https://www.modb.pro/db/199920)
     * 极客重生公众号作者，前面的博客中也有部分内容索引到作者的文章，干货挺多，后续梳理学习其他历史文章
 * [[译] RFC 1180：朴素 TCP/IP 教程（1991）](https://arthurchiao.art/blog/rfc1180-a-tcp-ip-tutorial-zh/)
-    * 之前也简单画图梳理过：[RFC1180学习笔记](https://xiaodongq.github.io/2023/05/10/rfc1180-tcpip-tutorial/)
+    * 之前也简单画图梳理过：[RFC1180学习笔记](https://aletheics.github.io/2023/05/10/rfc1180-tcpip-tutorial/)
 
 *说明：本博客作为个人学习实践笔记，可供参考但非系统教程，可能存在错误或遗漏，欢迎指正。若需系统学习，建议参考原链接。*
 
@@ -43,7 +43,7 @@ tags: [TCP, Wireshark, 接收缓冲区]
 * 计算方式：`在途字节数 = Seq + Len - Ack`（Wireshark中提供的`SEQ/ACK analysis`功能会自动计算）
 * TCP协议中，由发送窗口动态控制，跟`cwnd`拥塞窗口和`rwnd`接收窗口也有关系。
 
-在Wireshark中可以直接查看其提供的`Seq`、`Ack`分析结果，方式可见 [Wireshark中新增实用列](https://xiaodongq.github.io/2025/04/14/handy-tools/#13-%E6%96%B0%E5%A2%9E%E5%AE%9E%E7%94%A8%E5%88%97apply-as-column)中的示例：
+在Wireshark中可以直接查看其提供的`Seq`、`Ack`分析结果，方式可见 [Wireshark中新增实用列](https://aletheics.github.io/2025/04/14/handy-tools/#13-%E6%96%B0%E5%A2%9E%E5%AE%9E%E7%94%A8%E5%88%97apply-as-column)中的示例：
 
 ![tcp-useful-column](/images/2025-04-15-tcp-useful-column.png)
 

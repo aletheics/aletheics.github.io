@@ -14,8 +14,8 @@ TODO List里面，收藏待看的文章已经不少了，有一类是觉得比�
 
 **<mark>另外：</mark>**
 
-* **<mark>1、</mark>**补充篇 [问题定位和性能优化案例集锦 -- 工具补充实验](https://xiaodongq.github.io/2025/04/18/excellent-trouble-shooting-tools/) 中会记录一些涉及的工具说明和实验记录。
-* **<mark>2、</mark>**[实用工具集索引](https://xiaodongq.github.io/2025/04/14/handy-tools/) 中，则统一归档一些工具，便于索引使用。
+* **<mark>1、</mark>**补充篇 [问题定位和性能优化案例集锦 -- 工具补充实验](https://aletheics.github.io/2025/04/18/excellent-trouble-shooting-tools/) 中会记录一些涉及的工具说明和实验记录。
+* **<mark>2、</mark>**[实用工具集索引](https://aletheics.github.io/2025/04/14/handy-tools/) 中，则统一归档一些工具，便于索引使用。
 
 这里再说说 **知识效率** 和 **工程效率**（具体见：[如何在工作中学习](https://plantegg.github.io/2018/05/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%AD%A6%E4%B9%A0/)，里面讲得非常好）：
 
@@ -51,7 +51,7 @@ TODO List里面，收藏待看的文章已经不少了，有一类是觉得比�
 
 * 先来60s系列性能检查：`iostat` **查看总体io占用情况**
     * 发现`r_await`读等待相对较高（写的话write-back模式有cache一般等待少），`avgqu-sz`平均队列长度不少在排队，io大小则是128KB（用`rkB/s`/`r/s`，即可查看读取的io块大小，比如4K、32K、128K等）
-    * [60s系列Linux命令版本](https://xiaodongq.github.io/2025/04/14/handy-tools/#45-60s%E7%B3%BB%E5%88%97linux%E5%91%BD%E4%BB%A4%E7%89%88%E6%9C%AC)
+    * [60s系列Linux命令版本](https://aletheics.github.io/2025/04/14/handy-tools/#45-60s%E7%B3%BB%E5%88%97linux%E5%91%BD%E4%BB%A4%E7%89%88%E6%9C%AC)
 * 检查硬盘延时：`biolatency`（bcc）
     * bcc工具检查总体的bio延时情况，大部分延时统计在`[16, 127 ms]`。判断是负载比较大，**排除是硬盘的异常**。
 * 检查io负载情况：bitesize（bcc）
@@ -88,7 +88,7 @@ Counting cache functions... Output every 1 seconds.
 * [Linux ftrace TCP Retransmit Tracing](https://www.brendangregg.com/blog/2014-09-06/linux-ftrace-tcp-retransmit-tracing.html)
     * 用ftrace（perf-tools里面的`tcpretrans`）追踪TCP重传
     * 之前用tc构造过重传实验，不过用的是bcc tools里的`tcpretrans`。有一个差别是：**perf-tools中的`tcpretrans`可以追踪堆栈**。
-        * 之前自己的bcc实验见：[eBPF学习实践系列（二） -- bcc tools网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/#38-tcpretrans%E9%87%8D%E4%BC%A0%E7%9A%84tcp%E8%BF%9E%E6%8E%A5%E8%B7%9F%E8%B8%AA)
+        * 之前自己的bcc实验见：[eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/#38-tcpretrans%E9%87%8D%E4%BC%A0%E7%9A%84tcp%E8%BF%9E%E6%8E%A5%E8%B7%9F%E8%B8%AA)
 * [perf sched for Linux CPU scheduler analysis](https://www.brendangregg.com/blog/2017-03-16/perf-sched.html)
     * 介绍`perf sched`追踪调度延迟和分布情况，bcc中提供的调度相关工具为：`runqlat`、`runqslower`、`runqlen`
 * [Linux bcc/BPF Run Queue (Scheduler) Latency](https://www.brendangregg.com/blog/2016-10-08/linux-bcc-runqlat.html)
@@ -101,7 +101,7 @@ Counting cache functions... Output every 1 seconds.
     * 以及通过bcc中的 `biosnoop` 来查看每个磁盘事件，可以看到这块盘的dd事件及其对应的延迟
 * [Linux bcc tcptop](https://www.brendangregg.com/blog/2016-10-15/linux-bcc-tcptop.html)
     * 介绍 `tcptop` 查看当前TCP流量的统计情况，按大小排列
-    * 之前在 [eBPF学习实践系列（二） -- bcc tools网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/#32-tcptop%E7%BB%9F%E8%AE%A1tcp%E5%8F%91%E9%80%81%E6%8E%A5%E6%94%B6%E7%9A%84%E5%90%9E%E5%90%90%E9%87%8F) 里也实验过了。
+    * 之前在 [eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/#32-tcptop%E7%BB%9F%E8%AE%A1tcp%E5%8F%91%E9%80%81%E6%8E%A5%E6%94%B6%E7%9A%84%E5%90%9E%E5%90%90%E9%87%8F) 里也实验过了。
 * [Linux bcc ext4 Latency Tracing](https://www.brendangregg.com/blog/2016-10-06/linux-bcc-ext4dist-ext4slower.html)
     * 使用 `ext4dist` 追踪ext4文件系统的操作延迟，`write`、`read`、`open`等操作
     * `ext4slower` 查看高延迟
@@ -175,7 +175,7 @@ NIC statistics:
      ...
 ```
 
-网络队列、ring buffer查看相关命令示例见：[实用工具集索引 -- 网卡相关工具命令](https://xiaodongq.github.io/2025/04/14/handy-tools/#73-%E7%BD%91%E5%8D%A1%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4)
+网络队列、ring buffer查看相关命令示例见：[实用工具集索引 -- 网卡相关工具命令](https://aletheics.github.io/2025/04/14/handy-tools/#73-%E7%BD%91%E5%8D%A1%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4)
 
 另外发现博主的历史文章，也覆盖了之前看过的网络发送和接收文章翻译：
 
@@ -205,7 +205,7 @@ NIC statistics:
     * **根因分析**。可以看看里面的手段思路
         * 了解`smaps`中的内容和文件更新原理，proc使用的文件类型是`seq_file`序列文件。
             * `smaps` 文件包含了每个进程的内存段的详细信息，包括但不限于各段的大小、权限、偏移量、设备号、inode 号以及最值得注意的——各段的 `PSS（Proportional Set Size，比例集大小）`和 `RSS（Resident Set Size，常驻集大小）`。（针对多进程共享内存的场景，`PSS`的物理内存统计比`RSS`更为准确）。
-            * 关于序列文件，之前梳理netstat的实现流程中也涉及了。其读取proc文件系统的`/proc/net/tcp`就是用的序列文件，其简要流程可见：[分析netstat中的Send-Q和Recv-Q](https://xiaodongq.github.io/2024/05/27/netstat-code/#3-procnettcp%E6%96%87%E4%BB%B6%E6%9B%B4%E6%96%B0%E9%80%BB%E8%BE%91) 
+            * 关于序列文件，之前梳理netstat的实现流程中也涉及了。其读取proc文件系统的`/proc/net/tcp`就是用的序列文件，其简要流程可见：[分析netstat中的Send-Q和Recv-Q](https://aletheics.github.io/2024/05/27/netstat-code/#3-procnettcp%E6%96%87%E4%BB%B6%E6%9B%B4%E6%96%B0%E9%80%BB%E8%BE%91) 
         * **耗时定位思路**说明：进程耗时分2大部分：**用户空间** 和 **内核空间** 的耗时
             * 在缺乏统计系统和百分位延时指标时，`用户空间`的耗时，可以使用bcc的 `funcslower`（示例实验见补充文章）
             * `内核空间`耗时，可选工具：
@@ -408,7 +408,7 @@ static const struct file_operations proc_environ_operations = {
         * 在 ping 测试过程中分别在主机 A 和主机 B 上使用 tcpdump 抓包分析，发现在主机 B 上的 eth1 与网卡 cali95f3fd83a87 之间的延时达 `133 ms`。
             * 到此为止问题已经逐步明确，在主机 B 上接收到 ping 包在转发过程中有 100 多ms 的延时，那么**是什么原因导致的 ping 数据包在主机 B转发的延时呢？**
             * **网络数据包内核中的处理流程**：数据 -> 网卡DMA数据到`Ring Buffer` -> 网络设备驱动发起硬中断通知CPU（中断处理函数即`ISR，Interrupt Service Routines`） -> CPU发起软中断 -> `ksoftirqd`线程处理软中断，从Ring Buffer收包 -> 帧数据保存为一个skb -> 网络协议层处理，处理后数据放到socket的接收队列 -> 内核唤醒用户进程
-            * 之前自己也基于几篇参考链接梳理过，可见：[TCP发送接收过程（一） -- Wireshark跟踪TCP流统计图](https://xiaodongq.github.io/2024/06/30/tcp-wireshark-tcp-graphs/)
+            * 之前自己也基于几篇参考链接梳理过，可见：[TCP发送接收过程（一） -- Wireshark跟踪TCP流统计图](https://aletheics.github.io/2024/06/30/tcp-wireshark-tcp-graphs/)
         * 这里用了个基于bcc写的工具：[traceicmpsoftirq.py](https://gist.github.com/theojulienne/9d78a0cb68dbe56f19a2ae6316bc6846)，跟踪ping时的中断情况
             * 使用bcc里面的`trace`追踪`icmp_echo`的效果也差不多（可到`/proc/kallsyms`里过滤icmp相关的符号）
             * 从主机 A ping `主机B中容器IP` 的地址，每次处理包的处理都会固定落到 `CPU#0` 上
@@ -602,7 +602,7 @@ PID     TID     COMM            FUNC
 
 * 硬件性能评测：对于zStorage来讲（其他系统基本也离不开这几大件），影响性能的最主要的几个硬件是：**CPU**、**内存**、**网络**和**硬盘**。
     * 传统软硬件中网络和硬盘是主要性能瓶颈（1ms-10ms级别），但近年来高速 NVMe SSD 硬盘和高速 RDMA 网卡迅猛发展，其性能提升速度远高于CPU和内存，**SSD硬盘和RDMA网卡响应时间已经可以达到小于10us级别**，此场景下CPU和内存的耗时已经不可忽视。
-        * 可了解 [Linux存储IO栈梳理（一） -- 存储栈全貌图](https://xiaodongq.github.io/2024/07/11/linux-storage-io-stack/#3-%E8%80%97%E6%97%B6%E4%BD%93%E6%84%9F) 中记录的一些耗时体感。
+        * 可了解 [Linux存储IO栈梳理（一） -- 存储栈全貌图](https://aletheics.github.io/2024/07/11/linux-storage-io-stack/#3-%E8%80%97%E6%97%B6%E4%BD%93%E6%84%9F) 中记录的一些耗时体感。
     * 做性能分析时，CPU和内存需要结合起来看，CPU一般不会成为主要瓶颈，关注点还是在 **内存的带宽** 以及 **CPU缓存的命中率** 上。
     * 可以在`性能符合预期`的实验室环境中，对这几个主要部件进行性能评测，形成一个`硬件的基准性能数据`。
 * 定位**硬盘**瓶颈
@@ -626,7 +626,7 @@ PID     TID     COMM            FUNC
     * 节点间IPC差异过大问题：**节点负载不均衡**，同样可测量不同CPU核心间的IPC，如果差距过大，也可以反映**CPU核心间的负载不均衡**
     * IPC增加，但是IOPS性能数据下降
         * 表明CPU虽然在卖力地工作，但却做了许多无用功。该情况可以**perf采集，再生成差分火焰图**
-        * 各类火焰图示例，可见：[并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/)
+        * 各类火焰图示例，可见：[并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile/)
     * 两套不同环境下的IPC对比
         * 不同架构，如Intel服务器 vs 海光
         * 除了IPC，还可测量 `前端停顿周期（stalled-cycles-frontend）`（较高比例可能是指令获取的瓶颈） 和 `后端停顿周期（stalled-cycles-backend）`（高比例可能是执行单元等待数据的表现，通常与内存瓶颈相关）
@@ -735,7 +735,7 @@ PID     TID     COMM            FUNC
     * 算法和数据结构优化。比如STL中不关注顺序则`unordered_map`优于`map`、数据量大时`O(nlogn)`的排序、`O(logn)`的查找算法
 * **3、并行优化**
     * 多线程、多协程：上下文切换的开销不同
-        * 可参考：[CPU及内存调度（一） -- 进程、线程、系统调用、协程上下文切换](https://xiaodongq.github.io/2025/03/09/context-switch/)）
+        * 可参考：[CPU及内存调度（一） -- 进程、线程、系统调用、协程上下文切换](https://aletheics.github.io/2025/03/09/context-switch/)）
         * 量级参考：进程上下文切换2.7us到5.48us之间、线程上下文切换3.8us左右、系统调用200ns、协程切换120ns
     * 异步处理：可避免程序因为等待而一直阻塞
     * 锁优化优化：细粒度锁、无锁设计，CPU/Thread local（比如tcmalloc内存池）
@@ -746,7 +746,7 @@ PID     TID     COMM            FUNC
     * 优先级调整：`nice`调整进程优先级
     * CPU独占：`taskset`命令 或者 `pthread_setaffinity_np`接口
     * 中断负载均衡
-        * `irqbalance`在高吞吐环境效果不一定好，手动设置方式可了解：[网卡相关工具命令](https://xiaodongq.github.io/2025/04/14/handy-tools/#73-%E7%BD%91%E5%8D%A1%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4)
+        * `irqbalance`在高吞吐环境效果不一定好，手动设置方式可了解：[网卡相关工具命令](https://aletheics.github.io/2025/04/14/handy-tools/#73-%E7%BD%91%E5%8D%A1%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4)
 * **6、亲和性优化**
     * 中断亲和：网卡硬中断（RSS）和软中断（RPS）均衡绑定处理中断的CPU
         * 可以到`/proc/interrupts`里面过滤网卡设备，查看对应的中断号和中断处理的分布情况

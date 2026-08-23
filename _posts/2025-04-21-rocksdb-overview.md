@@ -8,7 +8,7 @@ tags: [存储, RocksDB]
 
 ## 1. 引言
 
-[前面](https://xiaodongq.github.io/categories/leveldb/)梳理了基于LSM的<mark>LevelDB</mark>，本篇开始梳理学习RocksDB，后续进一步看将其作为存储引擎的Ceph等开源项目。
+[前面](https://aletheics.github.io/categories/leveldb/)梳理了基于LSM的<mark>LevelDB</mark>，本篇开始梳理学习RocksDB，后续进一步看将其作为存储引擎的Ceph等开源项目。
 
 相关链接：
 
@@ -48,7 +48,7 @@ RocksDB优点很多，但也有些缺点，上面提到在几个放大因素上�
 
 ### 2.2. 架构
 
-RocksDB基本结构如下，即典型的LSM结构（也可见：[LevelDB学习笔记（一） -- 整体架构和基本操作](https://xiaodongq.github.io/2024/07/10/leveldb-learn-first)）：
+RocksDB基本结构如下，即典型的LSM结构（也可见：[LevelDB学习笔记（一） -- 整体架构和基本操作](https://aletheics.github.io/2024/07/10/leveldb-learn-first)）：
 
 ![rocksdb-constructs-lsm](/images/rocksdb-constructs-lsm.png)
 
@@ -81,7 +81,7 @@ RocksDB中的SST文件叫`BlockBasedTable`，具体可见：[Rocksdb BlockBasedT
 <end_of_file>
 ```
 
-LevelDB里面的SSTable文件格式示意图如下（可见 [LevelDB学习笔记（五） -- sstable实现](https://xiaodongq.github.io/2024/08/07/leveldb-sstable) 和 [leveldb-handbook](https://leveldb-handbook.readthedocs.io/zh/latest/sstable.html)）：
+LevelDB里面的SSTable文件格式示意图如下（可见 [LevelDB学习笔记（五） -- sstable实现](https://aletheics.github.io/2024/08/07/leveldb-sstable) 和 [leveldb-handbook](https://leveldb-handbook.readthedocs.io/zh/latest/sstable.html)）：
 
 ![SSTable文件结构示意图](/images/sstable_logic.jpeg)
 
@@ -580,7 +580,7 @@ RocksDB总体介绍和基本API使用，并对比了和LevelDB的大致区别。
 * [RocksDB-Wiki](https://github.com/facebook/rocksdb/wiki)
 * [RocksDB-Overview](https://github.com/facebook/rocksdb/wiki/RocksDB-Overview)
 * [facebook/rocksdb](https://github.com/facebook/rocksdb/)
-* [LevelDB学习笔记（五） -- sstable实现](https://xiaodongq.github.io/2024/08/07/leveldb-sstable)
+* [LevelDB学习笔记（五） -- sstable实现](https://aletheics.github.io/2024/08/07/leveldb-sstable)
 * [Basic Operations](https://github.com/facebook/rocksdb/wiki/Basic-Operations)
 * [深入 RocksDB 高性能的技术关键](https://mp.weixin.qq.com/s/40JnearOCVDaGbU7WpxB1g)
 * [TiDB博客 -- RocksDB标签](https://cn.pingcap.com/blog/?tag=RocksDB)

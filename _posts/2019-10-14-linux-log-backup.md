@@ -10,7 +10,7 @@ Linux下使用crontab和shell脚本实现过期日志移动备份到备份路径
 
 针对某类文件做一个通用的运维demo，一个是便于复用，一个是温习加深印象
 
-之前就整理过crontab使用：[crontab学习使用笔记](https://xiaodongq.github.io/2015/08/18/crontab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)
+之前就整理过crontab使用：[crontab学习使用笔记](https://aletheics.github.io/2015/08/18/crontab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)
 
 ### 前提
 
@@ -99,7 +99,7 @@ echo "`date`, end" >> $AUTO_OPS_LOG_FILE
 
 ### crontab文件
 
-关于crontab，参考前面贴出来的 [crontab学习使用笔记](https://xiaodongq.github.io/2015/08/18/crontab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)
+关于crontab，参考前面贴出来的 [crontab学习使用笔记](https://aletheics.github.io/2015/08/18/crontab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)
 
 ```sh
 #crontab.xd

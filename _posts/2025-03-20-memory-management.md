@@ -9,7 +9,7 @@ tags: 内存
 
 ## 1. 背景
 
-在 [CPU及内存调度（一） -- 进程、线程、系统调用、协程上下文切换](https://xiaodongq.github.io/2025/03/09/context-switch) 中已经介绍过Linux通过页表机制进行内存映射管理，涉及TLB、MMU、缺页中断等，并发与异步编程系列梳理学习中，也涉及内存序和CPU缓存等问题，本篇开始梳理学习Linux内存管理，以及相关的进程、线程创建过程。
+在 [CPU及内存调度（一） -- 进程、线程、系统调用、协程上下文切换](https://aletheics.github.io/2025/03/09/context-switch) 中已经介绍过Linux通过页表机制进行内存映射管理，涉及TLB、MMU、缺页中断等，并发与异步编程系列梳理学习中，也涉及内存序和CPU缓存等问题，本篇开始梳理学习Linux内存管理，以及相关的进程、线程创建过程。
 
 主要参考：
 
@@ -154,7 +154,7 @@ struct task_struct {
 说明：
 
 * **进程/线程状态** 对应的定义也在 include/linux/sched.h 中
-    * 在 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/) 的介绍中，bcc中的`offcputime`工具就可以通过`--state`来指定过滤线程状态，以避免多线程时部分等待线程影响整体火焰图的展示
+    * 在 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile/) 的介绍中，bcc中的`offcputime`工具就可以通过`--state`来指定过滤线程状态，以避免多线程时部分等待线程影响整体火焰图的展示
     * 常见状态：
         * 0（`TASK_RUNNING`）可执行状态
             * 进程要么正在执行，要么准备执行，涵盖了操作系统层面“运行”和“就绪”两种状态。

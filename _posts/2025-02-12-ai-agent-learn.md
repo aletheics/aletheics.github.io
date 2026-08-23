@@ -9,7 +9,7 @@ HuggingFace AI Agents Course学习笔记（AI智能体）
 
 ## 1. 背景
 
-当前AI发展日新月异，功能越来越强大。日常只是使用基本问答比较多，之前（[ollama搭建本地个人知识库](https://xiaodongq.github.io/2024/06/20/ollama-ai-models/)）也在本地用ollama部署千问简单体验了一下。近几年AI大模型应用从ChatBot -> Copilot -> Agent，对于软件行业从业者来说相关辅助更为明显，比如火热的cursor编辑器、Devin软件工程师智能体。
+当前AI发展日新月异，功能越来越强大。日常只是使用基本问答比较多，之前（[ollama搭建本地个人知识库](https://aletheics.github.io/2024/06/20/ollama-ai-models/)）也在本地用ollama部署千问简单体验了一下。近几年AI大模型应用从ChatBot -> Copilot -> Agent，对于软件行业从业者来说相关辅助更为明显，比如火热的cursor编辑器、Devin软件工程师智能体。
 
 技术潮流还是得跟上，正好了解到近期HuggingFace推出了一个免费的AI Agents课程：[AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)，先学习该课程并进行实践。
 

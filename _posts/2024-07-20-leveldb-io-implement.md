@@ -8,7 +8,7 @@ LevelDB学习笔记，本篇学习其读写操作流程。
 
 ## 1. 背景
 
-[LevelDB学习笔记（一） -- 整体架构和基本操作](https://xiaodongq.github.io/2024/07/10/leveldb-learn-first/)里做了基本介绍和简单demo功能测试，本篇看下对应的读写实现流程。
+[LevelDB学习笔记（一） -- 整体架构和基本操作](https://aletheics.github.io/2024/07/10/leveldb-learn-first/)里做了基本介绍和简单demo功能测试，本篇看下对应的读写实现流程。
 
 *说明：本博客作为个人学习实践笔记，可供参考但非系统教程，可能存在错误或遗漏，欢迎指正。若需系统学习，建议参考原链接。*
 

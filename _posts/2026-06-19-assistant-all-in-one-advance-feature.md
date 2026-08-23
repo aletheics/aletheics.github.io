@@ -8,7 +8,7 @@ last_modified_at: 2026-06-27
 
 ## 1. 引言
 
-续篇，在[构建个人All-In-One助手应用](https://xiaodongq.github.io/2026/06/10/assistant-all-in-one/)的基础上，按需叠加了大量新功能。本文按功能大类组织，介绍思路和实现方式，代码位于 [xiaodongQ/xworkbench](https://github.com/xiaodongQ/xworkbench)。
+续篇，在[构建个人All-In-One助手应用](https://aletheics.github.io/2026/06/10/assistant-all-in-one/)的基础上，按需叠加了大量新功能。本文按功能大类组织，介绍思路和实现方式，代码位于 [xiaodongQ/xworkbench](https://github.com/xiaodongQ/xworkbench)。
 
 ## 2. AI 任务执行增强
 

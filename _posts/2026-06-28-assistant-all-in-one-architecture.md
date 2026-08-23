@@ -7,7 +7,7 @@ tags: [Agent, 个人助手, xworkbench]
 
 ## 1. 引言
 
-前两篇分别介绍了 [All-In-One 助手的基础构建](https://xiaodongq.github.io/2026/06/10/assistant-all-in-one/) 和 [新增的高级特性](https://xiaodongq.github.io/2026/06/19/assistant-all-in-one-advance-feature/)，本文直接嵌入完整的功能介绍页面。
+前两篇分别介绍了 [All-In-One 助手的基础构建](https://aletheics.github.io/2026/06/10/assistant-all-in-one/) 和 [新增的高级特性](https://aletheics.github.io/2026/06/19/assistant-all-in-one-advance-feature/)，本文直接嵌入完整的功能介绍页面。
 
 代码位于 [xiaodongQ/xworkbench](https://github.com/xiaodongQ/xworkbench)，截图和样式基于该项目的实际界面。
 

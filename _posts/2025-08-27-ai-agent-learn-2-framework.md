@@ -7,7 +7,7 @@ tags: [AI, LLM]
 
 ## 1. 引言
 
-上一篇：[AI Agent学习实践笔记（一） -- Agents介绍](https://xiaodongq.github.io/2025/02/12/ai-agent-learn/) 进行了智能体的基本介绍，间隔比较久了，继续后续的unit学习。
+上一篇：[AI Agent学习实践笔记（一） -- Agents介绍](https://aletheics.github.io/2025/02/12/ai-agent-learn/) 进行了智能体的基本介绍，间隔比较久了，继续后续的unit学习。
 
 AI发展日新月异，后续还有不少内容可以继续学习，如 [mcp-course](https://huggingface.co/learn/mcp-course/unit0/introduction)，加入TODO List。
 

@@ -35,7 +35,7 @@ tags: [协程, 异步编程]
 
 ## 2. libco协程库简析
 
-libco中实现了有栈协程。相关核心机制，和之前 [协程梳理实践](https://xiaodongq.github.io/categories/%E5%8D%8F%E7%A8%8B/) 中梳理`sylar`协程时基本类似，不过libco更为完善，**支持共享栈**、**协程间可嵌套调用**。核心机制，如：协程`yield`/`resume`操作、协程调度、系统调用hook等。
+libco中实现了有栈协程。相关核心机制，和之前 [协程梳理实践](https://aletheics.github.io/categories/%E5%8D%8F%E7%A8%8B/) 中梳理`sylar`协程时基本类似，不过libco更为完善，**支持共享栈**、**协程间可嵌套调用**。核心机制，如：协程`yield`/`resume`操作、协程调度、系统调用hook等。
 
 ### 2.1. 项目文件结构
 
@@ -165,7 +165,7 @@ void    co_eventloop( stCoEpoll_t *ctx,pfn_co_eventloop_t pfn,void *arg );
     * 比如：`co_create( &co,NULL,readwrite_routine, &endpoint);`
 * 2、协程切换，调用`co_resume`
 * 3、调用`co_eventloop`，开始协程调度
-    * 其中系统调用被hook为通过epoll事件驱动，流程类似：[协程梳理实践（四） -- sylar协程API hook封装](https://xiaodongq.github.io/2025/06/10ocoroutine-api-hook/)。
+    * 其中系统调用被hook为通过epoll事件驱动，流程类似：[协程梳理实践（四） -- sylar协程API hook封装](https://aletheics.github.io/2025/06/10ocoroutine-api-hook/)。
 
 示例：以libco里的`example_echocli.cpp`做说明。
 * 使用方式 `./example_echosvr 127.0.0.1 10000 100 50`，各参数为：服务端ip、端口、协程数（每个子进程都创建该数量的协程）、子进程数

@@ -8,14 +8,14 @@ tags: 网络
 
 ## 1. 背景
 
-在“[TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/)”这篇文章中，进行了全连接队列溢出的实验，并且遗留了几个问题。
+在“[TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/)”这篇文章中，进行了全连接队列溢出的实验，并且遗留了几个问题。
 
 1. 半连接队列溢出情况分析，服务端接收具体处理逻辑
 2. 内核drop包的时机，以及跟抓包的关系。哪些情况可能会抓不到drop的包？
 3. systemtap/ebpf跟踪TCP状态变化，跟踪上述drop事件
 4. 上述全连接实验case1中，2MSL内没观察到客户端连接`FIN_WAIT2`状态，为什么？
 
-[TCP半连接全连接（二） -- 半连接队列代码逻辑](https://xiaodongq.github.io/2024/05/30/tcp_syn_queue/) 中基本梳理涉及到问题1、2。
+[TCP半连接全连接（二） -- 半连接队列代码逻辑](https://aletheics.github.io/2024/05/30/tcp_syn_queue/) 中基本梳理涉及到问题1、2。
 
 本篇通过eBPF跟踪TCP状态变化和溢出情况，经过"eBPF学习实践系列"，终于可以投入实际验证了。
 
@@ -40,7 +40,7 @@ tags: 网络
 
 ## 3. bcc tools 跟踪
 
-从之前“[eBPF学习实践系列（二） -- bcc tools网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/)”学习记录的bcc tools工具集中，选取如下工具：
+从之前“[eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/)”学习记录的bcc tools工具集中，选取如下工具：
 
 * `tcpstates`，跟踪TCP状态变化，每次连接改变其状态时，tcpstates都会显示一个新行
 * `tcptracer`，追踪**已建立连接**的TCP socket，每个connect/accept/close事件都会记录打印

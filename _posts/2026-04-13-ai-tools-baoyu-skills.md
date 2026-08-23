@@ -7,7 +7,7 @@ tags: [AI, Skills]
 
 ## 1. 引言
 
-[上篇](https://xiaodongq.github.io/2026/04/12/ai-tools-openrouter-cc-switch/)说到最近换了支持生图和语音的token plan，这里来实验一下。
+[上篇](https://aletheics.github.io/2026/04/12/ai-tools-openrouter-cc-switch/)说到最近换了支持生图和语音的token plan，这里来实验一下。
 
 宝玉老师（有很多AI相关知识分享）之前分享了他的 Claude Code 技能集：[baoyu-skills](https://github.com/JimLiu/baoyu-skills)，里面的图片生成功能有很多自媒体也在用。先试试效果，后续看如何跟日常结合起来：比如博客配图、程序架构图等等。
 

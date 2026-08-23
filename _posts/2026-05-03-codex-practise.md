@@ -7,7 +7,7 @@ tags: [AI, Codex]
 
 ## 1. 引言
 
-平常使用`Claude Code`比较多，在 [Claude Code系列 -- Claude Code实战手记](https://xiaodongq.github.io/2026/03/04/claude-code-practise/) 里进行了记录。本篇用于记录一些`OpenAI Codex`相关的实践笔记。
+平常使用`Claude Code`比较多，在 [Claude Code系列 -- Claude Code实战手记](https://aletheics.github.io/2026/03/04/claude-code-practise/) 里进行了记录。本篇用于记录一些`OpenAI Codex`相关的实践笔记。
 
 ## 2. 安装和基本使用
 

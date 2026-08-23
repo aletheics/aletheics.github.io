@@ -9,9 +9,9 @@ tags: [CPU, 存储, 异步编程]
 
 ## 1. 背景
 
-[并发与异步编程（二） -- 异步编程框架了解](https://xiaodongq.github.io/2025/03/11/async-io/) 介绍了几种异步编程框架，现在来完成 [并发与异步编程（一） -- 实现一个简单线程池](https://xiaodongq.github.io/2025/03/08/threadpool/) 中的TODO，进行异步编程实验，并简单进行分析性能。
+[并发与异步编程（二） -- 异步编程框架了解](https://aletheics.github.io/2025/03/11/async-io/) 介绍了几种异步编程框架，现在来完成 [并发与异步编程（一） -- 实现一个简单线程池](https://aletheics.github.io/2025/03/08/threadpool/) 中的TODO，进行异步编程实验，并简单进行分析性能。
 
-本篇进行代码实践，并使用 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/) 中提及的工具进行分析。
+本篇进行代码实践，并使用 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile/) 中提及的工具进行分析。
 
 ## 2. 采集方法说明
 
@@ -322,7 +322,7 @@ swapper/3, stack:
 
 ![stack-bcctools-libbpftools](/images/2025-03-16-stack-bcctools-libbpftools.png)
 
-到这里，上篇：[并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile) 中的TODO疑问就解决了。
+到这里，上篇：[并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile) 中的TODO疑问就解决了。
 
 ---
 
@@ -534,8 +534,8 @@ offwaketime火焰图：
 
 ## 7. 参考
 
-* [并发与异步编程（一） -- 实现一个简单线程池](https://xiaodongq.github.io/2025/03/08/threadpool/)
-* [并发与异步编程（二） -- 异步编程框架了解](https://xiaodongq.github.io/2025/03/11/async-io/)
-* [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/) 
+* [并发与异步编程（一） -- 实现一个简单线程池](https://aletheics.github.io/2025/03/08/threadpool/)
+* [并发与异步编程（二） -- 异步编程框架了解](https://aletheics.github.io/2025/03/11/async-io/)
+* [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile/) 
 * [C++ 并发三剑客future, promise和async](https://gitbookcpp.llfc.club/sections/cpp/concurrent/concpp07.html)
 * LLM

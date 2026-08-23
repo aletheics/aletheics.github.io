@@ -10,7 +10,7 @@ tags: [存储, IO]
 
 LevelDB的学习梳理暂告一段落（还有不少东西没完结），继续看Linux存储IO栈。
 
-上一篇：[Linux存储IO栈梳理（一） -- 存储栈全貌图](https://xiaodongq.github.io/2024/07/11/linux-storage-io-stack/) 中，看了一下总体存储协议栈，本篇看下VFS和文件系统相关的内核代码逻辑。
+上一篇：[Linux存储IO栈梳理（一） -- 存储栈全貌图](https://aletheics.github.io/2024/07/11/linux-storage-io-stack/) 中，看了一下总体存储协议栈，本篇看下VFS和文件系统相关的内核代码逻辑。
 
 主要参考下面文章，并结合内核代码梳理学习：
 
@@ -288,7 +288,7 @@ Page Cache用于加速文件系统访问，通过缓存磁盘数据来减少直�
 
 上述具体文件系统接口读写时，会根据open时传入参数（是否指定`O_DIRECT`）判断是否需要经过Page Cache。
 
-我们在 [Linux存储IO栈梳理（一） -- 存储栈全貌图](https://xiaodongq.github.io/2024/07/11/linux-storage-io-stack/) 中贴的耗时体感图，里面有个耗时对比：磁盘缓存命中时在`100微秒`内，磁盘连续读则在约`1ms`级别，随机读约`8ms`（这里可能是指磁盘内部缓存？还是FS缓存？）。
+我们在 [Linux存储IO栈梳理（一） -- 存储栈全貌图](https://aletheics.github.io/2024/07/11/linux-storage-io-stack/) 中贴的耗时体感图，里面有个耗时对比：磁盘缓存命中时在`100微秒`内，磁盘连续读则在约`1ms`级别，随机读约`8ms`（这里可能是指磁盘内部缓存？还是FS缓存？）。
 
 在 Linux 内核中，页面缓存由一系列 `struct page` 组成，每个页结构代表一个内存页，页面缓存通过这些页结构来管理和存储缓存的数据。
 
@@ -375,7 +375,7 @@ ssize_t vfs_read(struct file *file, char __user *buf, size_t count, loff_t *pos)
 
 ### 4.2. 追踪工具说明
 
-经过前面的学习实践（[eBPF学习实践系列](https://xiaodongq.github.io/2024/06/06/ebpf_learn/)、[追踪内核网络堆栈的几种方式](https://xiaodongq.github.io/2024/07/03/strace-kernel-network-stack/)等），手头已经有不少工具集了(太富裕了。。)，这里做下简单梳理。
+经过前面的学习实践（[eBPF学习实践系列](https://aletheics.github.io/2024/06/06/ebpf_learn/)、[追踪内核网络堆栈的几种方式](https://aletheics.github.io/2024/07/03/strace-kernel-network-stack/)等），手头已经有不少工具集了(太富裕了。。)，这里做下简单梳理。
 
 * [`bpftrace`](https://github.com/bpftrace/bpftrace) 写简便的eBPF功能，能满足日常大部分追踪需要了
     * [tools](https://github.com/bpftrace/bpftrace/tree/master/tools)里面还有很多现成的bt脚本，也可以用

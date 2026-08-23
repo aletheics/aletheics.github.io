@@ -9,7 +9,7 @@ tags: 内存
 
 ## 1. 背景
 
-利用 [Valgrind Massif](https://valgrind.org/docs/manual/ms-manual.html)、[AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) 进行内存相关实验。以及使用 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/) 中未具体展开的 [Memory Leak and Growth火焰图](https://www.brendangregg.com/FlameGraphs/memoryflamegraphs.html) 工具进行操作实践。
+利用 [Valgrind Massif](https://valgrind.org/docs/manual/ms-manual.html)、[AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) 进行内存相关实验。以及使用 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile/) 中未具体展开的 [Memory Leak and Growth火焰图](https://www.brendangregg.com/FlameGraphs/memoryflamegraphs.html) 工具进行操作实践。
 
 并介绍下bcc tools里面内存相关的工具。
 
@@ -776,8 +776,8 @@ Attaching to pid 45324, Ctrl+C to quit.
 
 之前的文章中：
 
-* 在 [eBPF学习实践系列（二） -- bcc tools网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/) 中介绍了网络相关bcc工具
-* 在 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/) 中介绍了Scheduler下的offcputime、wakeuptime、offwaketime等几个工具用于生成不同类别的火焰图。
+* 在 [eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/) 中介绍了网络相关bcc工具
+* 在 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile/) 中介绍了Scheduler下的offcputime、wakeuptime、offwaketime等几个工具用于生成不同类别的火焰图。
 
 本小节介绍下内存相关工具。
 

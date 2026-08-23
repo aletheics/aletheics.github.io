@@ -8,7 +8,7 @@ tags: [Linux, 网络]
 
 ## 1. 背景
 
-[分析某环境中ss结果中Send-Q为0的原因](https://xiaodongq.github.io/2024/05/20/ss-sendq-0/)中，最后没分析`netstat`中为什么不展示全连接队列，本篇博客进行跟踪分析。
+[分析某环境中ss结果中Send-Q为0的原因](https://aletheics.github.io/2024/05/20/ss-sendq-0/)中，最后没分析`netstat`中为什么不展示全连接队列，本篇博客进行跟踪分析。
 
 ## 2. netstat源码
 

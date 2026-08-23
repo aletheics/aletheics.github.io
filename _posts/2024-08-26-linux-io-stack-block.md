@@ -8,7 +8,7 @@ tags: [存储, IO]
 
 ## 1. 背景
 
-[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://xiaodongq.github.io/2024/08/13/linux-kernel-fs/) 中简单带过了一下通用块层，并在 [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://xiaodongq.github.io/2024/08/15/linux-write-io-stack) 中追踪IO写流程时追踪到对应的io调度处理相关堆栈，本篇来具体看下通用块层的对应流程。
+[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://aletheics.github.io/2024/08/13/linux-kernel-fs/) 中简单带过了一下通用块层，并在 [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://aletheics.github.io/2024/08/15/linux-write-io-stack) 中追踪IO写流程时追踪到对应的io调度处理相关堆栈，本篇来具体看下通用块层的对应流程。
 
 另外，想起来之前看过的极客时间课程，回头看了下存储模块相关的系列文章：[基础篇：Linux 磁盘I/O是怎么工作的（上）](https://time.geekbang.org/column/article/77010)，发现作为概述和索引用来查漏补缺挺好的。之前更多的是对CPU/内存/存储/网络等对应有哪些观测工具和指标有个总览的了解，浮于“知道”（且容易忘）的层面，深入去看则发现有很多东西需要自己另外花心思去啃。这时再看文章有了不同的角度，收获到一些新的东西。
 
@@ -53,7 +53,7 @@ Linux 内核支持的几种 I/O 调度算法，分别为 `NONE`、`NOOP`、`CFQ`
 
 ### 3.1. block层框架
 
-Linux上传统的块设备层和IO调度器（如`cfq`）主要是针对`HDD`设计的。HDD设备的随机IO性能很差，吞吐量大约是几百IOPS，延迟在毫秒级（耗时可参考[之前文章](https://xiaodongq.github.io/2024/07/11/linux-storage-io-stack/)的耗时体感图和IOPS对比），所以当时IO性能的瓶颈在硬件，而不是内核。
+Linux上传统的块设备层和IO调度器（如`cfq`）主要是针对`HDD`设计的。HDD设备的随机IO性能很差，吞吐量大约是几百IOPS，延迟在毫秒级（耗时可参考[之前文章](https://aletheics.github.io/2024/07/11/linux-storage-io-stack/)的耗时体感图和IOPS对比），所以当时IO性能的瓶颈在硬件，而不是内核。
 
 但是，随着高速`SSD`的出现并展现出越来越高的性能，百万级甚至千万级IOPS的数据访问已成为一大趋势，传统的块设备层已无法满足这么高的IOPS需求，逐渐成为系统IO性能的瓶颈。
 
@@ -221,7 +221,7 @@ struct scsi_cmnd {
 
 block层提供了`submit_bio`的接口，上层可以调用这个接口来提交请求。
 
-在 [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://xiaodongq.github.io/2024/08/15/linux-write-io-stack) 中，通过`funcgraph`追踪到了block层的调用栈，不过层数太多，完整没贴在文章中，完整内容见：[O_DIRECT写入调用栈](/images/srcfiles/funcgragh_write_direct_stack.txt)。
+在 [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://aletheics.github.io/2024/08/15/linux-write-io-stack) 中，通过`funcgraph`追踪到了block层的调用栈，不过层数太多，完整没贴在文章中，完整内容见：[O_DIRECT写入调用栈](/images/srcfiles/funcgragh_write_direct_stack.txt)。
 
 这里贴一下block层相关的调用栈（去除了一些细节和其他调用，可通过括号匹配层级）：
 

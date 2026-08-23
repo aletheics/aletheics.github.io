@@ -9,7 +9,7 @@ CPU和内存调度系列，梳理进程、线程、系统调用、协程上下�
 
 ## 1. 背景
 
-之前投入 [网络](https://xiaodongq.github.io/category/#%E7%BD%91%E7%BB%9C) 相关的学习实践更多一点，虽然还有很多TODO项，以及存储方面待深入梳理，但最近碰到的问题有不少还是跟内存和CPU相关。本篇开始梳理CPU、内存方面的学习记录，并基于上篇 [并发与异步编程（一） -- 实现一个简单线程池](https://xiaodongq.github.io/2025/03/08/threadpool/) 进行观察。
+之前投入 [网络](https://aletheics.github.io/category/#%E7%BD%91%E7%BB%9C) 相关的学习实践更多一点，虽然还有很多TODO项，以及存储方面待深入梳理，但最近碰到的问题有不少还是跟内存和CPU相关。本篇开始梳理CPU、内存方面的学习记录，并基于上篇 [并发与异步编程（一） -- 实现一个简单线程池](https://aletheics.github.io/2025/03/08/threadpool/) 进行观察。
 
 参考博客系列：
 

@@ -18,7 +18,7 @@ Rust学习实践，进一步学习梳理Rust特性。
 
 ## 2. 生命周期
 
-[之前](https://xiaodongq.github.io/2024/09/17/rust-relearn-overview/)过基础语法时，简单提到过生命周期的基本使用，这次进一步学习下。
+[之前](https://aletheics.github.io/2024/09/17/rust-relearn-overview/)过基础语法时，简单提到过生命周期的基本使用，这次进一步学习下。
 
 基于下述链接梳理学习：
 
@@ -406,7 +406,7 @@ fn get_memory_location() -> (usize, usize) {
 
 ### 3.1. 闭包基本示例
 
-[第一篇](https://xiaodongq.github.io/2024/09/17/rust-relearn-overview/) 简单介绍过闭包，下面用一个简单示例看闭包的好处（完整代码见 [github work_example](https://github.com/xiaodongQ/rust_learning/tree/master/test_functional/bin/work_example.rs)）。
+[第一篇](https://aletheics.github.io/2024/09/17/rust-relearn-overview/) 简单介绍过闭包，下面用一个简单示例看闭包的好处（完整代码见 [github work_example](https://github.com/xiaodongQ/rust_learning/tree/master/test_functional/bin/work_example.rs)）。
 
 1、基础代码：不同公司工作不同工作时长，工作内容是写代码
 

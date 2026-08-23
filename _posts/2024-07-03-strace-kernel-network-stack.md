@@ -70,7 +70,7 @@ tags: [TCP, 内核]
 
 上面的链接文章里用了systemtap追踪两个网络相关跟踪点`tcp_v4_send_reset`和`tcp_send_active_reset`，怎么用eBPF跟踪呢？
 
-这里还是用`bpftrace`，用法可参考之前的学习笔记：[eBPF学习实践系列（六） -- bpftrace学习和使用](https://xiaodongq.github.io/2024/06/28/ebpf-bpftrace-learn/)
+这里还是用`bpftrace`，用法可参考之前的学习笔记：[eBPF学习实践系列（六） -- bpftrace学习和使用](https://aletheics.github.io/2024/06/28/ebpf-bpftrace-learn/)
 
 1、先查看系统是否支持（CentOS 8.5），可看到是有这两个符号的：
 
@@ -301,7 +301,7 @@ glibc-debuginfo-2.28-164.el8.x86_64.rpm、libgcc-debuginfo-8.5.0-3.el8.x86_64.rp
 
 ### 3.2. 扩展：iptables debug
 
-这里也参考上面学习下iptables调试日志，之前[网络实验-设置机器的MTU和MSS](https://xiaodongq.github.io/2023/04/09/network-mtu-mss/)里用`iptables`设置MSS时就想跟踪的，当时留了TODO项。
+这里也参考上面学习下iptables调试日志，之前[网络实验-设置机器的MTU和MSS](https://aletheics.github.io/2023/04/09/network-mtu-mss/)里用`iptables`设置MSS时就想跟踪的，当时留了TODO项。
 
 上面打印iptables DEBUG日志的命令：
 
@@ -621,7 +621,7 @@ CentOS Linux release 7.9.2009 (Core)
 
 ## 4. 使用perf跟踪网络堆栈
 
-[之前](https://xiaodongq.github.io/2024/06/20/ebpf-practice-case/)也看过TCP相关的tracepoint，没有多少个：
+[之前](https://aletheics.github.io/2024/06/20/ebpf-practice-case/)也看过TCP相关的tracepoint，没有多少个：
 
 ```sh
 [root@xdlinux ➜ ~ ]$ perf list 'tcp:*' 'sock:inet*' 'skb:*'

@@ -11,7 +11,7 @@ tags: [AI, 性能分析, 火焰图, perf, 排查]
 
 火焰图（Flame Graph）由 Brendan Gregg 发明，是性能分析领域最直观的可视化工具。
 
-本系列是**历史经验 Skill 化**的第一篇，火焰图知识体系见之前博客：[《并发与异步编程——性能分析工具：gperftools和火焰图》](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/)。
+本系列是**历史经验 Skill 化**的第一篇，火焰图知识体系见之前博客：[《并发与异步编程——性能分析工具：gperftools和火焰图》](https://aletheics.github.io/2025/03/14/async-io-example-profile/)。
 
 ### 火焰图类型
 
@@ -40,11 +40,11 @@ tags: [AI, 性能分析, 火焰图, perf, 排查]
 
 本博客有完整的 eBPF 学习系列，可搭配火焰图一起使用：
 
-- [eBPF学习实践系列（一）—— 初识eBPF](https://xiaodongq.github.io/2024/06/06/ebpf_learn/)
-- [eBPF学习实践系列（二）—— bcc tools 网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/)
-- [eBPF学习实践系列（三）—— 基于libbpf开发实践](https://xiaodongq.github.io/2024/06/15/libbpf-future/)
-- [eBPF学习实践系列（四）—— eBPF的各种追踪类型](https://xiaodongq.github.io/2024/06/19/ebpf-trace-type/)
-- [eBPF学习实践系列（五）—— 分析tcplife.bpf.c程序](https://xiaodongq.github.io/2024/06/20/ebpf-practice-case/)
+- [eBPF学习实践系列（一）—— 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/)
+- [eBPF学习实践系列（二）—— bcc tools 网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/)
+- [eBPF学习实践系列（三）—— 基于libbpf开发实践](https://aletheics.github.io/2024/06/15/libbpf-future/)
+- [eBPF学习实践系列（四）—— eBPF的各种追踪类型](https://aletheics.github.io/2024/06/19/ebpf-trace-type/)
+- [eBPF学习实践系列（五）—— 分析tcplife.bpf.c程序](https://aletheics.github.io/2024/06/20/ebpf-practice-case/)
 
 ---
 

@@ -8,7 +8,7 @@ tags: [存储, IO]
 
 ## 1. 背景
 
-[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://xiaodongq.github.io/2024/08/13/linux-kernel-fs/) 中，我们跟踪了读取的IO调用栈，本篇跟踪下写入操作时的IO调用栈。
+[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://aletheics.github.io/2024/08/13/linux-kernel-fs/) 中，我们跟踪了读取的IO调用栈，本篇跟踪下写入操作时的IO调用栈。
 
 环境说明：同上一篇一样，本地CentOS8.5环境只追踪到中断调用栈，先起ECS进行实验了：Alibaba Cloud Linux 3.2104 LTS 64位（内核版本：5.10.134-16.1.al8.x86_64）
 

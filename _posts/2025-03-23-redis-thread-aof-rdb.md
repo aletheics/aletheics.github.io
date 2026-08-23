@@ -20,7 +20,7 @@ tags: [Redis, 存储]
 
 ## 2. 事件循环和多线程
 
-主线程基于epoll进行IO多路复用判断处理，前面 [梳理Redis中的epoll机制](https://xiaodongq.github.io/2025/02/28/epoll-redis-nginx/) 中已经梳理过，此处不做展开。
+主线程基于epoll进行IO多路复用判断处理，前面 [梳理Redis中的epoll机制](https://aletheics.github.io/2025/02/28/epoll-redis-nginx/) 中已经梳理过，此处不做展开。
 
 线程初始化调用栈：`main` -> `initServer` -> `InitServerLast`
 
@@ -297,7 +297,7 @@ int rdbSaveRio(rio *rdb, int *error, int rdbflags, rdbSaveInfo *rsi) {
 
 ### 4.3. RDB文件查看
 
-可以用`od`命令（od - dump files in octal and other formats）查看RDB文件，也可以用 [之前](https://xiaodongq.github.io/2023/06/30/linux-directory-struct/) 看xfs超级块信息时用的`xxd`命令工具。
+可以用`od`命令（od - dump files in octal and other formats）查看RDB文件，也可以用 [之前](https://aletheics.github.io/2023/06/30/linux-directory-struct/) 看xfs超级块信息时用的`xxd`命令工具。
 
 xxd查看：跟上述`rdbSaveRio`中写的魔数可对比印证
 

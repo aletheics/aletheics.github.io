@@ -8,7 +8,7 @@ bcc tools工具集中网络部分说明和使用。
 
 ## 1. 背景
 
-上篇([eBPF学习实践系列（一） -- 初识eBPF](https://xiaodongq.github.io/2024/06/06/ebpf_learn/#22-ebpf%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81%E8%AF%B4%E6%98%8E))中提到性能分析大师`Brendan Gregg`等编写了**诸多的 BCC 或 BPFTrace 的工具集**可以拿来直接使用，可以满足很多我们日常问题分析和排查，本篇先学习下网络相关的几个工具。
+上篇([eBPF学习实践系列（一） -- 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/#22-ebpf%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81%E8%AF%B4%E6%98%8E))中提到性能分析大师`Brendan Gregg`等编写了**诸多的 BCC 或 BPFTrace 的工具集**可以拿来直接使用，可以满足很多我们日常问题分析和排查，本篇先学习下网络相关的几个工具。
 
 ![bcc tools 2019](/images/bcc-tools-2019.png)  
 [参考](https://www.ebpf.top/post/ebpf_intro/)
@@ -533,7 +533,7 @@ modprobe: FATAL: Module sch_netem not found in directory /lib/modules/4.18.0-348
 需安装`kernel-modules-extra`，而后再`modprobe sch_netem`  
 参考解决方式：[RTNETLINK answers: No such file or directory¶](https://tcconfig.readthedocs.io/en/latest/pages/troubleshooting.html)
 
-但是安装上述内核包时提示`/boot`空间不够，尝试扩容失败了，最后重装系统使用`tc`使用正常。(踩坑过程：[记一次失败的/boot分区扩容](https://xiaodongq.github.io/2024/06/12/record-failed-expend-space/))
+但是安装上述内核包时提示`/boot`空间不够，尝试扩容失败了，最后重装系统使用`tc`使用正常。(踩坑过程：[记一次失败的/boot分区扩容](https://aletheics.github.io/2024/06/12/record-failed-expend-space/))
 
 尝试在本机大量请求：`ab -n 10000 -c 2 http://192.168.1.150:8000/` (`python -m http.server`先起服务)，但是没抓到重传包。
 

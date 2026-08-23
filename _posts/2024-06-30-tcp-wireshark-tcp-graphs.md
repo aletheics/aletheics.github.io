@@ -90,7 +90,7 @@ TCP三次握手时会协商好接收窗口，而发送窗口复杂一些，会�
 
 参考：[用 Wireshark 分析 TCP 吞吐瓶颈](https://www.kawabangga.com/posts/4794)
 
-（三次握手时的协商观察，可见MTU实验：[网络实验-设置机器的MTU和MSS](https://xiaodongq.github.io/2023/04/09/network-mtu-mss/)，之前还留了TODO项）
+（三次握手时的协商观察，可见MTU实验：[网络实验-设置机器的MTU和MSS](https://aletheics.github.io/2023/04/09/network-mtu-mss/)，之前还留了TODO项）
 
 也推荐看下林沛满的《Wireshark网络分析就这么简单》、《Wireshark网络分析的艺术》。
 

@@ -111,7 +111,7 @@ Cargo有**对象自动发现**机制，基于目录布局发现和确定对象�
 
 > Tokio 中大多数类型的名称都和标准库中对应的同步类型名称相同，而且，如果没有特殊原因，Tokio 的 API 名称也和标准库保持一致，只不过用 `async fn` 取代 `fn` 来声明函数。
 
-[上一篇](https://xiaodongq.github.io/2024/10/15/rust-network-program/)学习过标准库的 `TcpListener` 和 `TcpStream`（`std::net`）。
+[上一篇](https://aletheics.github.io/2024/10/15/rust-network-program/)学习过标准库的 `TcpListener` 和 `TcpStream`（`std::net`）。
 
 对应`tokio`用的是 `tokio::net::TcpListener` 和 `tokio::net::TcpStream`。
 
@@ -191,7 +191,7 @@ async fn process(socket: TcpStream) {
 
 跟着参考链接学习实践简单redis demo，同时了解典型cargo项目结构和规范。当前仅实践了一部分，其他部分涉及特性和功能在后续进一步学习实践。
 
-这篇开篇到现在，耗时比较久了（近期投入了一些时间在 [LeetCode刷题学习（二） -- 数组篇](https://xiaodongq.github.io/2000/01/01/leetcode-2-array/)）。后面还有几个练习demo，要加快点节奏，快速过完后开启新的篇章。
+这篇开篇到现在，耗时比较久了（近期投入了一些时间在 [LeetCode刷题学习（二） -- 数组篇](https://aletheics.github.io/2000/01/01/leetcode-2-array/)）。后面还有几个练习demo，要加快点节奏，快速过完后开启新的篇章。
 
 ## 5. 参考
 

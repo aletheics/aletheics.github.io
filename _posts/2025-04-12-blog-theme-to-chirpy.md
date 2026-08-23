@@ -9,7 +9,7 @@ tags: [博客, Jekyll]
 
 ## 1. 背景
 
-自己的博客之前也调整过：[GitHub Pages及jekyll搭建博客](https://xiaodongq.github.io/2016/04/04/github-pages-jekyll-blog/)，原有框架的翻页和搜索感觉不大好用，前端不大懂（后续考虑折腾一下），换一个现有的模板。
+自己的博客之前也调整过：[GitHub Pages及jekyll搭建博客](https://aletheics.github.io/2016/04/04/github-pages-jekyll-blog/)，原有框架的翻页和搜索感觉不大好用，前端不大懂（后续考虑折腾一下），换一个现有的模板。
 
 * 主题：[jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)，里面有几篇示例文章介绍了效果和写博客的语法。
 * 博客主页示例：[cotes page](https://chirpy.cotes.page/)
@@ -116,9 +116,9 @@ defaults:
       toc: true # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
-      # 博客链接格式：https://xiaodongq.github.io/posts/memory-management/
+      # 博客链接格式：https://aletheics.github.io/posts/memory-management/
       # permalink: /posts/:title/
-      # 修改类型为：https://xiaodongq.github.io/2025/03/20/memory-management/
+      # 修改类型为：https://aletheics.github.io/2025/03/20/memory-management/
       permalink: /:year/:month/:day/:title/
 ```
 

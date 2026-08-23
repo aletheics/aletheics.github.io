@@ -16,7 +16,7 @@ Excalidraw 的作者是一位目前在 Facebook 工作的法裔前端开发工�
 
 Excalidraw 也是Github开源[项目](https://github.com/excalidraw/excalidraw)，从2020年开源开始，Star数一路直线增长。截止今天(2024-06-16)已达`75.7K`。
 
-值得一说的是excalidraw里还增加了AI功能，可以根据文字生成控件或者流程图。之前[设计模式示例博客](https://xiaodongq.github.io/2024/05/12/design-pattern-2-3-factory/)里的图就是自动生成的：  
+值得一说的是excalidraw里还增加了AI功能，可以根据文字生成控件或者流程图。之前[设计模式示例博客](https://aletheics.github.io/2024/05/12/design-pattern-2-3-factory/)里的图就是自动生成的：  
 ![23种设计模式](/images/2024-05-12-20240512100608.png)
 
 ### 1.2. 中文手绘效果

@@ -7,13 +7,13 @@ tags: [Troubleshooting]
 
 ## 1. 背景
 
-限于 [问题定位和性能优化案例集锦](https://xiaodongq.github.io/2025/04/15/excellent-trouble-shooting/) 的篇幅，其中的一些指标、工具、实验等在本篇中进行记录。
+限于 [问题定位和性能优化案例集锦](https://aletheics.github.io/2025/04/15/excellent-trouble-shooting/) 的篇幅，其中的一些指标、工具、实验等在本篇中进行记录。
 
 ## 2. 系统指标
 
 ### 2.1. proc smaps：进程的内存段信息
 
-虚拟内存布局，可见之前的梳理：[CPU及内存调度（二） -- Linux内存管理](https://xiaodongq.github.io/2025/03/20/memory-management/)
+虚拟内存布局，可见之前的梳理：[CPU及内存调度（二） -- Linux内存管理](https://aletheics.github.io/2025/03/20/memory-management/)
 
 ```sh
 # smaps内容
@@ -153,7 +153,7 @@ getpid                       10           20.359
 close                        10            9.638
 ```
 
-下面则是 [问题定位和性能优化案例集锦 -- Redis长尾延迟案例](https://xiaodongq.github.io/2025/04/15/excellent-trouble-shooting/#23-redis%E9%95%BF%E5%B0%BE%E5%BB%B6%E8%BF%9F%E6%A1%88%E4%BE%8B) 对应的`mmap`跟踪，截取贴到下面：
+下面则是 [问题定位和性能优化案例集锦 -- Redis长尾延迟案例](https://aletheics.github.io/2025/04/15/excellent-trouble-shooting/#23-redis%E9%95%BF%E5%B0%BE%E5%BB%B6%E8%BF%9F%E6%A1%88%E4%BE%8B) 对应的`mmap`跟踪，截取贴到下面：
 
 ```sh
 $> syscount -L -i 30  -p $PID
@@ -366,7 +366,7 @@ funcslower     71980    22.70               3a vfs_write
 `funcgraph` 工具之前用过很多次了，追踪内核态的接口调用栈很方便，这里特别再提一下。只是在perf-tools中，bcc里没有。
 
 比如下文中的使用示例：  
-[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://xiaodongq.github.io/2024/08/13/linux-kernel-fs/)
+[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://aletheics.github.io/2024/08/13/linux-kernel-fs/)
 
 ## 4. perf
 
@@ -395,7 +395,7 @@ bcc的 `syscount`（上面有小节说明） 也提供系统调用的耗时统�
    getpid                77      0     0.155     0.001     0.002     0.003      1.91%
 ```
 
-下面则是 [问题定位和性能优化案例集锦 -- Redis长尾延迟案例](https://xiaodongq.github.io/2025/04/15/excellent-trouble-shooting/#23-redis%E9%95%BF%E5%B0%BE%E5%BB%B6%E8%BF%9F%E6%A1%88%E4%BE%8B) 对应的`mmap`跟踪，没记录问题发生时的情况，仅贴一个普通情形下的追踪：
+下面则是 [问题定位和性能优化案例集锦 -- Redis长尾延迟案例](https://aletheics.github.io/2025/04/15/excellent-trouble-shooting/#23-redis%E9%95%BF%E5%B0%BE%E5%BB%B6%E8%BF%9F%E6%A1%88%E4%BE%8B) 对应的`mmap`跟踪，没记录问题发生时的情况，仅贴一个普通情形下的追踪：
 
 ```sh
 perf trace -p $PID -s
@@ -496,7 +496,7 @@ migration/0    12 [000] 605084.480483:       sched:sched_switch: prev_comm=migra
   605084.480555 [0001]  perf[35478]                         0.000      0.000      0.000 
 ```
 
-下面是 [问题定位和性能优化案例集锦 -- 进程调度案例](https://xiaodongq.github.io/2025/04/15/excellent-trouble-shooting/#24-%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%A1%88%E4%BE%8B) 中抓取的调度延迟情况：
+下面是 [问题定位和性能优化案例集锦 -- 进程调度案例](https://aletheics.github.io/2025/04/15/excellent-trouble-shooting/#24-%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%A1%88%E4%BE%8B) 中抓取的调度延迟情况：
 
 ```sh
 $ perf sched latency

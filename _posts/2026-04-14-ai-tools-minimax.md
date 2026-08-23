@@ -211,7 +211,7 @@ API key saved to /Users/xd/.mmx/config.json
 
 ### 3.2. 生成图片示例效果1（不满意）
 
-基于博客文章：[Claude Code系列 -- CC-Switch和CLIProxyApi组合共享API](https://xiaodongq.github.io/2026/04/12/ai-tools-openrouter-cc-switch/)生成配图
+基于博客文章：[Claude Code系列 -- CC-Switch和CLIProxyApi组合共享API](https://aletheics.github.io/2026/04/12/ai-tools-openrouter-cc-switch/)生成配图
 
 ```sh
  /minimax-skills:minimax-multimodal-toolkit 帮我基于 _posts/2026-04-12-ai-tools-openrouter-cc-switch.md 进行配图

@@ -12,7 +12,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 
 **说明**：
 1. 本文是 AI 基于 2026-03-09 的聊天记录自动生成的博客文章
-2. 由于是 AI 生成，部分内容可能存在不准确，具体实操请参考：[OpenClaw 实战手记 - 进阶搭建一人团队](https://xiaodongq.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)
+2. 由于是 AI 生成，部分内容可能存在不准确，具体实操请参考：[OpenClaw 实战手记 - 进阶搭建一人团队](https://aletheics.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)
 
 **AI 自动生成博客流程**：
 ![AI 自动生成博客的完整流程](/images/2026-03-09-blog-generation-flow.png)
@@ -51,7 +51,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 
 **详细配置**：参见 [一人团队配置文件归档](https://github.com/xiaodongQ/ai-playground/tree/main/design/一人团队配置文件归档)
 
-**实操步骤**：详见 [OpenClaw 实战手记 - 进阶搭建一人团队](https://xiaodongq.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)
+**实操步骤**：详见 [OpenClaw 实战手记 - 进阶搭建一人团队](https://aletheics.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)
 
 ---
 
@@ -142,7 +142,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 
 设计好方案后，手动创建 Agent 工作区，剩下就让 OpenClaw 自己修改人设文件了。
 
-**实操步骤**：详见 [OpenClaw 实战手记 - 进阶搭建一人团队](https://xiaodongq.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)
+**实操步骤**：详见 [OpenClaw 实战手记 - 进阶搭建一人团队](https://aletheics.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)
 
 **基本步骤**：
 ```bash
@@ -162,7 +162,7 @@ cp -r ~/.openclaw/workspace/* ~/.openclaw/workspace-dev-agent/
 
 ### 6.3 配置飞书通道
 
-参考：[OpenClaw 实战手记 - 飞书通道配置](https://xiaodongq.github.io/2026/03/05/openclaw-practise/#23-飞书通道配置)
+参考：[OpenClaw 实战手记 - 飞书通道配置](https://aletheics.github.io/2026/03/05/openclaw-practise/#23-飞书通道配置)
 
 **基本步骤**：
 1. 在飞书开放平台创建企业自建应用
@@ -277,10 +277,10 @@ tail -f ~/.openclaw/logs/*.log
 - [一人团队配置文件归档](https://github.com/xiaodongQ/ai-playground/tree/main/design/一人团队配置文件归档)
 
 ### 实战文档
-- [OpenClaw 实战手记](https://xiaodongq.github.io/2026/03/05/openclaw-practise.html)
-- [OpenClaw 进阶搭建一人团队](https://xiaodongq.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队) ⭐ **重点参考**
+- [OpenClaw 实战手记](https://aletheics.github.io/2026/03/05/openclaw-practise.html)
+- [OpenClaw 进阶搭建一人团队](https://aletheics.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队) ⭐ **重点参考**
 - [CrewAI + LangChain 学习材料包](https://github.com/xiaodongQ/ai-playground/tree/main/learning/crewai-langchain)
 
 ---
 
-**说明**：本文是 AI 基于聊天记录自动生成的博客文章，由于是 AI 生成，部分内容可能存在不准确，具体实操请重点参考 [OpenClaw 实战手记 - 进阶搭建一人团队](https://xiaodongq.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)。
+**说明**：本文是 AI 基于聊天记录自动生成的博客文章，由于是 AI 生成，部分内容可能存在不准确，具体实操请重点参考 [OpenClaw 实战手记 - 进阶搭建一人团队](https://aletheics.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)。

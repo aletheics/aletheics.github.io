@@ -8,9 +8,9 @@ tags: [Agent, 个人助手]
 ## 1. 引言
 
 在近期几个尝试和之前折腾过的自动任务系统基础上，结合自己的一些刚需来开发一个个人助手：
-* [AI能力集 -- 开发一个任务自动执行系统](https://xiaodongq.github.io/2026/04/19/ai-auto-task-system/)
-* [AI能力集 -- 开发一个 Skill 工厂](https://xiaodongq.github.io/2026/06/05/skill-factory-impl/)
-* [AI能力集 -- /loop 三天就废?如何设置长定时任务](https://xiaodongq.github.io/2026/06/05/claudecode-loop-task/)
+* [AI能力集 -- 开发一个任务自动执行系统](https://aletheics.github.io/2026/04/19/ai-auto-task-system/)
+* [AI能力集 -- 开发一个 Skill 工厂](https://aletheics.github.io/2026/06/05/skill-factory-impl/)
+* [AI能力集 -- /loop 三天就废?如何设置长定时任务](https://aletheics.github.io/2026/06/05/claudecode-loop-task/)
 
 ## 2. 需求描述（输入）
 
@@ -20,7 +20,7 @@ tags: [Agent, 个人助手]
 
 1、主页上能让我快捷添加/删除一些网页链接，用于我平时的跳转（左上角）
 
-比如 github主页：https://github.com/xiaodongQ/、博客地址：https://xiaodongq.github.io/ 等
+比如 github主页：https://github.com/xiaodongQ/、博客地址：https://aletheics.github.io/ 等
 
 2、主页上能让我添加/删除一些目录地址，点击时自动用对应系统的资源管理器打开（左中）
 

@@ -220,5 +220,5 @@ xd-self-market/
 ## 7. 其他
 
 * windterm 终端工具，替换xshell、secureCRT等ssh工具。目前Windows、Mac笔记本都换成了这个，挺好用。默认的横向和纵向分屏功能不大好用，可以让AI来添加快捷键，快捷分屏、快捷移动和关闭。
-* Excalidraw的快捷键，之前写了篇博客说明：[Excalidraw白板工具和快捷键](https://xiaodongq.github.io/2024/06/16/excalidraw-cn-font/)
-* vim插件，之前记录过：[Vim插件配置](https://xiaodongq.github.io/2015/08/01/vim-plugin-config/)，一直用的这套插件，有点老了不过够用，可以找找其他人的分享。除了插件，一些基本配置可以复用，常用的服务器建议上来就配置下，比如高亮搜索、换行和tab占有、自动语法缩减等。
+* Excalidraw的快捷键，之前写了篇博客说明：[Excalidraw白板工具和快捷键](https://aletheics.github.io/2024/06/16/excalidraw-cn-font/)
+* vim插件，之前记录过：[Vim插件配置](https://aletheics.github.io/2015/08/01/vim-plugin-config/)，一直用的这套插件，有点老了不过够用，可以找找其他人的分享。除了插件，一些基本配置可以复用，常用的服务器建议上来就配置下，比如高亮搜索、换行和tab占有、自动语法缩减等。

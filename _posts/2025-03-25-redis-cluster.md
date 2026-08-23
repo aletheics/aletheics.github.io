@@ -564,7 +564,7 @@ void sentinelReconnectInstance(sentinelRedisInstance *ri) {
 
 `quorum`参数表示能判断主库客观下线的最小哨兵实例数量；**选主及切换主库**，则需要满足总节点半数以上（`N/2+1`）。比如，有5个哨兵实例的Redis集群，`quorum`设置为2，若3个哨兵实例故障，则主库宕机异常时，可以正常判断主库客观下线，但是不满足半数（`3`）节点，所以无法选出新主库。
 
-**哨兵Leader选举并没有完全按照 Raft 协议来实现**。Raft选举相关论文学习，之前在 [MIT6.824学习笔记（四） -- Raft](https://xiaodongq.github.io/2024/08/30/mit-6-824-6-raft/) 中也学习过了，下面简单回顾并对比。
+**哨兵Leader选举并没有完全按照 Raft 协议来实现**。Raft选举相关论文学习，之前在 [MIT6.824学习笔记（四） -- Raft](https://aletheics.github.io/2024/08/30/mit-6-824-6-raft/) 中也学习过了，下面简单回顾并对比。
 
 * **Raft中**：有 `领导人（Leader）`、`跟随者（Follower）` 和 `候选人（Candidate）` 3种角色，通过定期心跳机制来 *维持Leader的权威* 和 *触发Leader选举*。在Leader异常时，`Follower`增加自己的`任期号`并切换为`Candidate`，并行地发起投票请求，当收到本任期号中半数以上选票则选举成功，成为`新Leader`，其他节点则承认新Leader并回到`Follower`状态。
 * **Redis中**：主节点正常运行过程中，哨兵之间的角色是**对等的**，只有哨兵发现主节点故障了，哨兵才按照`Raft`协议执行选举`Leader`的过程。

@@ -12,9 +12,9 @@ LevelDB学习笔记，本篇学习其布隆过滤器实现。
 
 之前学习记录中虽然有涉及但未展开：
 
-[LevelDB学习笔记（二） -- 读写操作流程](https://xiaodongq.github.io/2024/07/20/leveldb-io-implement/)里面的读写流程，没有展开说明
+[LevelDB学习笔记（二） -- 读写操作流程](https://aletheics.github.io/2024/07/20/leveldb-io-implement/)里面的读写流程，没有展开说明
 
-[LevelDB学习笔记（五） -- sstable实现](https://xiaodongq.github.io/2024/08/07/leveldb-sstable/)里提到`filter block`是基于布隆过滤器实现的。
+[LevelDB学习笔记（五） -- sstable实现](https://aletheics.github.io/2024/08/07/leveldb-sstable/)里提到`filter block`是基于布隆过滤器实现的。
 
 主要参考如下文章并映证LevelDB代码：
 

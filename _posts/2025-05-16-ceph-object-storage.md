@@ -16,7 +16,7 @@ tags: [存储, Ceph]
 
 Ceph`对象存储`包含一个`Ceph存储集群`和一个`对象网关`（Ceph Object Gateway）。
 
-* **Ceph存储集群**：如前面 [Ceph集群构成](https://xiaodongq.github.io/2025/05/03/ceph-overview/#22-ceph%E9%9B%86%E7%BE%A4%E6%9E%84%E6%88%90) 中所述，一个Ceph存储集群中至少包含`monitor`、`manager`、`osd`，文件存储则还包含`mds`。
+* **Ceph存储集群**：如前面 [Ceph集群构成](https://aletheics.github.io/2025/05/03/ceph-overview/#22-ceph%E9%9B%86%E7%BE%A4%E6%9E%84%E6%88%90) 中所述，一个Ceph存储集群中至少包含`monitor`、`manager`、`osd`，文件存储则还包含`mds`。
 * **对象网关**：构建在`librados`之上，通过`radosgw`守护进程提供服务，为应用程序提供对象存储`RESTful API`，用于操作Ceph存储集群。
 
 Ceph支持两种对象存储接口，两者共享一个命名空间（namespace），意味着一类接口写的数据可以通过另一类接口读取。

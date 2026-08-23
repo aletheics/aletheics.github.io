@@ -8,7 +8,7 @@ tags: [协程, 异步编程]
 
 ## 1. 引言
 
-[Ceph学习笔记（三） -- 对象存储](https://xiaodongq.github.io/2025/05/16/ceph-object-storage/) 中梳理`rgw`的`main`启动流程时，提到客户端请求管理类`RGWCompletionManager`基于**协程**实现。以及之前的多篇博客中留下了梳理协程的TODO项，本篇就来梳理下协程的机制原理，并基于开源项目进行实践。
+[Ceph学习笔记（三） -- 对象存储](https://aletheics.github.io/2025/05/16/ceph-object-storage/) 中梳理`rgw`的`main`启动流程时，提到客户端请求管理类`RGWCompletionManager`基于**协程**实现。以及之前的多篇博客中留下了梳理协程的TODO项，本篇就来梳理下协程的机制原理，并基于开源项目进行实践。
 
 相关参考：
 
@@ -19,7 +19,7 @@ tags: [协程, 异步编程]
     * [IO协程调度模块](https://www.midlane.top/wiki/pages/viewpage.action?pageId=10061031)
 * [协程Part1-boost.Coroutine.md](https://www.cnblogs.com/pokpok/p/16932735.html)
     * 说明：[boost.coroutine](https://www.boost.org/doc/libs/latest/libs/coroutine/doc/html/coroutine/overview.html)已经被标记为`已过时（deprecated）`了，不过可以从中学习理解协程的基本原理，新的协程实现为 [boost.coroutine2](https://www.boost.org/doc/libs/latest/libs/coroutine2/doc/html/index.html)。
-* 以及在[RocksDB学习笔记（三） -- RocksDB中的一些特性设计和高性能相关机制](https://xiaodongq.github.io/2025/04/30/rocksdb-performance-mechanism/)中未展开的几篇协程相关参考文章
+* 以及在[RocksDB学习笔记（三） -- RocksDB中的一些特性设计和高性能相关机制](https://aletheics.github.io/2025/04/30/rocksdb-performance-mechanism/)中未展开的几篇协程相关参考文章
     * [实现一个简单的协程](https://www.bluepuni.com/archives/implements-coroutine/)
     * [从无栈协程，到 Asio 的协程实现](https://www.bluepuni.com/archives/stackless-coroutine-and-asio-coroutine/)
     * [从 C++20 协程，到 Asio 的协程适配](https://www.bluepuni.com/archives/cpp20-coroutine-and-asio-coroutine/)
@@ -40,7 +40,7 @@ tags: [协程, 异步编程]
     * `yield`时只是暂时出让CPU，其他协程可以获得CPU并运行。
 * 协程创建后，其运行和`yield`、`resume`完全**由应用程序控制**，不经过内核调度。相对而言，线程的`运行和调度`则需要内核进行控制。
 * 协程的上下文切换开销
-    * 在之前的 [CPU及内存调度（一） -- 进程、线程、系统调用、协程上下文切换](https://xiaodongq.github.io/2025/03/09/context-switch) 中对比过几种上下文切换的时机和开销，此处贴一下作为参考。依赖不同硬件，参考数量级即可。
+    * 在之前的 [CPU及内存调度（一） -- 进程、线程、系统调用、协程上下文切换](https://aletheics.github.io/2025/03/09/context-switch) 中对比过几种上下文切换的时机和开销，此处贴一下作为参考。依赖不同硬件，参考数量级即可。
     * 进程上下文切换：`2.7us到5.48us之间`
     * 线程上下文切换：`3.8us`左右
     * 系统调用：`200ns`

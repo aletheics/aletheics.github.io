@@ -192,7 +192,7 @@ MCP可以是一个服务程序或者工具，在配置中告诉Claude Code可以
 
 1、示例1，我实际用的MiniMax联网MCP，添加命令：`claude mcp add -s user MiniMax --env MINIMAX_API_KEY=xxxx --env MINIMAX_API_HOST=https://api.minimaxi.com -- uvx minimax-coding-plan-mcp -y`
 
-而由于网络问题没自动安装成功，我是`pip install`安装工具后手动维护了MCP和配置，可见记录：[MiniMax MCP安装](https://xiaodongq.github.io/2026/04/14/ai-tools-minimax/)。原理一样的。
+而由于网络问题没自动安装成功，我是`pip install`安装工具后手动维护了MCP和配置，可见记录：[MiniMax MCP安装](https://aletheics.github.io/2026/04/14/ai-tools-minimax/)。原理一样的。
 
 ```sh
 # vi ~/.claude.json
@@ -390,7 +390,7 @@ Superpowers 会自动：
 
 ### 5.1. 会话远程切换功能、Cowork Dispatch远程操控桌面端
 
-自己用`happy-coder`，貌似不需要了。可见：[用手机远程控制Claude Code](https://xiaodongq.github.io/2026/04/01/happy-coder-remote-control/)
+自己用`happy-coder`，貌似不需要了。可见：[用手机远程控制Claude Code](https://aletheics.github.io/2026/04/01/happy-coder-remote-control/)
 
 ### 5.2. 定时自动化：`/loop` 和 `/schedule`
 
@@ -776,7 +776,7 @@ Claude Code会话周期各个阶段支持的hooks事件，示意图：
 
 ### 8.1. 初步搭建的市场
 
-如之前在 [复利工程 -- Obsidian Wiki模板仓库与实用工具分享](https://xiaodongq.github.io/2026/04/30/fubilee-tools-wiki-template/) 所说的，创建的个人AI工具集市场：[xiaodongQ/xd-self-market](https://github.com/xiaodongQ/xd-self-market)。
+如之前在 [复利工程 -- Obsidian Wiki模板仓库与实用工具分享](https://aletheics.github.io/2026/04/30/fubilee-tools-wiki-template/) 所说的，创建的个人AI工具集市场：[xiaodongQ/xd-self-market](https://github.com/xiaodongQ/xd-self-market)。
 
 目录结构如下：
 

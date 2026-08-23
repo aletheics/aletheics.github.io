@@ -34,7 +34,7 @@ tags: [存储, RocksDB]
 * [Rocksdb加SPDK改善吞吐能力建设](https://chenxu14.github.io/2021/02/04/rocksdb-perfomance-improve.html)
     * 暂不展开，Ceph中再看
 * [从 C++20 协程，到 Asio 的协程适配](https://www.bluepuni.com/archives/cpp20-coroutine-and-asio-coroutine)
-    * PS：发现之前也看过该博主相关文章，[梳理存储io栈](https://xiaodongq.github.io/2024/08/26/linux-io-stack-block/) 时看过的 [Linux 内核的 blk-mq（Block IO 层多队列）机制](https://www.bluepuni.com/archives/linux-blk-mq/)
+    * PS：发现之前也看过该博主相关文章，[梳理存储io栈](https://aletheics.github.io/2024/08/26/linux-io-stack-block/) 时看过的 [Linux 内核的 blk-mq（Block IO 层多队列）机制](https://www.bluepuni.com/archives/linux-blk-mq/)
 * 还是上面博客中的一些文章
     * [从无栈协程，到 Asio 的协程实现](https://www.bluepuni.com/archives/stackless-coroutine-and-asio-coroutine/)
     * [实现一个简单的协程](https://www.bluepuni.com/archives/implements-coroutine/)
@@ -50,7 +50,7 @@ tags: [存储, RocksDB]
 
 ### 2.1. 索引SST文件以提升查找性能
 
-1、可以先了解下 **`LevelDB`**中的`SST`文件结构（可见：[LevelDB学习笔记（五） -- sstable实现](https://xiaodongq.github.io/2024/08/07/leveldb-sstable)）：
+1、可以先了解下 **`LevelDB`**中的`SST`文件结构（可见：[LevelDB学习笔记（五） -- sstable实现](https://aletheics.github.io/2024/08/07/leveldb-sstable)）：
 
 ![leveldb-sstable-overview](/images/leveldb-sstable-overview.svg)  
 [出处](https://leveldb-handbook.readthedocs.io/zh/latest/sstable.html)，在此基础上添加说明

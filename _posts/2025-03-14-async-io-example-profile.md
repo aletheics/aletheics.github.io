@@ -9,7 +9,7 @@ tags: [CPU, 存储, 异步编程]
 
 ## 1. 背景
 
-[并发与异步编程（二） -- 异步编程框架了解](https://xiaodongq.github.io/2025/03/11/async-io/) 介绍了几种异步编程框架，现在来完成 [并发与异步编程（一） -- 实现一个简单线程池](https://xiaodongq.github.io/2025/03/08/threadpool/) 中的TODO，进行异步编程实验，并简单进行分析性能。
+[并发与异步编程（二） -- 异步编程框架了解](https://aletheics.github.io/2025/03/11/async-io/) 介绍了几种异步编程框架，现在来完成 [并发与异步编程（一） -- 实现一个简单线程池](https://aletheics.github.io/2025/03/08/threadpool/) 中的TODO，进行异步编程实验，并简单进行分析性能。
 
 * 1、通过 [gperftools](https://github.com/gperftools/gperftools) 采集分析资源消耗情况
 * 2、基于 [Brendan Gregg](https://www.brendangregg.com/index.html) 大佬的火焰图（[Flame Graphs](https://www.brendangregg.com/flamegraphs.html)）采集信息进行可视化展示，包括 On-CPU火焰图、Off-CPU火焰图
@@ -151,7 +151,7 @@ Off-CPU 能够识别的类型包含：阻塞在 I/O、锁、定时器、缺页�
 
 由于Off-CPU相关指标很多都涉及内核层面，perf采样比较耗性能，且perf自身造成的上下文切换会比较影响结果，上面几个工具的指标一般都是基于`eBPF`采集。
 
-之前 [eBPF学习实践系列](https://xiaodongq.github.io/2024/06/06/ebpf_learn) 中，学习实践了不少eBPF、ftrace相关的一些工具，这里再回顾一下。
+之前 [eBPF学习实践系列](https://aletheics.github.io/2024/06/06/ebpf_learn) 中，学习实践了不少eBPF、ftrace相关的一些工具，这里再回顾一下。
 
 1、基于eBPF的bcc工具集（/usr/share/bcc/tools/）：
 
@@ -175,7 +175,7 @@ Off-CPU 能够识别的类型包含：阻塞在 I/O、锁、定时器、缺页�
 * bpftrace 用来从上到下来跟踪到指定函数，即只能看到谁调用到指定追踪点
 * funcgraph 用来从指定函数往下追踪调用栈
 
-可以回顾之前用bpftrace和funcgraph追踪存储栈实践用法：[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://xiaodongq.github.io/2024/08/13/linux-kernel-fs/)、[Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://xiaodongq.github.io/2024/08/15/linux-write-io-stack/)
+可以回顾之前用bpftrace和funcgraph追踪存储栈实践用法：[Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口](https://aletheics.github.io/2024/08/13/linux-kernel-fs/)、[Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://aletheics.github.io/2024/08/15/linux-write-io-stack/)
 
 ### 4.2. 工具归档说明
 
@@ -245,7 +245,7 @@ flamegraph.pl --color=io --title="Off-CPU Time Flame Graph" --countname=us --rev
 * **堆栈方向**：从下到上，下面是用户态，上面是内核态堆栈。从中可看到**用户态程序真正被什么阻塞了**
     * 比如图中mysqld的`__pthread_cond_timedwait`系统调用，依次堆栈是进入内核态调用 -> `__x64_sys_futex` -> `do_futex` -> ... -> `finish_task_switch`
 * 虽然执行了stress，但火焰图中最宽的还是mysqld进程
-    * 这里mysqld时间占了**165秒**，原因如 [之前](https://xiaodongq.github.io/2025/03/09/context-switch/) 用`perf stat`分析线程池开销时所说的，`time elapse`（也叫墙上时间，Wall Clock Time）是程序开始到结束的时间（此处即这5s左右），是可能比用户时间（`user time`）和系统时间（`sys time`）小的，主要是多线程中这些时间是分别累加的。比如两个线程各自sys time是0.03s和0.04s，总的sys time就是0.07s，而time elapse可能只是`max(0.03, 0.04, usr time)`
+    * 这里mysqld时间占了**165秒**，原因如 [之前](https://aletheics.github.io/2025/03/09/context-switch/) 用`perf stat`分析线程池开销时所说的，`time elapse`（也叫墙上时间，Wall Clock Time）是程序开始到结束的时间（此处即这5s左右），是可能比用户时间（`user time`）和系统时间（`sys time`）小的，主要是多线程中这些时间是分别累加的。比如两个线程各自sys time是0.03s和0.04s，总的sys time就是0.07s，而time elapse可能只是`max(0.03, 0.04, usr time)`
     * 几个多线程服务就会出现这个尴尬的情况，Off-CPU火焰图中，总被这些大宽列影响整体查看。
     * **一个解决方式**是：过滤感兴趣线程的状态，比如不可中断睡眠状态，`offcputime -df --state 2`
 

@@ -7,7 +7,7 @@ tags: [AI, Agent]
 
 ## 1. 引言
 
-[之前](https://xiaodongq.github.io/2025/08/27/ai-agent-learn-2-framework/) 跟着`Hugging Face`的[AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)简单实践过agent开发，实际使用的话还是应该选择一个比较主流的框架。现在通过IDE或者CLI直接一句话就可以生成了，其中的框架流程和具体逻辑还是有必要去掌握的。
+[之前](https://aletheics.github.io/2025/08/27/ai-agent-learn-2-framework/) 跟着`Hugging Face`的[AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)简单实践过agent开发，实际使用的话还是应该选择一个比较主流的框架。现在通过IDE或者CLI直接一句话就可以生成了，其中的框架流程和具体逻辑还是有必要去掌握的。
 
 Agent开发实践，相关参考链接：
 * [crewai.cn文档](https://docs.crewai.org.cn/en/quickstart)

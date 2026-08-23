@@ -8,11 +8,11 @@ netfilter作为网络协议栈非常关键的一部分，本篇学习下netfilte
 
 ## 1. 背景
 
-在[追踪内核网络堆栈的几种方式](https://xiaodongq.github.io/2024/07/03/strace-kernel-network-stack)里记录了一下iptables设置日志跟踪的实践过程，CentOS8下为什么实验失败还没有定论。
+在[追踪内核网络堆栈的几种方式](https://aletheics.github.io/2024/07/03/strace-kernel-network-stack)里记录了一下iptables设置日志跟踪的实践过程，CentOS8下为什么实验失败还没有定论。
 
 平常工作中设置iptables防火墙规则，基本只是浮于表面记住，不清楚为什么这么设置，规则也经常混淆。
 
-[TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/)里面的TODO项：“内核drop包的时机，以及跟抓包的关系。哪些情况可能会抓不到drop的包？”，在系列文章里分析了源码里全连接、半连接溢出时drop的位置，给了个tcpdump能抓到drop原始请求包的现象结论，但没有理清楚流程。
+[TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/)里面的TODO项：“内核drop包的时机，以及跟抓包的关系。哪些情况可能会抓不到drop的包？”，在系列文章里分析了源码里全连接、半连接溢出时drop的位置，给了个tcpdump能抓到drop原始请求包的现象结论，但没有理清楚流程。
 
 这些问题都或多或少，或直接或间接跟**内核中的netfilter框架**有关系。
 
@@ -131,7 +131,7 @@ iptables 提供的 table 类型如下：
 
 ### 4.1. 先获取一份网络堆栈
 
-有多种方式获取堆栈，可按之前[追踪内核网络堆栈的几种方式](https://xiaodongq.github.io/2024/07/03/strace-kernel-network-stack/)里的方法，这里用bpftrace来获取。
+有多种方式获取堆栈，可按之前[追踪内核网络堆栈的几种方式](https://aletheics.github.io/2024/07/03/strace-kernel-network-stack/)里的方法，这里用bpftrace来获取。
 
 ```sh
 # TCP相关追踪点
@@ -825,7 +825,7 @@ static int __tcp_transmit_skb(struct sock *sk, struct sk_buff *skb,
 
 先说结果：上面`queue_xmit`中注册的函数是`ip_queue_xmit`，下面进行分析说明。
 
-我们在"[TCP半连接全连接（二） -- 半连接队列代码逻辑](https://xiaodongq.github.io/2024/05/30/tcp_syn_queue/)"中梳理过，面向连接的sock相关的初始化。这里再贴一下：
+我们在"[TCP半连接全连接（二） -- 半连接队列代码逻辑](https://aletheics.github.io/2024/05/30/tcp_syn_queue/)"中梳理过，面向连接的sock相关的初始化。这里再贴一下：
 
 `inet_init`初始化网络协议->注册TCP协议(`struct proto tcp_prot`)
 

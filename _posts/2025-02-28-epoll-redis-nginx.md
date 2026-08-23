@@ -9,7 +9,7 @@ tags: [网络, epoll, Redis]
 
 ## 1. 背景
 
-[前面](https://xiaodongq.github.io/2025/02/25/ioserver2-epoll-dive/)的ioserver demo中进行了基本的epoll机制使用，并梳理了开源网络库 muduo 的epoll使用和线程池实现。
+[前面](https://aletheics.github.io/2025/02/25/ioserver2-epoll-dive/)的ioserver demo中进行了基本的epoll机制使用，并梳理了开源网络库 muduo 的epoll使用和线程池实现。
 
 本篇继续epoll在Redis和Nginx中的使用，进一步加深理解。跟踪的源码分支保持和本地CentOS8环境安装的服务版本一致：Redis版本：`5.0.3`（单线程版本）、Nginx版本：`1.14`。
 
@@ -212,7 +212,7 @@ int listenToPort(int port, int *fds, int *count) {
 
 可看到全连接队列（ss中listening状态的句柄） `Send-Q`只有128，而redis.conf中默认配置的`tcp-backlog`为511。这是因为系统listen时取`min(传入的backlog, 系统net.core.somaxconn)`。
 
-TCP全连接队列和ss/netstat相关分析，可以参考之前的学习实践笔记：[TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/)。
+TCP全连接队列和ss/netstat相关分析，可以参考之前的学习实践笔记：[TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/)。
 
 ```sh
 [CentOS-root@xdlinux ➜ ~ ]$ netstat -anpt|grep -E "redis|Send-Q"
@@ -451,4 +451,4 @@ TODO
 * [万字多图，搞懂 Nginx 高性能网络工作原理！](https://mp.weixin.qq.com/s/AX6Fval8RwkgzptdjlU5kg)
 * [Redis 5.0.3 源码](https://github.com/redis/redis/tree/5.0.3)
 * [Nginx 1.14 源码](https://github.com/nginx/nginx/tree/stable-1.14)
-* [TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/)
+* [TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/)

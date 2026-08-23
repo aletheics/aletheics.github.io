@@ -38,7 +38,7 @@ tags: jekyll
 
     disqus操作：选择"I want to install Disqus on my site" -> 设置Website Name为github博客的地址，设置shortname（该name用于博客模板中进行配置）
 
-4. gitalk配置repo时，提示"ERROR: NOT FOUND"，去掉`repo: 'xiaodongq.github.io/'`中的`/`后正常
+4. gitalk配置repo时，提示"ERROR: NOT FOUND"，去掉`repo: 'aletheics.github.io/'`中的`/`后正常
 
 ---
 

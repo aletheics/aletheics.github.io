@@ -16,7 +16,7 @@ LevelDB学习笔记，本篇学习日志结构对应的实现。
 
 ### 2.1. 再看下总体流程
 
-[前面](https://xiaodongq.github.io/2024/07/20/leveldb-io-implement/)看过了写流程，这里再放一下：
+[前面](https://aletheics.github.io/2024/07/20/leveldb-io-implement/)看过了写流程，这里再放一下：
 
 ![写流程](/images/2024-07-25-level-write-process.png)
 
@@ -343,7 +343,7 @@ chunk共有四种类型：full，first，middle，last。一条日志记录若�
 
 上述要写的日志，即示意图中的Data（不包含7字节的header），在`WriteBatchInternal::Contents(write_batch)`里构造。
 
-[上篇](https://xiaodongq.github.io/2024/07/20/leveldb-io-implement/)中可知write_batch(类型为`WriteBatch*`)对应的编码格式如下（以`Put`为例，`Delete`则没有value对应信息）：
+[上篇](https://aletheics.github.io/2024/07/20/leveldb-io-implement/)中可知write_batch(类型为`WriteBatch*`)对应的编码格式如下（以`Put`为例，`Delete`则没有value对应信息）：
 
 ![batch](https://leveldb-handbook.readthedocs.io/zh/latest/_images/batch.jpeg)
 

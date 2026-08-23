@@ -8,7 +8,7 @@ tags: [网络, TCP]
 
 ## 1. 背景
 
-在“[TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/)”这篇文章中，进行了全连接队列溢出的实验，并且遗留了几个问题。
+在“[TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/)”这篇文章中，进行了全连接队列溢出的实验，并且遗留了几个问题。
 
 本博客跟踪分析半连接队列相关过程，并探究上述文章中的遗留问题。
 
@@ -232,7 +232,7 @@ ffff8af4c3a2a900 3360  python     172.23.133.146  8000  172.23.133.146  51068 FI
 
 先说结论：只有`SYN_RECV`，没有`TCP_NEW_SYN_RECV`
 
-之前 [分析netstat中的Send-Q和Recv-Q](https://xiaodongq.github.io/2024/05/27/netstat-code/) 中我们分析过netstat源码，快速找到解析逻辑所在位置：`main`->`tcp_info`->`tcp_do_one`
+之前 [分析netstat中的Send-Q和Recv-Q](https://aletheics.github.io/2024/05/27/netstat-code/) 中我们分析过netstat源码，快速找到解析逻辑所在位置：`main`->`tcp_info`->`tcp_do_one`
 
 ```sh
 [root@xdlinux ➜ /root ]$ netstat -anp|head -n4

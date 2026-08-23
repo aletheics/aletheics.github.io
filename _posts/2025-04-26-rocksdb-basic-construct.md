@@ -28,7 +28,7 @@ tags: [存储, RocksDB]
 * MemTable会根据配置的大小和数量来决定什么时候`flush`到磁盘上。一旦 MemTable 达到配置的大小，旧的 MemTable 和 WAL 都会变成`不可变`的状态（即immutable MemTable），然后会重新分配新的 MemTable 和 WAL 用来写入数据，旧的 MemTable 则会被 flush 到`SSTable`文件中，即`L0`层的数据。
 * 任何时间点，都**只有一个活跃的MemTable** 和 **0个或多个immutable MemTable**
 
-RocksDB中的`MemTable`基于**跳表**实现，可见之前梳理LevelDB时的说明：[跳表](https://xiaodongq.github.io/2024/08/02/leveldb-memtable-skiplist/#2-%E8%B7%B3%E8%A1%A8)。
+RocksDB中的`MemTable`基于**跳表**实现，可见之前梳理LevelDB时的说明：[跳表](https://aletheics.github.io/2024/08/02/leveldb-memtable-skiplist/#2-%E8%B7%B3%E8%A1%A8)。
 
 `MemTable`类定义：
 

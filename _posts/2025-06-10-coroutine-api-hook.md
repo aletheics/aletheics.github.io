@@ -52,7 +52,7 @@ hook实现有多种方式：**动态链接**、**静态链接**，还有**内核
 
 * 1、外挂式hook，也称**非侵入式hook**，不需要重新编译代码。通过**优先加载自定义动态库**来实现对后面动态库的hook。（对应上面结论中的`2.1`，实验demo可见参考链接）
     * 方式：实现和库函数签名相同的接口（如libc的`write`），编译为动态库，并在运行时通过`LD_PRELOAD`指定优先加载：`LD_PRELOAD="./libhook.so" ./a.out`。
-    * 比如之前在 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile) 中提及的`gperftools`工具，就可以通过`LD_PRELOAD`指定`tcmalloc`库来采集内存相关的统计。
+    * 比如之前在 [并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile) 中提及的`gperftools`工具，就可以通过`LD_PRELOAD`指定`tcmalloc`库来采集内存相关的统计。
 * 2、**侵入式hook**，需要**改造代码**或者**重新编译**一次，以指定动态库的加载顺序。
     * 改造代码方式：在代码里（比如`main.c`）直接实现相同签名的函数
     * 重新编译方式：编译时将自定义库放在libc之前链接，如`gcc main.c -L. -lhook -Wl,-rpath=.`（libc库默认链接顺序总是在最后），以实现**全局符号介入**。

@@ -235,7 +235,7 @@ struct SkipList<Key, Comparator>::Node {
 2. `std::memory_order_acquire`: 用在 load 时，保证同线程中该 load 之后的对相关内存读写语句不会被重排到 load 之前，并且其他线程中对同样内存用了 store release（`next_[n].store(x, std::memory_order_release)`） 都对其可见。
 3. `std::memory_order_release`：用在 store 时，保证同线程中该 store 之后的对相关内存的读写语句不会被重排到 store 之前，并且该线程的所有修改对用了 load acquire（`next_[n].load(std::memory_order_acquire)`） 的其他线程都可见。
 
-`load acquire`和`store release`常配套使用，之前在学习：[创建型设计模式-单例模式](https://xiaodongq.github.io/2024/05/11/design-pattern-1-singleton/)时，其中的双重检测单例里，也有个相关示例。
+`load acquire`和`store release`常配套使用，之前在学习：[创建型设计模式-单例模式](https://aletheics.github.io/2024/05/11/design-pattern-1-singleton/)时，其中的双重检测单例里，也有个相关示例。
 
 ### 4.3. 插入：SkipList::Insert
 

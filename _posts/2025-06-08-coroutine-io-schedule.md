@@ -36,9 +36,9 @@ sylar中的IO协程调度基于`epoll`实现。相对于上篇多线程下的协
     * 2）通过`pipe`管道来进行通知，当任务队列里还有任务没一次性处理完，通过`tickle()`向管道发送数据来触发`epoll_wait`
 
 `epoll`的使用流程和项目中的应用，之前在好几篇历史博文里都梳理过了，可作回顾：
-* Redis的事件循环：[梳理Redis中的epoll机制](https://xiaodongq.github.io/2025/02/28/epoll-redis-nginx/)
-* muduo库，以及trae生成的demo项目：[ioserver服务实验（二） -- epoll使用梳理](https://xiaodongq.github.io/2025/02/25/ioserver2-epoll-dive/)
-* 3FS里的事件循环也基于epoll：[DeepSeek 3FS学习实践（一） -- 事件循环](https://xiaodongq.github.io/2025/03/28/3fs-overview-eventloop/)
+* Redis的事件循环：[梳理Redis中的epoll机制](https://aletheics.github.io/2025/02/28/epoll-redis-nginx/)
+* muduo库，以及trae生成的demo项目：[ioserver服务实验（二） -- epoll使用梳理](https://aletheics.github.io/2025/02/25/ioserver2-epoll-dive/)
+* 3FS里的事件循环也基于epoll：[DeepSeek 3FS学习实践（一） -- 事件循环](https://aletheics.github.io/2025/03/28/3fs-overview-eventloop/)
     * 另外其中也基于`Folly`库的**协程**，对IO进行了异步化。
 
 ## 3. 调度逻辑梳理
@@ -265,7 +265,7 @@ int IOManager::addEvent(int fd, Event event, std::function<void()> cb)
 
 `IOManager`里没有重载父类`Scheduler`中的`run()`，因此**调度类线程池**中各调度线程的线程函数还是`Scheduler::run()`。
 
-具体逻辑可见上篇中的 [调度处理：run()](https://xiaodongq.github.io/2025/06/02/coroutine-schedule/#34-%E8%B0%83%E5%BA%A6%E5%A4%84%E7%90%86run)。这里贴一下上篇的流程图：
+具体逻辑可见上篇中的 [调度处理：run()](https://aletheics.github.io/2025/06/02/coroutine-schedule/#34-%E8%B0%83%E5%BA%A6%E5%A4%84%E7%90%86run)。这里贴一下上篇的流程图：
 
 ![sylar-coroutine-schedule](/images/sylar-coroutine-schedule.svg)
 

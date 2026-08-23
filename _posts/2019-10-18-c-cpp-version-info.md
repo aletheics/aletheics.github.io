@@ -8,7 +8,7 @@ tags: C/C++版本
 
 ## C++各版本
 
-C++版本之前也讲到过：[C++中的RAII机制和互斥锁应用](https://xiaodongq.github.io/2019/10/16/C++%E4%B8%AD%E7%9A%84RAII%E6%9C%BA%E5%88%B6%E5%92%8C%E4%BA%92%E6%96%A5%E9%94%81%E5%BA%94%E7%94%A8/)
+C++版本之前也讲到过：[C++中的RAII机制和互斥锁应用](https://aletheics.github.io/2019/10/16/C++%E4%B8%AD%E7%9A%84RAII%E6%9C%BA%E5%88%B6%E5%92%8C%E4%BA%92%E6%96%A5%E9%94%81%E5%BA%94%E7%94%A8/)
 
 百度百科：[c++0x](https://baike.baidu.com/item/c%2B%2B0x)
 

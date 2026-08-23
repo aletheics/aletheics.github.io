@@ -10,7 +10,7 @@ tags: [Git, GitHub, 博客]
 博客用了几年下来，`images` 和 `.git` 越来越膨胀，克隆一次要好久，还占硬盘空间。这是当前仓库大小，已经370MB了。。
 
 ```sh
-[MacOS-xd@qxd ➜ xiaodongQ.github.io git:(master) ✗ ]$ du -h -d1|sort -h
+[MacOS-xd@qxd ➜ aletheics.github.io git:(master) ✗ ]$ du -h -d1|sort -h
 4.0K    ./.claude
 4.0K    ./.github
 4.0K    ./_draft
@@ -102,9 +102,9 @@ tags: [Git, GitHub, 博客]
 
 ```sh
 # 1、添加LFS追踪规则
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ git lfs track "*.png" "*.jpg" "*.jpeg" "*.gif" "*.svg" "*.cap" "*.pcap"
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ git lfs track "*.png" "*.jpg" "*.jpeg" "*.gif" "*.svg" "*.cap" "*.pcap"
 # 2、查看并确认内容
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ cat .gitattributes
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ cat .gitattributes
 ...
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
@@ -128,7 +128,7 @@ git push
 * 查看LFS追踪规则：`git lfs track`
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ git lfs track
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ git lfs track
 Listing tracked patterns
     *.png (.gitattributes)
     *.jpg (.gitattributes)
@@ -155,14 +155,14 @@ Listing excluded patterns
 迁移后，本地`.git`会膨胀，文件会修改：
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ git status
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ git status
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
         modified:   assets/img/favicons/favicon.svg
         modified:   images/2024-07-03-tcp-graph-tcptrace-detail.jpeg
         ...
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ du -h -d1
 # 之前是90MB左右
 155M    ./.git
 101M    ./images
@@ -178,16 +178,16 @@ Changes not staged for commit:
 
 ```sh
 # 该步不能缺少，在此之前，git lfs ls-files看不到LFS管理的文件
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ git add -A
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ git add -A
 
 # 然后就可查看到LFS管理的文件了
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ git lfs ls-files
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ git lfs ls-files
 4b15f617f5 * assets/img/favicons/favicon.svg
 e63de17933 * images/2024-07-03-tcp-graph-tcptrace-detail.jpeg
 24a1d5e5e0 * images/2024-07-21-leveldb-class-graph.svg
 
 # 历史还是没变
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ du -h -d1
 155M    ./.git
 101M    ./images
 ...
@@ -196,18 +196,18 @@ e63de17933 * images/2024-07-03-tcp-graph-tcptrace-detail.jpeg
 #### 3.2.3. git commit提交
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ git commit -m "迁移现有图片到git LFS"
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ git commit -m "迁移现有图片到git LFS"
 [master d58ec63] 迁移现有图片到git LFS
  95 files changed, 195 insertions(+), 62615 deletions(-)
 
 # 历史还是没变
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ du -h -d1
 155M    ./.git
 101M    ./images
 ...
 
 # 查看LFS状态，有待push的对象
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ git lfs status
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ git lfs status
 On branch master
 Objects to be pushed to origin/master:
     assets/img/favicons/favicon.svg (4b15f617f57b868da21f4bfadaca140542667a851d960e98e0230a4a1ea4e6d0)
@@ -234,7 +234,7 @@ Objects to be pushed to origin/master:
 ```
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ git push --force-with-lease
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ git push --force-with-lease
 Uploading LFS objects: 100% (95/95), 78 MB | 4.0 MB/s, done.
 Enumerating objects: 198, done.
 Counting objects: 100% (198/198), done.
@@ -243,27 +243,27 @@ Compressing objects: 100% (101/101), done.
 Writing objects: 100% (102/102), 14.26 KiB | 2.38 MiB/s, done.
 Total 102 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
-To github.com:xiaodongQ/xiaodongq.github.io.git
+To github.com:aletheics/aletheics.github.io.git
    a56e390..d58ec63  master -> master
 ```
 
 ```sh
 # 历史还是没变
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ✗ ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ✗ ]$ du -h -d1
 155M    ./.git
 101M    ./images
 ...
 
 # LFS状态，已经没有待处理数据了
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ git lfs status
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ git lfs status
 On branch master
 Objects to be pushed to origin/master:
 Objects to be committed:
 Objects not staged for commit:
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$
 
 # 查看被LFS管理的文件
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ git lfs ls-files
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ git lfs ls-files
 4b15f617f5 * assets/img/favicons/favicon.svg
 e63de17933 * images/2024-07-03-tcp-graph-tcptrace-detail.jpeg
 24a1d5e5e0 * images/2024-07-21-leveldb-class-graph.svg
@@ -283,8 +283,8 @@ e63de17933 * images/2024-07-03-tcp-graph-tcptrace-detail.jpeg
 ```sh
 # 下面方式只给当前这一条git clone命令临时设置环境变量，克隆完就失效，不影响以后的Git操作。
 # 不能分成2条分别执行（否则只定义了一个本地变量，git clone拿不到这个值）
-[root@xdlinux ➜ workspace ]$ GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:xiaodongQ/xiaodongq.github.io.git
-Cloning into 'xiaodongq.github.io'...
+[root@xdlinux ➜ workspace ]$ GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:aletheics/aletheics.github.io.git
+Cloning into 'aletheics.github.io'...
 remote: Enumerating objects: 7049, done.
 remote: Counting objects: 100% (3817/3817), done.
 remote: Compressing objects: 100% (1892/1892), done.
@@ -296,7 +296,7 @@ Resolving deltas: 100% (4373/4373), done.
 **大小只有11MB了**，`images`里只保留了图片的LFS的指针。
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ du -h -d1
 4.2M    ./.git
 3.1M    ./_posts
 2.8M    ./images
@@ -317,14 +317,14 @@ size 995001
 
 ```sh
 # images里可从大小看出来，文件指针还原为真实图片数据了
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ du -h -d1
 105M    ./.git
 101M    ./images
 ...
 211M    .
 
 # .git里面可看到lfs缓存变大了
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ du -h -d1 .git
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ du -h -d1 .git
 101M    .git/lfs
 ...
 105M    .git
@@ -374,7 +374,7 @@ jobs:
 
 ```sh
 # `.git/lfs`目录里是LFS缓存，关闭smudge时里面只有文件地址
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ du -h -d1 .git
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ du -h -d1 .git
 0       .git/branches
 84K     .git/hooks
 4.0K    .git/info
@@ -388,14 +388,14 @@ jobs:
 2、作为对比，clone时不指定`GIT_LFS_SKIP_SMUDGE=1`，默认会下载图片。可看到不加参数的话`images`和`.git`里还是很大：
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io_1508 git:(master) ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io_1508 git:(master) ]$ du -h -d1
 107M    ./.git
 101M    ./images
 ...
 213M    .
 
 # `.git/lfs`下面是LFS的缓存，不关闭smudge时里面有真实图片
-[root@xdlinux ➜ xiaodongq.github.io_1508 git:(master) ]$ du -h -d1 .git
+[root@xdlinux ➜ aletheics.github.io_1508 git:(master) ]$ du -h -d1 .git
 0       .git/branches
 84K     .git/hooks
 4.0K    .git/info
@@ -449,7 +449,7 @@ jobs:
 
 ```sh
 # 1. 克隆镜像
-git clone --mirror git@github.com:xiaodongQ/xiaodongq.github.io.git /home/xd_blog_mirror
+git clone --mirror git@github.com:aletheics/aletheics.github.io.git /home/xd_blog_mirror
 
 [root@xdlinux ➜ xd_blog_mirror git:(master) ]$ du -sh /home/xd_blog_mirror
 171M    /home/xd_blog_mirror
@@ -506,7 +506,7 @@ BFG **只清理Git历史版本**（`.git`）里的大文件，**当前分支最�
 瘦身前：
 
 ```sh
-[MacOS-xd@qxd ➜ xiaodongQ.github.io git:(master) ✗ ]$ du -h -d1|sort -h
+[MacOS-xd@qxd ➜ aletheics.github.io git:(master) ✗ ]$ du -h -d1|sort -h
 3.1M    ./_posts
 166M    ./images
 200M    ./.git
@@ -516,7 +516,7 @@ BFG **只清理Git历史版本**（`.git`）里的大文件，**当前分支最�
 瘦身后：
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ du -h -d1
 4.2M    ./.git
 3.1M    ./_posts
 2.8M    ./images
@@ -527,7 +527,7 @@ BFG **只清理Git历史版本**（`.git`）里的大文件，**当前分支最�
 仓库从原来的`371MB`变成了`11MB`（LFS所管理的文件只clone文件指针），克隆和更新都飞快。若本地需要使用图片，`git lfs pull`进行拉取即可（下面是lfs pull之后，`211M`相对之前也还是下降不少）。
 
 ```sh
-[root@xdlinux ➜ xiaodongq.github.io git:(master) ]$ du -h -d1
+[root@xdlinux ➜ aletheics.github.io git:(master) ]$ du -h -d1
 105M    ./.git
 101M    ./images
 ...

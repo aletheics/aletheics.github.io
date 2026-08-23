@@ -17,11 +17,11 @@ tags: [Wireshark, eBPF, bcc, ss, bpftrace]
 
 设置路径：在Wireshark中对照查看(**设置->Appearance->Layout->Pane3 选 Packet Diagram**)
 
-使用示例，看协议代码时head和图印证：[TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/#63-%E6%8E%A5%E6%94%B6%E6%B5%81%E7%A8%8B)
+使用示例，看协议代码时head和图印证：[TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/#63-%E6%8E%A5%E6%94%B6%E6%B5%81%E7%A8%8B)
 
 ### 1.2. TCP流统计图（TCP Stream Graphs）
 
-几个图的说明示例可见：[TCP发送接收过程（一） -- Wireshark跟踪TCP流统计图](https://xiaodongq.github.io/2024/06/30/tcp-wireshark-tcp-graphs/)
+几个图的说明示例可见：[TCP发送接收过程（一） -- Wireshark跟踪TCP流统计图](https://aletheics.github.io/2024/06/30/tcp-wireshark-tcp-graphs/)
 
 ![TCP流图形tcptrace](/images/2024-07-01-wireshark-tcptrace.png)
 
@@ -69,7 +69,7 @@ tags: [Wireshark, eBPF, bcc, ss, bpftrace]
 
 各类火焰图：On-CPU、Off-CPU、Wakeup、Off-Wake。
 
-使用示例可见：[并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://xiaodongq.github.io/2025/03/14/async-io-example-profile/)
+使用示例可见：[并发与异步编程（三） -- 性能分析工具：gperftools和火焰图](https://aletheics.github.io/2025/03/14/async-io-example-profile/)
 
 火焰图还有下面介绍的 [Memory Leak and Growth火焰图](#33-memory-leak-and-growth火焰图)。
 
@@ -77,17 +77,17 @@ tags: [Wireshark, eBPF, bcc, ss, bpftrace]
 
 ### 3.1. Valgrind Massif
 
-使用实验可参考：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://xiaodongq.github.io/2025/04/02/memory-profiling-tools)
+使用实验可参考：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://aletheics.github.io/2025/04/02/memory-profiling-tools)
 
 ### 3.2. AddressSanitizer 和 其他 Sanitizer工具
 
-使用实验可参考：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://xiaodongq.github.io/2025/04/02/memory-profiling-tools)
+使用实验可参考：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://aletheics.github.io/2025/04/02/memory-profiling-tools)
 
 ### 3.3. Memory Leak and Growth火焰图
 
 [Memory Leak and Growth火焰图](https://www.brendangregg.com/FlameGraphs/memoryflamegraphs.html)
 
-使用实验可参考：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://xiaodongq.github.io/2025/04/02/memory-profiling-tools)
+使用实验可参考：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://aletheics.github.io/2025/04/02/memory-profiling-tools)
 
 ## 4. eBPF：bcc tools、bpftrace
 
@@ -143,7 +143,7 @@ I/O size (bytes) histograms by process name:
 
 ![linux_kernel_event_bpf](/images/linux_kernel_event_bpf.png)  
 
-[eBPF学习实践系列（一） -- 初识eBPF](https://xiaodongq.github.io/2024/06/06/ebpf_learn/#22-ebpf%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81%E5%8F%8A%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7) 里简要说明了下。
+[eBPF学习实践系列（一） -- 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/#22-ebpf%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81%E5%8F%8A%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7) 里简要说明了下。
 
 ### 4.2. bcc tools
 
@@ -151,9 +151,9 @@ I/O size (bytes) histograms by process name:
 
 下面几篇博客做了一些介绍和实验：
 
-* [eBPF学习实践系列（一） -- 初识eBPF](https://xiaodongq.github.io/2024/06/06/ebpf_learn/)
-* 网络相关：[eBPF学习实践系列（二） -- bcc tools网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/)
-* 内存相关：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://xiaodongq.github.io/2025/04/02/memory-profiling-tools/#6-bcc-tools%E5%B7%A5%E5%85%B7)
+* [eBPF学习实践系列（一） -- 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/)
+* 网络相关：[eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/)
+* 内存相关：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://aletheics.github.io/2025/04/02/memory-profiling-tools/#6-bcc-tools%E5%B7%A5%E5%85%B7)
 
 自行编译了bcc libbpf版本，工具归档在：[tools](https://github.com/xiaodongQ/prog-playground/tree/main/tools)，其中的 bcc_libbpf-tools_bin_db5b63f.tar.xz 压缩包。基于 x86_64，gcc8.5.0，bcc commitid：db5b63ff876d3346021871e2189a354bfc6d510e，20250315才提交的，项目一直在更新，后续按需编译。
 
@@ -163,7 +163,7 @@ bpftrace提供的追踪类型：
 
 ![bpftrace提供的追踪类型](/images/bpftrace_probes_2018.png)
 
-介绍和工具使用，可见：[eBPF学习实践系列（六） -- bpftrace学习和使用](https://xiaodongq.github.io/2024/06/28/ebpf-bpftrace-learn/)
+介绍和工具使用，可见：[eBPF学习实践系列（六） -- bpftrace学习和使用](https://aletheics.github.io/2024/06/28/ebpf-bpftrace-learn/)
 
 bpftrace-tools 自己也归档了一份便于统一使用：[tools](https://github.com/xiaodongQ/prog-playground/tree/main/tools)，其中的bpftrace-tools_v0.23.1。
 
@@ -204,7 +204,7 @@ top
 
 ![perf-tools工具集](/images/perf-tools_2016.png)
 
-可了解：[eBPF学习实践系列（一） -- 初识eBPF](https://xiaodongq.github.io/2024/06/06/ebpf_learn/#222-perf-tools)。
+可了解：[eBPF学习实践系列（一） -- 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/#222-perf-tools)。
 
 ### 5.1. perf使用示例
 
@@ -216,8 +216,8 @@ perf的使用，可以见Brendan Gregg大佬的网站：[perf Examples](https://
 
 可见：
 
-* [Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口：追踪工具说明](https://xiaodongq.github.io/2024/08/13/linux-kernel-fs/#42-%E8%BF%BD%E8%B8%AA%E5%B7%A5%E5%85%B7%E8%AF%B4%E6%98%8E)
-* [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://xiaodongq.github.io/2024/08/15/linux-write-io-stack/)
+* [Linux存储IO栈梳理（二） -- Linux内核存储栈流程和接口：追踪工具说明](https://aletheics.github.io/2024/08/13/linux-kernel-fs/#42-%E8%BF%BD%E8%B8%AA%E5%B7%A5%E5%85%B7%E8%AF%B4%E6%98%8E)
+* [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://aletheics.github.io/2024/08/15/linux-write-io-stack/)
 
 ## 6. 源码阅读分析：calltree.pl 和 cpptree.pl
 
@@ -231,8 +231,8 @@ perf的使用，可以见Brendan Gregg大佬的网站：[perf Examples](https://
 
 使用到该工具：
 
-* 查看调用栈：[Redis学习实践（三） -- 主从复制和集群](https://xiaodongq.github.io/2025/03/25/redis-cluster/#23-%E4%B8%BB%E5%BA%93%E5%BA%94%E7%AD%94%E5%A4%84%E7%90%86)
-* 查看代码规模：[CPU及内存调度（四） -- ptmalloc、tcmalloc、jemalloc、mimalloc内存分配器（上）](https://xiaodongq.github.io/2025/04/04/memory-allocator/#32-dlmalloc%E8%AF%B4%E6%98%8E)
+* 查看调用栈：[Redis学习实践（三） -- 主从复制和集群](https://aletheics.github.io/2025/03/25/redis-cluster/#23-%E4%B8%BB%E5%BA%93%E5%BA%94%E7%AD%94%E5%A4%84%E7%90%86)
+* 查看代码规模：[CPU及内存调度（四） -- ptmalloc、tcmalloc、jemalloc、mimalloc内存分配器（上）](https://aletheics.github.io/2025/04/04/memory-allocator/#32-dlmalloc%E8%AF%B4%E6%98%8E)
 
 ## 7. 命令和小技巧
 

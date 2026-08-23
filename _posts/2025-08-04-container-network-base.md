@@ -8,7 +8,7 @@ tags: [云原生, 容器网络]
 
 ## 1. 引言
 
-[Kubernetes学习实践](https://xiaodongq.github.io/categories/kubernetes/) 前几篇中了解了基本的K8s操作，终于可以开始梳理容器网络了，这也是之前的核心出发点之一，本篇来梳理下容器网络相关基础，并澄清说明一下本机网络的基本流程。
+[Kubernetes学习实践](https://aletheics.github.io/categories/kubernetes/) 前几篇中了解了基本的K8s操作，终于可以开始梳理容器网络了，这也是之前的核心出发点之一，本篇来梳理下容器网络相关基础，并澄清说明一下本机网络的基本流程。
 
 本篇主要参考：[开发内功修炼](https://kfngxl.cn/index.php) 中网络篇的一些文章，后续再在本基础上扩展学习。
 * 本机网络通信：本地回环 和 `Unix Domain Socket`
@@ -25,7 +25,7 @@ tags: [云原生, 容器网络]
 
 ## 2. 本机网络通信方式说明
 
-[Kubernetes学习实践（一） -- 总体说明和基本使用](https://xiaodongq.github.io/2025/07/13/kubernetes-overview/) 中搭建环境时提到需要为容器CLI工具`crictl`新增配置文件（“修复上述警告和crictl命令执行不了的问题”所在小节），其中指定了`Unix Domain Socket（UDS）`的通信地址：`unix:///var/run/containerd/containerd.sock`，这里就是指定`UDS`进行`bind`时需要用到的文件路径。
+[Kubernetes学习实践（一） -- 总体说明和基本使用](https://aletheics.github.io/2025/07/13/kubernetes-overview/) 中搭建环境时提到需要为容器CLI工具`crictl`新增配置文件（“修复上述警告和crictl命令执行不了的问题”所在小节），其中指定了`Unix Domain Socket（UDS）`的通信地址：`unix:///var/run/containerd/containerd.sock`，这里就是指定`UDS`进行`bind`时需要用到的文件路径。
 
 此处来介绍下`Unix Domain Socket`的本机通信方式，并说明其和`127.0.0.1`回环（`loopback`）网络通信的差异，以及和跨主机网络通信的差异。
 
@@ -49,7 +49,7 @@ EOF
 
 发送方数据经过内核网络协议栈处理，通过**邻居子系统**发送到驱动程序，而后通过**网卡硬件**发出。接收方则也通过**网卡硬件**接收。
 
-之前宿主机网络相关的梳理和实验稍微多一点，可见：[TCP发送接收过程](https://xiaodongq.github.io/categories/tcp%E5%8F%91%E9%80%81%E6%8E%A5%E6%94%B6%E8%BF%87%E7%A8%8B/) 和 [TCP半连接全连接](https://xiaodongq.github.io/categories/tcp%E5%8D%8A%E8%BF%9E%E6%8E%A5%E5%85%A8%E8%BF%9E%E6%8E%A5/)。
+之前宿主机网络相关的梳理和实验稍微多一点，可见：[TCP发送接收过程](https://aletheics.github.io/categories/tcp%E5%8F%91%E9%80%81%E6%8E%A5%E6%94%B6%E8%BF%87%E7%A8%8B/) 和 [TCP半连接全连接](https://aletheics.github.io/categories/tcp%E5%8D%8A%E8%BF%9E%E6%8E%A5%E5%85%A8%E8%BF%9E%E6%8E%A5/)。
 
 2、loopback回环网络通信流程
 
@@ -167,7 +167,7 @@ Server closed.
 * `rm`本质上调用`unlink`实现文件删除，但支持更多功能（如递归删除目录 -r、强制删除 -f 等）
     * `unlink`一次只能删除一个文件，且不能删除目录；`rm`可批量删除文件或目录。
 
-文件的`inode`链接计数，之前在 [从1万空文件占用空间大小看Linux文件系统结构](https://xiaodongq.github.io/2023/06/30/linux-directory-struct/) 中也做过简单实验，这里再看下，刚touch的文件（未创建soft/hard链接）：`Links: 1`
+文件的`inode`链接计数，之前在 [从1万空文件占用空间大小看Linux文件系统结构](https://aletheics.github.io/2023/06/30/linux-directory-struct/) 中也做过简单实验，这里再看下，刚touch的文件（未创建soft/hard链接）：`Links: 1`
 ```sh
 [root@xdlinux ➜ unix_domain_socket git:(main) ✗ ]$ touch 111
 [root@xdlinux ➜ unix_domain_socket git:(main) ✗ ]$ stat 111 
@@ -390,7 +390,7 @@ listening on veth4, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 
 `veth`的创建、发送/接收等内核源码过程，具体可见[参考链接](https://kfngxl.cn/index.php/archives/415/)进行学习，本篇暂只跟踪下数据发送接口：`veth_xmit`。
 
-追踪内核正反调用栈，还是用`bpftrace`（也可用`perf record -e`+`perf report`） + `funcgraph`。可了解之前的实践用法：[追踪内核网络堆栈的几种方式](https://xiaodongq.github.io/2024/07/03/strace-kernel-network-stack/) 和 [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://xiaodongq.github.io/2024/08/15/linux-write-io-stack/)，还是得结合场景多实践内化，要不时间一长又弱化了。
+追踪内核正反调用栈，还是用`bpftrace`（也可用`perf record -e`+`perf report`） + `funcgraph`。可了解之前的实践用法：[追踪内核网络堆栈的几种方式](https://aletheics.github.io/2024/07/03/strace-kernel-network-stack/) 和 [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://aletheics.github.io/2024/08/15/linux-write-io-stack/)，还是得结合场景多实践内化，要不时间一长又弱化了。
 * `perf-tools`需要从 [GitHub项目主页](https://github.com/brendangregg/perf-tools) 下载使用，可以自行本地归档一份，比如我的归档：[tools/perf-tools](https://github.com/xiaodongQ/prog-playground/tree/main/tools/perf-tools)。
 
 查看对应的符号和追踪点：

@@ -8,7 +8,7 @@ tags: 网络
 
 ## 1. 说明
 
-继续上一篇 [TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://xiaodongq.github.io/2024/06/23/bcctools-trace-tcp_connect/)
+继续上一篇 [TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://aletheics.github.io/2024/06/23/bcctools-trace-tcp_connect/)
 
 *说明：本博客作为个人学习实践笔记，可供参考但非系统教程，可能存在错误或遗漏，欢迎指正。若需系统学习，建议参考原链接。*
 
@@ -272,7 +272,7 @@ Failed to load and verify BPF skeleton
 
 先降低难度使用[bpftrace](https://github.com/bpftrace/bpftrace)吧。。
 
-这里记录了bpftrace学习使用：[eBPF学习实践系列（六） -- bpftrace学习和使用](https://xiaodongq.github.io/2024/06/28/ebpf-bpftrace-learn/)
+这里记录了bpftrace学习使用：[eBPF学习实践系列（六） -- bpftrace学习和使用](https://aletheics.github.io/2024/06/28/ebpf-bpftrace-learn/)
 
 ### 3.1. 尝试tcpdrop.bt跟踪
 
@@ -289,7 +289,7 @@ Failed to load and verify BPF skeleton
 definitions.h:3:10: fatal error: 'net/sock.h' file not found
 ```
 
-[之前](https://xiaodongq.github.io/2024/06/12/record-failed-expend-space/)重装系统时内核小版本不对应，应该是内核头文件没有
+[之前](https://aletheics.github.io/2024/06/12/record-failed-expend-space/)重装系统时内核小版本不对应，应该是内核头文件没有
 
 查看安装匹配的：kernel-headers
 
@@ -366,7 +366,7 @@ kprobe:tcp_drop
 结果对比：
 
 * 上小节`tcpdrop.bt`没抓到服务端全连接队列满时的drop包；
-* 在[TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://xiaodongq.github.io/2024/06/23/bcctools-trace-tcp_connect/)里用bcc的`tcpdrop`也没抓到服务端drop包，当时遗留了一个TODO项：“TODO tcpdrop的应用场景没理解到位？待跟eBPF主动监测对比”
+* 在[TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://aletheics.github.io/2024/06/23/bcctools-trace-tcp_connect/)里用bcc的`tcpdrop`也没抓到服务端drop包，当时遗留了一个TODO项：“TODO tcpdrop的应用场景没理解到位？待跟eBPF主动监测对比”
 
 之前以为是工具理解不到位，到这里基本可以排除了。工具对应的下述两个追踪点确实就是没有触发到：
 
@@ -569,7 +569,7 @@ Message sent: helloworld
 Connection Failed
 ```
 
-* 服务端bpftrace结果如下，抓包文件在[这里](https://github.com/xiaodongQ/xiaodongq.github.io/tree/master/images/srcfiles/8080_server150-20240630.cap)
+* 服务端bpftrace结果如下，抓包文件在[这里](https://github.com/aletheics/aletheics.github.io/tree/master/images/srcfiles/8080_server150-20240630.cap)
 
 ```sh
 [root@xdlinux ➜ bpftrace_tcp_queue git:(main) ✗ ]$ ./tcp_queue.bt   
@@ -677,21 +677,21 @@ net.ipv4.tcp_tw_reuse = 2
 
 过程笔记顺序稍作了调整，包含：
 
-* [TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/)
-* [TCP半连接全连接（二） -- 半连接队列代码逻辑](https://xiaodongq.github.io/2024/05/30/tcp_syn_queue/)
-* [TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://xiaodongq.github.io/2024/06/23/bcctools-trace-tcp_connect/)
-* [TCP半连接全连接（四） -- eBPF跟踪全连接队列溢出（下）](https://xiaodongq.github.io/2024/06/26/libbpf-trace-tcp_connect/)
+* [TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/)
+* [TCP半连接全连接（二） -- 半连接队列代码逻辑](https://aletheics.github.io/2024/05/30/tcp_syn_queue/)
+* [TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://aletheics.github.io/2024/06/23/bcctools-trace-tcp_connect/)
+* [TCP半连接全连接（四） -- eBPF跟踪全连接队列溢出（下）](https://aletheics.github.io/2024/06/26/libbpf-trace-tcp_connect/)
 
-* [分析某环境中ss结果中Send-Q为0的原因](https://xiaodongq.github.io/2024/05/20/ss-sendq-0/)
-* [分析netstat中的Send-Q和Recv-Q](https://xiaodongq.github.io/2024/05/27/netstat-code/)
+* [分析某环境中ss结果中Send-Q为0的原因](https://aletheics.github.io/2024/05/20/ss-sendq-0/)
+* [分析netstat中的Send-Q和Recv-Q](https://aletheics.github.io/2024/05/27/netstat-code/)
 
-* [eBPF学习实践系列（一） -- 初识eBPF](https://xiaodongq.github.io/2024/06/06/ebpf_learn/)
-* [eBPF学习实践系列（二） -- bcc tools网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/)
-* [eBPF学习实践系列（三） -- 基于libbpf开发实践](https://xiaodongq.github.io/2024/06/15/libbpf-future/)
-* [eBPF学习实践系列（四） -- eBPF的各种追踪类型](https://xiaodongq.github.io/2024/06/19/ebpf-trace-type/)
-* [eBPF学习实践系列（五） -- 分析tcplife.bpf.c程序](https://xiaodongq.github.io/2024/06/20/ebpf-practice-case/)
-* [eBPF学习实践系列（六） -- bpftrace学习和使用](https://xiaodongq.github.io/2024/06/28/ebpf-bpftrace-learn/)
-* [记一次失败的/boot分区扩容](https://xiaodongq.github.io/2024/06/12/record-failed-expend-space/)
+* [eBPF学习实践系列（一） -- 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/)
+* [eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/)
+* [eBPF学习实践系列（三） -- 基于libbpf开发实践](https://aletheics.github.io/2024/06/15/libbpf-future/)
+* [eBPF学习实践系列（四） -- eBPF的各种追踪类型](https://aletheics.github.io/2024/06/19/ebpf-trace-type/)
+* [eBPF学习实践系列（五） -- 分析tcplife.bpf.c程序](https://aletheics.github.io/2024/06/20/ebpf-practice-case/)
+* [eBPF学习实践系列（六） -- bpftrace学习和使用](https://aletheics.github.io/2024/06/28/ebpf-bpftrace-learn/)
+* [记一次失败的/boot分区扩容](https://aletheics.github.io/2024/06/12/record-failed-expend-space/)
 
 ## 6. 参考
 

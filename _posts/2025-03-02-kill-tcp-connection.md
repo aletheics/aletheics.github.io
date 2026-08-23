@@ -9,7 +9,7 @@ tags: [网络, tcpkill, hping3]
 
 ## 1. 背景
 
-1、梳理Redis中的epoll流程时（[梳理Redis和Nginx中的epoll机制](https://xiaodongq.github.io/2025/02/28/epoll-redis-nginx/)），看到accept回调中客户端关于keepalive相关的初始配置，想起来之前关于连接建立的实验和梳理：[网络实验 -- TIME_WAIT状态的连接收到SYN是什么表现](https://xiaodongq.github.io/2024/07/13/tcp-timewait-rcv-request/)，回顾了一遍。
+1、梳理Redis中的epoll流程时（[梳理Redis和Nginx中的epoll机制](https://aletheics.github.io/2025/02/28/epoll-redis-nginx/)），看到accept回调中客户端关于keepalive相关的初始配置，想起来之前关于连接建立的实验和梳理：[网络实验 -- TIME_WAIT状态的连接收到SYN是什么表现](https://aletheics.github.io/2024/07/13/tcp-timewait-rcv-request/)，回顾了一遍。
 
 实验中发生Seq回绕时，会向已经`Established`的服务端发送一个非法的Seq，而服务端会发送正确的ACK，这个ACK叫 **`Challenge ACK`**。客户端发现ACK并不是自己期望的，于是回复RST报文，服务端收到后就会关闭连接。
 
@@ -248,7 +248,7 @@ TODO：后续阅读工具的代码，考虑用Cpp/Go/Rust实现小工具。
 
 ## 6. 参考
 
-* [网络实验 -- TIME_WAIT状态的连接收到SYN是什么表现](https://xiaodongq.github.io/2024/07/13/tcp-timewait-rcv-request/)
+* [网络实验 -- TIME_WAIT状态的连接收到SYN是什么表现](https://aletheics.github.io/2024/07/13/tcp-timewait-rcv-request/)
 * [4.9 已建立连接的TCP，收到SYN会发生什么？](https://www.xiaolincoding.com/network/3_tcp/challenge_ack.html)
 * [4.13 拔掉网线后， 原本的 TCP 连接还存在吗？](https://www.xiaolincoding.com/network/3_tcp/tcp_unplug_the_network_cable.html)
 * [4.12 TCP 连接，一端断电和进程崩溃有什么区别？](https://www.xiaolincoding.com/network/3_tcp/tcp_down_and_crash.html)

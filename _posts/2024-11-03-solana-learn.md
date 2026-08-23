@@ -23,7 +23,7 @@ Rust项目学习：Solana。
 * [Solana中文开发教程](https://www.solanazh.com/)
 * blockchain背景知识：[B站北京大学肖臻老师《区块链技术与应用》公开课](https://www.bilibili.com/video/BV1Vt411X7JF/?vd_source=477b80445c7c1a81617bbea3bdf9a3c1)
 
-关于区块链，之前在《左耳听风》学习过基础的技术原理（笔记：[区块链学习笔记](https://xiaodongq.github.io/2019/10/27/blockchain-note/)），另外当时看《OK区块链60讲》里的应用时还挺受触动（[区块链学习.md](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%85%B6%E4%BB%96%E8%AE%B0%E5%BD%95/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0.md)），近些年也或多或少参与Crypto的投资或投机（屯大饼二饼；矿机；GTC/ENS/OP/ARB/ZK空投；链游；NFT）。之前看过BTC和以太坊的几本书，但没参与相关开发，趁学Rust的机会拓展下技能栈。
+关于区块链，之前在《左耳听风》学习过基础的技术原理（笔记：[区块链学习笔记](https://aletheics.github.io/2019/10/27/blockchain-note/)），另外当时看《OK区块链60讲》里的应用时还挺受触动（[区块链学习.md](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%85%B6%E4%BB%96%E8%AE%B0%E5%BD%95/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0.md)），近些年也或多或少参与Crypto的投资或投机（屯大饼二饼；矿机；GTC/ENS/OP/ARB/ZK空投；链游；NFT）。之前看过BTC和以太坊的几本书，但没参与相关开发，趁学Rust的机会拓展下技能栈。
 
 ## 2. Solana开发入门
 
@@ -98,7 +98,7 @@ Solana上有几种不同的网络环境（也称作集群，`cluster`），注�
 
 ### 2.5. Solana和BPF
 
-特别说明下，Solana基于`eBPF`实现了一个专门用于智能合约的运行时环境，这个运行时环境称为`Solana BPF Loader`。意外地跟前面 [eBPF学习实践系列](https://xiaodongq.github.io/2024/06/06/ebpf_learn/) 联接起来了，后面可以多看下基于Rust编写eBPF程序（相关实际示例参考：[一次使用 ebpf 来解决 k8s 网络通信故障记录](https://mp.weixin.qq.com/s/cK8Ffhr2M6okysu-_iI6jg)、[一次使用 eBPF LSM 来解决系统时间被回调的记录](https://mp.weixin.qq.com/s/6jpXhWpHhGbkz6fHSKckBw)。
+特别说明下，Solana基于`eBPF`实现了一个专门用于智能合约的运行时环境，这个运行时环境称为`Solana BPF Loader`。意外地跟前面 [eBPF学习实践系列](https://aletheics.github.io/2024/06/06/ebpf_learn/) 联接起来了，后面可以多看下基于Rust编写eBPF程序（相关实际示例参考：[一次使用 ebpf 来解决 k8s 网络通信故障记录](https://mp.weixin.qq.com/s/cK8Ffhr2M6okysu-_iI6jg)、[一次使用 eBPF LSM 来解决系统时间被回调的记录](https://mp.weixin.qq.com/s/6jpXhWpHhGbkz6fHSKckBw)。
 
 Solana 利用`LLVM`编译架构将程序编译成可执行与可链接格式文件(`ELF`)。这些文件包括一个为Solana程序修改过的BPF字节码(`eBPF bytecode`)，称为“Solana Bytecode Format”(`sBPF`)。
 

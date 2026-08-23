@@ -8,7 +8,7 @@ tags: [TCP, Wireshark, 接收缓冲区]
 
 ## 1. 引言
 
-[上篇](https://xiaodongq.github.io/2025/05/08/tcp-window-size-case/)进行了基本的TCP发送接收窗口调整实验，实际情况中则可能会碰到网络丢包、网络延迟、乱序等各种情况，本篇借助`tc`进行异常情况模拟，观察TCP发送接收的表现。
+[上篇](https://aletheics.github.io/2025/05/08/tcp-window-size-case/)进行了基本的TCP发送接收窗口调整实验，实际情况中则可能会碰到网络丢包、网络延迟、乱序等各种情况，本篇借助`tc`进行异常情况模拟，观察TCP发送接收的表现。
 
 ## 2. tc说明
 
@@ -69,7 +69,7 @@ tags: [TCP, Wireshark, 接收缓冲区]
 **扩展阅读**：[Linux-Traffic-Control-Classifier-Action-Subsystem-Architecture.pdf](https://people.netfilter.org/pablo/netdev0.1/papers/Linux-Traffic-Control-Classifier-Action-Subsystem-Architecture.pdf)，介绍了`TC Classifier-Action`子系统的架构。
 
 * 可了解到其和`netfilter`的位置关系：数据流入 -> `ingress TC` -> `netfilter` -> `egress TC` -> 数据流出。见下图示意。
-* 关于`netfilter`可见 [TCP发送接收过程 -- 学习netfilter和iptables](https://xiaodongq.github.io/2024/07/05/netfilter-iptables-learn/) 中的学习梳理。另外看了下当前自己`Rocky Linux`环境的`firewalld`防火墙后端，也默认`nftables`了（弃用了`iptables`）：`FirewallBackend=nftables`。
+* 关于`netfilter`可见 [TCP发送接收过程 -- 学习netfilter和iptables](https://aletheics.github.io/2024/07/05/netfilter-iptables-learn/) 中的学习梳理。另外看了下当前自己`Rocky Linux`环境的`firewalld`防火墙后端，也默认`nftables`了（弃用了`iptables`）：`FirewallBackend=nftables`。
 
 ![linux-tc-netfilter-datapath](/images/linux-tc-netfilter-datapath.png)  
 [出处](https://people.netfilter.org/pablo/netdev0.1/papers/Linux-Traffic-Control-Classifier-Action-Subsystem-Architecture.pdf)
@@ -89,7 +89,7 @@ tags: [TCP, Wireshark, 接收缓冲区]
 * `root qdisc`的`handle`一般使用`1:0`表示，`ingress`一般使用`ffff:0`表示。
 
 > 下面`tc`用到的`netem`需要先安装加载 `sch_netem` 内核模块（`yum install kernel-modules-extra`，需确认内核小版本也是一致的、`modprobe sch_netem`）。  
-> [之前](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/#381-tc%E6%A8%A1%E6%8B%9F) 实验bcc网络工具时就踩过坑了，所以本次安装Rocky Linux时/boot分区分的空间足够大。
+> [之前](https://aletheics.github.io/2024/06/10/bcc-tools-network/#381-tc%E6%A8%A1%E6%8B%9F) 实验bcc网络工具时就踩过坑了，所以本次安装Rocky Linux时/boot分区分的空间足够大。
 {: .prompt-warning }
 
 ```sh

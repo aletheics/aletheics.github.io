@@ -8,7 +8,7 @@ eBPF学习实践，初步整理学习。
 
 ## 1. 背景
 
-在“[TCP半连接全连接（一） -- 全连接队列相关过程](https://xiaodongq.github.io/2024/05/18/tcp_connect/)”这篇文章中，进行了全连接队列溢出的实验，准备后续用eBPF跟踪过程。
+在“[TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/)”这篇文章中，进行了全连接队列溢出的实验，准备后续用eBPF跟踪过程。
 
 eBPF名声在外，之前没用过时简单翻完了《Linux内核观测技术BPF》这本动物书，正好趁这个机会掌握熟悉这个技能，祛魅。
 
@@ -19,16 +19,16 @@ eBPF名声在外，之前没用过时简单翻完了《Linux内核观测技术BP
 eBPF学习实践记录包含下面几篇（另外各篇里的参考链接文章很值得一看），其中也包含捣腾的"弯路"。回顾并结合自己学习实践过程，给一些初学的建议参考。
 
 * eBPF学习实践系列（一） -- 初识eBPF
-* [eBPF学习实践系列（二） -- bcc tools网络工具集](https://xiaodongq.github.io/2024/06/10/bcc-tools-network/)
-* [eBPF学习实践系列（三） -- 基于libbpf开发实践](https://xiaodongq.github.io/2024/06/15/libbpf-future/)
-* [eBPF学习实践系列（四） -- eBPF的各种追踪类型](https://xiaodongq.github.io/2024/06/19/ebpf-trace-type/)
-* [eBPF学习实践系列（五） -- 分析tcplife.bpf.c程序](https://xiaodongq.github.io/2024/06/20/ebpf-practice-case/)
-* [eBPF学习实践系列（六） -- bpftrace学习和使用](https://xiaodongq.github.io/2024/06/28/ebpf-bpftrace-learn/)
+* [eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/)
+* [eBPF学习实践系列（三） -- 基于libbpf开发实践](https://aletheics.github.io/2024/06/15/libbpf-future/)
+* [eBPF学习实践系列（四） -- eBPF的各种追踪类型](https://aletheics.github.io/2024/06/19/ebpf-trace-type/)
+* [eBPF学习实践系列（五） -- 分析tcplife.bpf.c程序](https://aletheics.github.io/2024/06/20/ebpf-practice-case/)
+* [eBPF学习实践系列（六） -- bpftrace学习和使用](https://aletheics.github.io/2024/06/28/ebpf-bpftrace-learn/)
 
-* [TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://xiaodongq.github.io/2024/06/23/bcctools-trace-tcp_connect/)
-* [TCP半连接全连接（四） -- eBPF跟踪全连接队列溢出（下）](https://xiaodongq.github.io/2024/06/26/libbpf-trace-tcp_connect/)
+* [TCP半连接全连接（三） -- eBPF跟踪全连接队列溢出（上）](https://aletheics.github.io/2024/06/23/bcctools-trace-tcp_connect/)
+* [TCP半连接全连接（四） -- eBPF跟踪全连接队列溢出（下）](https://aletheics.github.io/2024/06/26/libbpf-trace-tcp_connect/)
 
-* [TCP发送接收过程 -- 学习netfilter和iptables](https://xiaodongq.github.io/2024/07/05/netfilter-iptables-learn/)
+* [TCP发送接收过程 -- 学习netfilter和iptables](https://aletheics.github.io/2024/07/05/netfilter-iptables-learn/)
 
 eBPF初学建议顺序：
 
