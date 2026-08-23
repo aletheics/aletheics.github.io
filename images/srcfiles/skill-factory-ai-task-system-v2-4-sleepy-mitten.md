@@ -676,7 +676,7 @@ mv data/skill-factory.db data/skill-factory.db.v1.bak
 冒烟（curl 一遍 5 个新功能）：
 ```bash
 # 1. 网页链接
-curl -X POST localhost:8080/api/web-links -d '{"name":"GitHub","url":"https://github.com/xiaodongQ/"}'
+curl -X POST localhost:8080/api/web-links -d '{"name":"GitHub","url":"https://github.com/aletheics/"}'
 curl localhost:8080/api/web-links
 
 # 2. 目录快捷

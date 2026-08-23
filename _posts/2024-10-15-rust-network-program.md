@@ -26,7 +26,7 @@ Rust学习实践，学习Rust网络编程，并编写Web服务器Demo。
 
 此处先只关注基于TCP的网络服务，学习 `TcpListener` 和 `TcpStream` 用法。
 
-下述涉及代码，也可见：
+下述涉及代码，也可见
 
 ### 2.1. TcpListener 和 TcpStream
 
@@ -103,7 +103,7 @@ Request: [
 
 上述代码补全逻辑后的demo：单线程解析请求，并根据不同请求内容，返回不同页面提示
 
-完整代码可见：
+完整代码可见
 
 ```rust
 fn handle_client(mut stream: TcpStream) {

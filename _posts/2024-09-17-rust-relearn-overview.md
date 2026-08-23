@@ -76,9 +76,9 @@ Rust的优势此处不做过多描述，可参见这篇介绍（“自夸”）�
 
 前置说明：
 
-* 1、基于[《The Rust Programming Language》](https://doc.rust-lang.org/book/)（中文版：[Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)）大概过一下，部分术语的英文表达参考这里。之前的初步学习笔记在：
+* 1、基于[《The Rust Programming Language》](https://doc.rust-lang.org/book/)（中文版：[Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)）大概过一下，部分术语的英文表达参考这里。之前的初步学习笔记在
 * 2、上述罗列的参考资料大概看了一下，[Rust开源教程：Rust语言圣经(Rust Course)](https://course.rs/about-book.html) 的内容比较贴合自己当前的偏好，先基于该教程学习梳理，其他作为辅助。
-* 3、代码练习还是复用之前的仓库：
+* 3、代码练习还是复用之前的仓库
 * 4、VSCode插件（结合《Rust编程第一课》和 [墙推 VSCode!](https://course.rs/first-try/editor.html) 中推荐的插件）
     + `rust-analyzer`：它会实时编译和分析你的 Rust 代码，提示代码中的错误，并对类型进行标注。你也可以使用官方的 Rust 插件取代。
         + 官方的`Rust`插件已经不维护了

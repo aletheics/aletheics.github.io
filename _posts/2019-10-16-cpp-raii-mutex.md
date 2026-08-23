@@ -18,7 +18,7 @@ RAII(Resource Acquisition Is Initialization)，，是C++语言的一种管理资
 
 C++标准保证任何情况下，已构造的对象最终会销毁，即它的析构函数最终会被调用。
 
-根据 RAII 对象的生存期在退出作用域时结束这一基本状况，此技术的另一名称是*作用域界定的资源管理*（ Scope-Bound Resource Management，SBRM）。
+根据 RAII 对象的生存期在退出作用域时结束这一基本状况，此技术的另一名称是*作用域界定的资源管理*（Scope-Bound Resource Management，SBRM）。
 
 
 RAII 可总结如下:

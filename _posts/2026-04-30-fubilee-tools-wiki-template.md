@@ -88,7 +88,7 @@ obsidian_xd/
 
 ## 3. WezTerm 配置
 
-配置拷贝到`~/.config/wezterm`即可使用：。
+配置拷贝到`~/.config/wezterm`即可使用。
 
 ### 3.1. 核心快捷键
 
@@ -142,7 +142,7 @@ obsidian_xd/
 
 ### 4.2. 默认样式配置
 
-默认配色感觉不大好看，参考了[博主 sansui233 的配置](https://www.sansui233.com/posts/2024-11-12-%E6%8A%8Adrawio%E8%A3%85%E4%BF%AE%E4%B8%BA%E7%AE%80%E5%8D%95%E7%BE%8E%E8%A7%82%E7%9A%84%E7%99%BD%E6%9D%BF%E5%BA%94%E7%94%A8)，自己也改了一版，见：。
+默认配色感觉不大好看，参考了[博主 sansui233 的配置](https://www.sansui233.com/posts/2024-11-12-%E6%8A%8Adrawio%E8%A3%85%E4%BF%AE%E4%B8%BA%E7%AE%80%E5%8D%95%E7%BE%8E%E8%A7%82%E7%9A%84%E7%99%BD%E6%9D%BF%E5%BA%94%E7%94%A8)，自己也改了一版，见。
 
 效果1：  
 ![handy-tools.drawio](/images/handy-tools.drawio.svg)
@@ -190,7 +190,7 @@ zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path "$ZSH_CACHE_DIR"
 ```
 
-一些其他配置，也可见笔记：
+一些其他配置，也可见笔记
 
 ---
 
@@ -198,7 +198,7 @@ zstyle ':completion::complete:*' cache-path "$ZSH_CACHE_DIR"
 
 日常积累的 Claude Code Skills、MCPs、Commands 等工具配置，整理到一个归档仓库，便于不同环境复用。建议每个人都构建自己的市场仓库，换一个机器后可以快速搭建环境。
 
-比如我初步搭建的： 
+比如我初步搭建的
 
 ```
 xd-self-market/

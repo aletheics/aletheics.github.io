@@ -404,4 +404,4 @@ void LRUCache::LRU_Append(LRUHandle* list, LRUHandle* e) {
 
 2、[leveldb-handbook cache](https://leveldb-handbook.readthedocs.io/zh/latest/cache.html)
 
-3、[漫谈 LevelDB 数据结构（三）：LRU 缓存（ LRUCache）](https://www.qtmuniao.com/2021/05/09/levedb-data-structures-lru-cache/)
+3、[漫谈 LevelDB 数据结构（三）：LRU 缓存（LRUCache）](https://www.qtmuniao.com/2021/05/09/levedb-data-structures-lru-cache/)

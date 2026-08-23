@@ -4,7 +4,7 @@ This file provides guidance to CodeBuddy Code when working with code in this rep
 
 ## Repository Overview
 
-Personal technical blog of xiaodongQ, built with Jekyll and the [jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) gem (v7.2+), deployed to GitHub Pages at https://xiaodongq.github.io. Post content is primarily in Chinese; site UI is in English (`lang: en` in `_config.yml`).
+Personal technical blog of aletheic, built with Jekyll and the [jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) gem (v7.2+), deployed to GitHub Pages at https://aletheics.github.io. Post content is primarily in Chinese; site UI is in English (`lang: en` in `_config.yml`).
 
 ## Common Commands
 
@@ -39,7 +39,7 @@ Posts use date-based permalinks:
 ```
 permalink: /:year/:month/:day/:title/
 ```
-e.g. `https://xiaodongq.github.io/2025/03/20/memory-management/`. `_config.yml` has a comment warning that changing this requires updating all existing post links. Tab pages use `permalink: /:title/`.
+e.g. `https://aletheics.github.io/2025/03/20/memory-management/`. `_config.yml` has a comment warning that changing this requires updating all existing post links. Tab pages use `permalink: /:title/`.
 
 ### Custom plugin: git-based lastmod
 `_plugins/posts-lastmod-hook.rb` registers a `:post_init` hook that sets `last_modified_at` from `git log` for any post touched by more than one commit. This requires git history to be present (the deploy workflow uses `fetch-depth: 0` for this reason).
@@ -48,8 +48,8 @@ e.g. `https://xiaodongq.github.io/2025/03/20/memory-management/`. `_config.yml` 
 `assets/css/jekyll-theme-chirpy.scss` is the entry point — it `@use`s the theme's `main` stylesheet (or `main.bundle` in production) and appends overrides. It also `@import`s `colorbox.scss`, which defines the `.box-info`, `.box-tip`, `.box-warning`, `.box-danger` callout styles referenced in posts via `{: .prompt-info }` / `{: .prompt-tip }` etc. Append custom SCSS here, not in the gem.
 
 ### Comments / analytics / PWA
-- **Comments:** Giscus (`comments.provider: giscus`), tied to repo `xiaodongQ/xiaodongq.github.io`, category `Announcements`.
-- **Analytics:** GoatCounter (`pageviews.provider: goatcounter`, id `xiaodongq`).
+- **Comments:** Giscus (`comments.provider: giscus`), tied to repo `aletheics/aletheics.github.io`, category `Announcements`.
+- **Analytics:** GoatCounter (`pageviews.provider: goatcounter`, id `aletheics`).
 - **PWA:** enabled with offline caching (`pwa.enabled: true`, `pwa.cache.enabled: true`).
 - **HTML compression:** enabled in production via `compress_html` (disabled in `development` env).
 

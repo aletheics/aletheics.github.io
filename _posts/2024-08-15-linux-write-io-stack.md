@@ -79,7 +79,7 @@ int main()
 
 编译：`g++ -o write_tempfile write_by_signal.cpp`
 
-代码和Makefile归档：
+代码和Makefile归档
 
 ### 3.1. 运行跟踪
 
@@ -358,7 +358,7 @@ int main(void)
 
 编译：`g++ -o write_direct write_by_signal_direct.cpp`
 
-代码和Makefile归档：
+代码和Makefile归档
 
 ### 4.4. 追踪结果
 

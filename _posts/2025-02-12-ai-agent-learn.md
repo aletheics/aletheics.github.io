@@ -64,7 +64,7 @@ Transformer 架构有3种类型：
     * 将文本转化为密集表示，用于文本分类、语义搜索等，比如Google的`BERT`
 * 解码器（Decoder）
     * 逐一生成新标记以完成序列，用于文本生成、聊天机器人、代码生成等，比如Meta的`Llama`
-* 序列到序列（Seq2Seq ）
+* 序列到序列（Seq2Seq）
     * 结合两者，用于翻译、总结、释义等，比如 T5（Google）、BART（Meta）
 
 常见模型：
@@ -140,7 +140,7 @@ LLM在大规模文本数据集上进行训练，在此过程中，它们通过`�
 
 ![UI和后台内容差异](/images/2025-02-16-llm-assistant.jpg)
 
-这里就是`聊天模板（chat templates）`发生作用的地方，它们充当了`对话消息（conversational messages ）`（上图中`用户`和`助手`间的轮次）与所选大语言模型`特定格式要求（the specific formatting requirements）`之间的桥梁。换句话说，聊天模板构建了用户与智能体之间的交流结构，确保每个模型，尽管它们有独特的特殊token，都能收到格式正确的提示（prompt）。
+这里就是`聊天模板（chat templates）`发生作用的地方，它们充当了`对话消息（conversational messages）`（上图中`用户`和`助手`间的轮次）与所选大语言模型`特定格式要求（the specific formatting requirements）`之间的桥梁。换句话说，聊天模板构建了用户与智能体之间的交流结构，确保每个模型，尽管它们有独特的特殊token，都能收到格式正确的提示（prompt）。
 
 **消息**：LLM（大语言模型）的底层系统
 

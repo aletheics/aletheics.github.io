@@ -209,7 +209,7 @@ edition = "2021"
 name = "minigrep"
 ```
 
-完整代码在：
+完整代码在
 
 ## 4. 模块化设计
 
@@ -219,30 +219,30 @@ name = "minigrep"
     * 关注点分离(Separation of Concerns)
 * 命令行解析是比较基础的功能，还是放在 main.rs 中
 
-代码逐步优化：（过程代码见：）
+代码逐步优化：
 
 * 优化1：解析传入参数抽取为函数；匹配逻辑由 `match` 调整为 `unwrap()` 处理
     * 抽取函数：`fn parse_args(args : &Vec<String>) -> (&str, &str) { xxx }`
     * `match`模式匹配调整为`unwarp()`：`let file_contents = std::fs::read_to_string(file_path).unwrap();`
         * unwrap 方法用于处理 Result 类型，如果 Result 类型是 Ok，则返回 Ok 中的值，否则程序会 panic
-    * 对应代码：
+    * 对应代码
 * 优化2：解析函数返回值由 2个元素的元组 调整为 struct结构体(定义`struct Config`)
     * `fn parse_args(args : &Vec<String>) -> Config { xxx }`
-    * 对应代码：
+    * 对应代码
 * 优化3：创建Config实例的方式，由函数调整为`impl`实现结构体方法（关联函数）`new`，面向对象编程
     * `impl Config { fn new(args : &[String]) -> Config { xxx} }`
         * 处理：`let config = Config::new(&args);`
-    * 对应代码：
+    * 对应代码
 * 优化4：使用`Result<T, E>`方式处理错误，方法名调整为`build`（语义更合适），并通过`闭包`处理错误
     * `impl Config { fn build(args : &[String]) -> Result<Config, &'static str> { xxx } }`
         * 处理：`let config = Config::build(&args).unwrap_or_else(|err| { xxx }`
         * `unwrap_or_else` 是定义在 `Result<T,E>` 上的常用方法，如果`Result`是`Ok`，那该方法就类似`unwrap`：返回`Ok`内部的值；如果是`Err`，就调用闭包中的自定义代码对错误进行进一步处理
-    * 对应代码：
+    * 对应代码
 * 优化5：分离main里的业务逻辑，抽取为 run 函数
     * `fn run(config : Config) -> Result<(), Box<dyn std::error::Error>> { xxx }`
         * std::error::Error 是Rust标准库的一个 trait，定义了错误处理的行为
         * dyn 表示动态分派，是Rust中的一种动态分派机制
-    * 对应代码：
+    * 对应代码
 * 优化6：分离业务逻辑到库包`lib.rs`中，并在`main.rs`里`use`引入；同时业务逻辑 `run` 中的匹配部分，继续抽取为 `search` 函数
     * 注意分离到`lib.rs`中的结构体和函数定义，需要标记为`pub`，否则在`main.rs`中无法使用
     * 可通过`use minigrep::Config;`，引入`lib.rs`中的`Config`结构体，然后使用`Config`；也可按`minigrep::Config`使用，显式指定包名

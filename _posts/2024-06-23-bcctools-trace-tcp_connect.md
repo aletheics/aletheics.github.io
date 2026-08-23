@@ -709,7 +709,7 @@ hnote over A: CLOSE
 
 在笔记本和linux PC间进行实验。笔记本作为服务端，linux PC作为客户端
 
-服务端新增accept处理，但不close，完整代码见：
+服务端新增accept处理，但不close，完整代码见
 
 ```c
 // server.cpp

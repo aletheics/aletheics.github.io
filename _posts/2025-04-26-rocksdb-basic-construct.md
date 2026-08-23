@@ -395,7 +395,7 @@ Status DBImpl::Write(const WriteOptions& write_options, WriteBatch* my_batch) {
 }
 ```
 
-用calltree.pl跟了下`DBImpl::WriteImpl`的实现调用栈，并不大直观，增大展开层数内容比较多（可见3层展开：）：
+用calltree.pl跟了下`DBImpl::WriteImpl`的实现调用栈，并不大直观，增大展开层数内容比较多：
 
 ![WriteImpl-calltree](/images/2025-04-29-calltree.png)
 

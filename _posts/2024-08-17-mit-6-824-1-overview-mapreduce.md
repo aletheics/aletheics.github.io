@@ -69,7 +69,7 @@ MIT 6.824: Distributed System，这门课每节课都会精读一篇分布式系
 
 以`Lecture 1 - Introduction`为例，说明下暂时的学习方式，后面可参考该流程进行：
 
-* 1、看课程对应的论文：
+* 1、看课程对应的论文
 * 2、先学习一遍B站视频：[2020 MIT 6.824 分布式系统：Lecture 1 -Introduction](https://www.bilibili.com/video/BV1R7411t71W/?spm_id_from=333.999.0.0&vd_source=477b80445c7c1a81617bbea3bdf9a3c1)
     * 可参考下别人的论文笔记和想法：[MapReduce论文阅读](https://tanxinyu.work/mapreduce-thesis/)
 * 3、跟着课程的中文翻译再学习一下：[Lecture 01 - Introduction](https://mit-public-courses-cn-translatio.gitbook.io/mit6-824/lecture-01-introduction)
@@ -85,7 +85,7 @@ MIT 6.824: Distributed System，这门课每节课都会精读一篇分布式系
 
 为了处理大量的原始数据，比如文档抓取、 Web 请求日志等；也为了计算处理各种类型的衍生数据，比如倒排索引、Web 文档的图结构的各种表示形式、每台主机上网络爬虫抓取的页面数量的汇总、每天被请求的最多的查询的集合等等，Google公司于**2004年**发表了论文：[MapReduce: Simplified Data Processing on Large Clusters](https://pdos.csail.mit.edu/6.824/papers/mapreduce.pdf)。
 
-另外找了篇中文版作为参考：
+另外找了篇中文版作为参考
 
 ### 4.1. 编程模型
 

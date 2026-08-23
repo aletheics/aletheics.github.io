@@ -169,7 +169,7 @@ Pi 原生只带 4 个指令，所有代码操作都靠它们组合完成：
 
 ## 四、Crush — OpenCode 的正统续作
 
-**一句话定位**：Charm 团队（ Bubble Tea、Gum 作者）收购原 OpenCode 作者后推出的新品，Go 原生内核，TUI 体验业内天花板。
+**一句话定位**：Charm 团队（Bubble Tea、Gum 作者）收购原 OpenCode 作者后推出的新品，Go 原生内核，TUI 体验业内天花板。
 
 ### 来历
 

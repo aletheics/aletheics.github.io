@@ -162,7 +162,7 @@ struct redisCommand redisCommandTable[] = {
 
 这里推荐下 [calltree.pl](https://zhuanlan.zhihu.com/p/339910341) 工具，作者在该文章中做了介绍。
 
-试了下很好用，有点像用户态的`bpftrace`+`funcgraph`，可以通过mode：0还是1控制查看的调用栈方向。自己也归档了一下并贴了使用结果：。
+试了下很好用，有点像用户态的`bpftrace`+`funcgraph`，可以通过mode：0还是1控制查看的调用栈方向。自己也归档了一下并贴了使用结果。
 
 上述`slaveTryPartialResynchronization`函数中，从库发送`psync`命令并根据应答判断处理
 
@@ -668,7 +668,7 @@ sentinelGetLeader
                 └── sentinelTimer	[vim src/sentinel.c +4571]
 ```
 
-上述具体内部流程暂不做展开，后续按需深入。先跟着参考文章走读代码流程并注释：。
+上述具体内部流程暂不做展开，后续按需深入。先跟着参考文章走读代码流程并注释。
 
 ## 4. 切片集群
 

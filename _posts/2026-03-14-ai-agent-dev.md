@@ -12,9 +12,9 @@ tags: [AI, Agent]
 Agent开发实践，相关参考链接：
 * [crewai.cn文档](https://docs.crewai.org.cn/en/quickstart)
     * crew：[kruː]，团队的意思，CrewAI就是让你像组建团队一样来编排AI Agent
-* AI生成的`CrewAI`和`LangChain`资料：
+* AI生成的`CrewAI`和`LangChain`资料
     - 跟着实践的过程中，**发现AI生成的资料有些坑**，比如安装方式是老版本才支持的，**建议还是找官网文档或者他人实践过的文档为准**
-* AI生成的`NanoClaw`资料，学习这个微型龙虾项目以了解`OpenClaw`原理：
+* AI生成的`NanoClaw`资料，学习这个微型龙虾项目以了解`OpenClaw`原理
 * 他人实践：[从 0 到 1 复刻一个 Claude Code 这样的 Agent](https://plantegg.github.io/2026/03/05/%E4%BB%8E0%E5%88%B01%E5%A4%8D%E5%88%BB%E4%B8%80%E4%B8%AAClaude_Code%E8%BF%99%E6%A0%B7%E7%9A%84Agent/)
 
 智能体开发框架很多，如`LangChain`/`LangGraph`/`AutoGen`/`CrewAI`等等，这里还是基于比较轻量的`CrewAI`框架来进行实践学习。
@@ -478,7 +478,7 @@ reporting_analyst:
 
 **需求丢给AI来修改**：我要修改成一个技术自媒体专家，非常擅长微信小红书抖音运营，并帮我输出可落地的报告
 
-修改后内容可见：
+修改后内容可见
 
 1、agents.yaml：
 

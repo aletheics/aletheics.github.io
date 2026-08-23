@@ -61,7 +61,7 @@ systemtap支持很多内建事件(tapset)，常见内建函数和变量：
 
 ### 3.1. 安装SystemTap
 
-SystemTap安装中踩了几个坑，具体可见：
+SystemTap安装中踩了几个坑，具体可见
 
 ### 3.2. 实验步骤
 

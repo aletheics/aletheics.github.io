@@ -294,7 +294,7 @@ Interval stall: 00:00:0.000 H:M:S, 0.0 percent
 
 wiki里有基本使用示例：[Basic Operations](https://github.com/facebook/rocksdb/wiki/Basic-Operations)。
 
-写了个demo如下（完整代码也可见 ）：
+写了个demo如下：
 
 ```cpp
 // test_rocksdb_ops.cpp

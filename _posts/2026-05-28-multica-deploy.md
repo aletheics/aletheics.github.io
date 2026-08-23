@@ -241,7 +241,7 @@ If the browser didn't open, visit:
   http://localhost:3000/login?cli_callback=http%3A%2F%2Flocalhost%3A43751%2Fcallback&cli_state=07be025316b939f5655863aa6a36d03a
 
 Waiting for authentication...
-Authenticated as xiaodong0795 (xiaodong0795@gmail.com)
+Authenticated as aletheics (aletheic@outlook.com)
 Token saved to config.
 
 Found 1 workspace(s):
@@ -287,7 +287,7 @@ Set app_url = http://localhost:3000
 
 # 用api登录
 [clauded@xdlinux ~]$ multica login --token mul_c30fc5eea6d52e88f15ba0a4b917489e7ea6855c
-Authenticated as xiaodong0795 (xiaodong0795@gmail.com)
+Authenticated as aletheics (aletheic@outlook.com)
 Token saved to config.
 
 Found 1 workspace(s):

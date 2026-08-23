@@ -406,7 +406,7 @@ fn get_memory_location() -> (usize, usize) {
 
 ### 3.1. 闭包基本示例
 
-[第一篇](https://aletheics.github.io/2024/09/17/rust-relearn-overview/) 简单介绍过闭包，下面用一个简单示例看闭包的好处（完整代码见 ）。
+[第一篇](https://aletheics.github.io/2024/09/17/rust-relearn-overview/) 简单介绍过闭包，下面用一个简单示例看闭包的好处。
 
 1、基础代码：不同公司工作不同工作时长，工作内容是写代码
 
@@ -608,7 +608,7 @@ fn exec_fn<'a, F: Fn(&'a str)>(f: F) {
 }
 ```
 
-上述完整代码()运行结果：
+上述完整代码运行结果：
 
 ```sh
 # cargo run --bin test_fn_trait

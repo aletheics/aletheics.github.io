@@ -196,7 +196,7 @@ Off-CPU 能够识别的类型包含：阻塞在 I/O、锁、定时器、缺页�
 * `make menuconfig`，搜索`CONFIG_DEBUG_INFO_BTF`并设置`y`保存到`.config`
 * `make -j6`，得到 bzImage，拷贝到`/boot/`替换vmlinuzxxx，或者只拷贝并在grub里新增一个menuentry项
 
-下面的实验结果，也归档在：
+下面的实验结果，也归档在
 
 ### 5.1. Off-CPU采集和分析
 
@@ -355,7 +355,7 @@ Tracing blocked time (us) by kernel stack
     ffffffff97b7d920 __hrtimer_run_queues+0x100
     ffffffff97b7e0f0 hrtimer_interrupt+0x100
     ffffffff984026ba smp_apic_timer_interrupt+0x6a
-    # 定时器中断函数被触发（经过一系列调用，最终调到上面的 try_to_wake_up ）
+    # 定时器中断函数被触发（经过一系列调用，最终调到上面的 try_to_wake_up）
     ffffffff98401c4f apic_timer_interrupt+0xf
     ffffffff981435fb cpuidle_enter_state+0xdb
     ffffffff9814393c cpuidle_enter+0x2c
@@ -597,7 +597,7 @@ red-blue-diff-flamegraph_based1-negate.svg，**可以明显看到io相关函数�
 
 将上面的内容提炼为脚本，供平常使用。生成两种差分火焰图，一个是默认方式：以堆栈2为基础，展示变化；一个是以堆栈1为基础，以防止堆栈2（比如代码优化后的程序）删除部分逻辑后，遗漏这部分差别。
 
-利用LLM生成（这部分工作最好基于推理来做，勾选“深度思考”，要不车轱辘话很磨人），完整脚本见：。
+利用LLM生成（这部分工作最好基于推理来做，勾选“深度思考”，要不车轱辘话很磨人），完整脚本见。
 
 ```sh
 # 生成主对比图（新版本变化视图）

@@ -312,7 +312,7 @@ __gthread_cond_wait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex)
 
 [gcc-mirror](https://github.com/gcc-mirror/gcc) 仓库是 GCC（GNU Compiler Collection）编译器套件的代码库，涵盖了 GCC 编译器套件的多个方面。
 
-从 `gcc-10.3.0` 分支代码里保留了 [libstdc++](https://github.com/gcc-mirror/gcc/tree/releases/gcc-10.3.0/libstdc%2B%2B-v3) ，上传到自己的仓库了：，用于跟踪学习C++标准库的相关内容。
+从 `gcc-10.3.0` 分支代码里保留了 [libstdc++](https://github.com/gcc-mirror/gcc/tree/releases/gcc-10.3.0/libstdc%2B%2B-v3) ，上传到自己的仓库了，用于跟踪学习C++标准库的相关内容。
 
 比如`condition_variable`：
 
@@ -505,7 +505,7 @@ class priority_queue
 
 结构体相对来说后续调整会更灵活，`tuple`实现更简洁，此处用`struct`来定义任务，并重载`operator<`。
 
-完整代码见：
+完整代码见
 
 任务由`std::function<void()>`修改为：在`struct Task`中组合`std::function`并加上优先级字段：
 

@@ -31,7 +31,7 @@ Ceph支持两种对象存储接口，两者共享一个命名空间（namespace�
 
 > 详情可见：[Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html)。
 
-介绍下`Amazon`的`S3（Simple Storage Service ）`对象存储，用户可以通过任意支持HTTP协议的工具，基于`REST API`来访问可读对象（object）。`REST API`中使用标准的HTTP头和状态码，因此一些标准浏览器和工具箱（toolkit）都可以正常访问S3。
+介绍下`Amazon`的`S3（Simple Storage Service）`对象存储，用户可以通过任意支持HTTP协议的工具，基于`REST API`来访问可读对象（object）。`REST API`中使用标准的HTTP头和状态码，因此一些标准浏览器和工具箱（toolkit）都可以正常访问S3。
 
 若在代码里直接使用`REST API`，需要编写计算签名的代码来对请求进行鉴权。**建议**使用下述两种方式：
 

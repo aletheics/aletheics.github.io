@@ -401,7 +401,7 @@ impl Solution {
 
 核心是保持循环不变量。左闭右开区间，每圈依次按 上->右->下->左 的顺序遍历。
 
-理解点：记住每轮开始的起点，`(top, left)` 或 `(startx, starty)`，感觉前者更易理解。可以查看提交代码的对比：
+理解点：记住每轮开始的起点，`(top, left)` 或 `(startx, starty)`，感觉前者更易理解。可以查看提交代码的对比
 
 ```cpp
 class Solution {
@@ -418,7 +418,7 @@ public:
         // 轮次
         int round = n/2;
         // 每轮到达的右边界偏移（最右n-offset）
-        // 由于是开区间，右边界到倒数第2列（ 即`[0, n-1)` ）
+        // 由于是开区间，右边界到倒数第2列（即`[0, n-1)`）
         int offset = 1;
         int i=0, j=0;
         // 结果，初始化时就申请好空间，避免push_back
@@ -582,7 +582,7 @@ int main() {
 
 可参考：[GoogleTest Quickstart: Building with CMake](https://google.github.io/googletest/quickstart-cmake.html)
 
-下面的完整代码，见：
+下面的完整代码，见
 
 #### 6.2.1. 实现
 

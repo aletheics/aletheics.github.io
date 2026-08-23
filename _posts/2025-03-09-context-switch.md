@@ -179,7 +179,7 @@ perf命令查看事件：`perf stat -e dTLB-loads,dTLB-load-misses,iTLB-loads,iT
 
 4、实验
 
-1）上面测试进程上下文切换的代码，可见：，以及同级目录的统计平均脚本
+1）上面测试进程上下文切换的代码，可见，以及同级目录的统计平均脚本
 
 TODO：自己运行demo统计的耗时基本都在 `0.8 us`左右
 
@@ -290,7 +290,7 @@ nonvoluntary_ctxt_switches:	0
 
 ## 4. 线程池demo开销
 
-上篇的demo代码：
+上篇的demo代码
 
 ```sh
 [CentOS-root@xdlinux ➜ thread_pool git:(main) ✗ ]$ perf stat ./thread_pool

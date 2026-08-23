@@ -171,8 +171,8 @@ Success.
 
 ```sh
 [root@xdlinux ➜ local ]$ tailscale status
-100.78.178.1x  xdlinux  xiaodongQ@  linux    -
-100.96.178.7x   jx-xd    xiaodongQ@  android  -  
+100.78.178.1x  xdlinux  aletheics@  linux    -
+100.96.178.7x   jx-xd    aletheics@  android  -  
 ```
 
 5、Linux重新运行：使用`--mobile-pairing`会生成手机端可扫描的二维码

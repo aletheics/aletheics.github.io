@@ -8,7 +8,7 @@ bpftrace学习和使用
 
 ## 1. 背景
 
-前面学习bcc和libbpf时，提到Brendan Gregg等大佬们编写的工具集（几个示意图可参考：[eBPF学习实践系列（一） -- 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/) ），这些工具已经能提供很丰富的功能了。
+前面学习bcc和libbpf时，提到Brendan Gregg等大佬们编写的工具集（几个示意图可参考：[eBPF学习实践系列（一） -- 初识eBPF](https://aletheics.github.io/2024/06/06/ebpf_learn/)），这些工具已经能提供很丰富的功能了。
 
 但是想自己跟踪一些想要的个性化信息时，需要基于Python或者C/C++写逻辑，写完后有时还要调试各类编译问题，于是学习下`bpftrace`的使用，实践中更容易上手。
 

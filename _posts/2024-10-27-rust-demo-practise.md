@@ -39,7 +39,7 @@ Rust学习实践，几个Demo练习。
 
 ### 2.2. 练习
 
-代码见：
+代码见
 
 示例：`python -m http.server`起一个http服务，`get`进行请求
 

@@ -16,7 +16,7 @@ K8s提供了CLI工具：`kubectl`用于完成大多数集群管理相关的功�
 * 可使用`kubectl -h`/`--help`方式查看帮助信息
 * 另外可用`kubectl explain`方式解释一些K8s中的组件和包含的字段(Field)。支持查看的组件列表可通过`kubectl api-resources`获取，比如`nodes`/`services`
 
-下述相关命令结果详情，可见：。
+下述相关命令结果详情，可见。
 
 ### 2.1. `kubectl describe`查看节点/Pod信息
 
@@ -353,7 +353,7 @@ service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6d14h
 ### 3.5. 对外暴露(expose)Redis服务
 
 上面`Redis` Pod已部署但尚未创建对应的`Service`，要访问上述创建的`Redis`服务，还需要创建`Redis Service`。
-* 实验的相关YAML文件内容归档在：
+* 实验的相关YAML文件内容归档在
 
 #### 3.5.1. 创建Redis Service
 
@@ -542,7 +542,7 @@ redis_version:8.0.3
 ## 4. 扩容Redis服务
 
 上述使用独立`Pod`方式部署了`Redis`，无法实现自动扩容。要实现自动扩容，这里使用`StatefulSet`替换`Deployment`。
-* 实验的相关YAML文件内容归档在：
+* 实验的相关YAML文件内容归档在
 
 ### 4.1. 创建`Redis StatefulSet`配置并apply
 

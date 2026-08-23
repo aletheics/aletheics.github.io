@@ -130,7 +130,7 @@ SYN 包里面的 TCP option 字段中，会带有 `MSS`，如果不带的话，d
 
 #### 2.3.1. Path MTU Discovery
 
-TCP协商MSS的时候应该经过 PMTUD（ This process is called "Path MTU discovery".） 来确认整个路由上的所有最小MTU。**PMTUD依赖于ICMP差错消息的正确传递**，如果网络中的防火墙或设备阻止了这些ICMP消息，PMTUD就无法正常工作。但是有些路由器会因为安全的原因过滤掉ICMP，导致PMTUD不可靠，所以这里的PMTUD形同虚设。
+TCP协商MSS的时候应该经过 PMTUD（This process is called "Path MTU discovery".） 来确认整个路由上的所有最小MTU。**PMTUD依赖于ICMP差错消息的正确传递**，如果网络中的防火墙或设备阻止了这些ICMP消息，PMTUD就无法正常工作。但是有些路由器会因为安全的原因过滤掉ICMP，导致PMTUD不可靠，所以这里的PMTUD形同虚设。
 
 比如在我们的三次握手中会协商一个MSS，这只是基于Client和Server两方的MTU来确定的，链路上如果还有比Client和Server的MTU更小的那么就会出现包超过MTU的大小，同时设置了DF标志而不再进行分片被丢掉。
 

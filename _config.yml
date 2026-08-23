@@ -96,7 +96,7 @@ theme_mode: # [light | dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-# cdn: "https://cdn.jsdelivr.net/gh/xiaodongQ/xiaodongq.github.io"
+# cdn: "https://cdn.jsdelivr.net/gh/aletheics/aletheics.github.io"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "/assets/img/favicons/favicon-192x192.png"
@@ -182,9 +182,9 @@ defaults:
       toc: true # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
-      # 博客链接格式：https://xiaodongq.github.io/posts/memory-management/
+      # 博客链接格式：https://aletheics.github.io/posts/memory-management/
       # permalink: /posts/:title/
-      # 修改类型为：https://xiaodongq.github.io/2025/03/20/memory-management/
+      # 修改类型为：https://aletheics.github.io/2025/03/20/memory-management/
       permalink: /:year/:month/:day/:title/
   - scope:
       path: _drafts

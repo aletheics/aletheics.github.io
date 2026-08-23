@@ -14,7 +14,7 @@ tags: [Agent, 个人助手]
 
 ## 2. 需求描述（输入）
 
-在原有demo基础上进行分析。（归档在）
+在原有demo基础上进行分析。
 
 分析下skill-factory和ai-task-system v2.4，是否能合成一个系统（all in one）。另外我还想加上一些其他功能：
 

@@ -895,7 +895,7 @@ git diff /root/.openclaw/scripts/message-router.mjs
 - 博客改进：挑战式交互提出改进建议
 
 **下一步**：
-- 查看完整代码：
+- 查看完整代码
 - 开始自己的 Multi-Agent 项目
 - 在群聊中体验挑战式交互
 

@@ -24,7 +24,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 
 ### 2.1 整体架构
 
-详细架构图和说明请参考：
+详细架构图和说明请参考
 
 ![一人团队 Multi-Agent 系统架构图](/images/2026-03-09-multi-agent-architecture.png)
 *图 2：一人团队 Multi-Agent 系统架构 - 用户通过小黑 - 管家与 4 个专业 Agent 交互*
@@ -83,7 +83,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 
 **实现脚本**：`/root/.openclaw/scripts/message-router.mjs`
 
-**详细说明**：
+**详细说明**
 
 ---
 
@@ -108,7 +108,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 - P2 违规：参考执行
 ```
 
-**完整规则**：
+**完整规则**
 
 ---
 
@@ -128,7 +128,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 子 Agent → 发现重要信息 → 通知小黑 → 小黑确认 → 写入 MEMORY.md
 ```
 
-**详细说明**：
+**详细说明**
 
 ---
 
@@ -175,7 +175,7 @@ cp -r ~/.openclaw/workspace/* ~/.openclaw/workspace-dev-agent/
 
 路由规则由 AI 自动编写，位于 `~/.openclaw/workspace/ROUTING.md`。
 
-**完整内容**：
+**完整内容**
 
 ---
 

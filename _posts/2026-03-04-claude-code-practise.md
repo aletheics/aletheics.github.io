@@ -248,7 +248,7 @@ The minimum required scopes are 'repo', 'read:org', 'workflow'.
 ? Paste your authentication token: *************************************************************************************- gh config set -h github.com git_protocol https
 ✓ Configured git protocol
 ! Authentication credentials saved in plain text
-✓ Logged in as xiaodongQ
+✓ Logged in as aletheics
 ! You were already logged in to this account
 ```
 
@@ -443,7 +443,7 @@ Superpowers 会自动：
 ❯ /branch 
   ⎿  Branched conversation. You are now in the branch.
      To resume the original: claude -r 4bc1ad63-b6e8-4835-b1a1-525247070857
-❯ 你的上下文 （ =========== 说明：此处是问问题）
+❯ 你的上下文 （=========== 说明：此处是问问题）
 ● 当前上下文：                                                              
   - 会话状态：已创建新分支 4bc1ad63-b6e8-4835-b1a1-525247070857             
   - 之前的工作：                                                            
@@ -776,7 +776,7 @@ Claude Code会话周期各个阶段支持的hooks事件，示意图：
 
 ### 8.1. 初步搭建的市场
 
-如之前在 [复利工程 -- Obsidian Wiki模板仓库与实用工具分享](https://aletheics.github.io/2026/04/30/fubilee-tools-wiki-template/) 所说的，创建的个人AI工具集市场：。
+如之前在 [复利工程 -- Obsidian Wiki模板仓库与实用工具分享](https://aletheics.github.io/2026/04/30/fubilee-tools-wiki-template/) 所说的，创建的个人AI工具集市场。
 
 目录结构如下：
 

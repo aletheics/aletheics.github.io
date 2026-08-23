@@ -231,7 +231,7 @@ RocksDB统计信息非常全面，单独一个小节特别说明下。（相比�
     * 包含`iostats_context.h` 和 `perf_context.h`，头文件中各自介绍了有哪些指标字段
     * 其使用示例，也可见 [这篇文章](https://vigourtyy-zhg.blog.csdn.net/article/details/108137659)
 
-统计使用示例（完整代码可见 ）：
+统计使用示例：
 
 ```cpp
     rocksdb::Options options;
@@ -322,7 +322,7 @@ rocksdb.block.cache.index.miss COUNT : 0
     * 可参考：[Parallelism options](https://github.com/facebook/rocksdb/wiki/RocksDB-Tuning-Guide#Parallelism-options)
 * 无法快速写入（Cannot Write Fast Enough）
     * 写入的问题通常是由于`写IO`的瓶颈，用户可以尝试`无序写`、手动刷`WAL`、多数据库共享、并行写入
-* 有时只是想要更低的读延迟（Demand Lower Read Latency ）
+* 有时只是想要更低的读延迟（Demand Lower Read Latency）
     * 有时没什么问题，但用户只希望读取延迟更低
     * 可通过 [Perf Context and IO Stats Context](https://github.com/facebook/rocksdb/wiki/Perf-Context-and-IO-Stats-Context) 检查每次的查询状态（query status），看是CPU 还是 I/O比较耗费时间，再调整相应选项
 

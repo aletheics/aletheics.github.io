@@ -624,7 +624,7 @@ const struct proto_ops inet_stream_ops = {
 
 ### 6.1. listen流程
 
-结合内核源码跟踪流程，具体见：
+结合内核源码跟踪流程，具体见
 
 代码位置：`__sys_listen`，linux-5.10.10/net/socket.c
 （Linux的系统调用在内核中的入口函数都是 `sys_xxx` ，但是如果我们拿着内核源码去搜索的话，就会发现根本找不到 `sys_xxx` 的函数定义，这是因为Linux的系统调用对应的函数全部都是由 `SYSCALL_DEFINE` 相关的宏来定义的。）
@@ -713,7 +713,7 @@ int inet_stream_connect(struct socket *sock, struct sockaddr *uaddr,
 ```
 
 跟踪`__inet_stream_connect`及socket创建等过程，可知tcp协议实际会调用 `tcp_v4_connect`
-(具体跟踪过程可参考：)
+
 
 ```cpp
 // linux-5.10.10/net/ipv4/tcp_ipv4.c
