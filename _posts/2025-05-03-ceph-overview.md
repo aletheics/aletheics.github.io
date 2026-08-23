@@ -12,8 +12,8 @@ tags: [存储, Ceph]
 
 Ceph提供了很全面的分布式存储功能，包括对象、文件、块，并支持很多特性，可以作为一个很好的入口，由点及面扩展梳理各类存储功能、`RocksDB`、`纠删码`、`SPDK/DPDK`、`Prometheus`、`OpenTelemetry分布式链路跟踪`、`K8S`等等的实际应用。
 
-**说明**：~~基于版本 **<mark>17.2.8</mark>（`Quincy`）**，fork一份 [ceph-v17.2.8](https://github.com/xiaodongQ/ceph/tree/ceph-v17.2.8) 的代码用于标注学习。~~  
-基于当前最新的发布版本 **<mark>19.2.2</mark>**（`Squid`），看tag里已经有`v20.0.0`了。基于`tag v19.2.2`建个分支：[ceph-v19.2.2](https://github.com/xiaodongQ/ceph/tree/ceph-v19.2.2)。
+**说明**：~~基于版本 **<mark>17.2.8</mark>（`Quincy`）**，fork一份  的代码用于标注学习。~~  
+基于当前最新的发布版本 **<mark>19.2.2</mark>**（`Squid`），看tag里已经有`v20.0.0`了。基于`tag v19.2.2`建个分支：。
 
 参考链接：
 
@@ -21,7 +21,7 @@ Ceph提供了很全面的分布式存储功能，包括对象、文件、块，�
     * [Intro to Ceph](https://docs.ceph.com/en/quincy/start/)
     * [Architecture](https://docs.ceph.com/en/quincy/architecture/)
     * 说明：本文中的内容参考基于`Quincy`版本的文档（原理一样的），后续使用`Squid`版本。
-* [ceph-v19.2.2](https://github.com/xiaodongQ/ceph/tree/ceph-v19.2.2)源码
+* 源码
 * 各版本时间线说明：[ceph-releases-index](https://docs.ceph.com/en/latest/releases/#ceph-releases-index)
 
 *说明：本博客作为个人学习实践笔记，可供参考但非系统教程，可能存在错误或遗漏，欢迎指正。若需系统学习，建议参考原链接。*

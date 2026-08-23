@@ -61,7 +61,7 @@ systemtap支持很多内建事件(tapset)，常见内建函数和变量：
 
 ### 3.1. 安装SystemTap
 
-SystemTap安装中踩了几个坑，具体可见：[动态追踪技术笔记](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%90%84%E5%88%86%E7%B1%BB%E8%AE%B0%E5%BD%95/%E5%8A%A8%E6%80%81%E8%BF%BD%E8%B8%AA%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0.md)
+SystemTap安装中踩了几个坑，具体可见：
 
 ### 3.2. 实验步骤
 

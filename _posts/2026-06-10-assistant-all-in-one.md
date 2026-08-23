@@ -14,13 +14,13 @@ tags: [Agent, 个人助手]
 
 ## 2. 需求描述（输入）
 
-在原有demo基础上进行分析。（归档在[ai-playground](https://github.com/xiaodongQ/ai-playground)）
+在原有demo基础上进行分析。（归档在）
 
 分析下skill-factory和ai-task-system v2.4，是否能合成一个系统（all in one）。另外我还想加上一些其他功能：
 
 1、主页上能让我快捷添加/删除一些网页链接，用于我平时的跳转（左上角）
 
-比如 github主页：https://github.com/xiaodongQ/、博客地址：https://aletheics.github.io/ 等
+比如 github主页：https://github.com/aletheics/、博客地址：https://aletheics.github.io/ 等
 
 2、主页上能让我添加/删除一些目录地址，点击时自动用对应系统的资源管理器打开（左中）
 

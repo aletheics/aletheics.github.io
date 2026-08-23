@@ -131,7 +131,7 @@ End of assembler dump.
 
 通过`readelf`来查看ELF文件对应的头信息，可从 `Entry point address` 中查看程序启动位置。
 
-以 [2fiber](https://github.com/xiaodongQ/coroutine-lib/blob/main/fiber_lib/2fiber/) 中编译的可执行文件为例操作。
+以  中编译的可执行文件为例操作。
 
 ```sh
 [root@xdlinux ➜ 2fiber git:(main) ✗ ]$ readelf -h test 

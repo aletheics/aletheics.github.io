@@ -395,7 +395,7 @@ Status DBImpl::Write(const WriteOptions& write_options, WriteBatch* my_batch) {
 }
 ```
 
-用calltree.pl跟了下`DBImpl::WriteImpl`的实现调用栈，并不大直观，增大展开层数内容比较多（可见3层展开：[WriteImpl调用栈](https://github.com/xiaodongQ/prog-playground/blob/main/storage/rocksdb/WriteImpl_calltree_depth3.txt)）：
+用calltree.pl跟了下`DBImpl::WriteImpl`的实现调用栈，并不大直观，增大展开层数内容比较多（可见3层展开：）：
 
 ![WriteImpl-calltree](/images/2025-04-29-calltree.png)
 

@@ -18,7 +18,7 @@ tags: [网络, epoll]
 * [深入揭秘 epoll 是如何实现 IO 多路复用的](https://mp.weixin.qq.com/s/OmRdUgO1guMX76EdZn11UQ)
 * [muduo源码](https://github.com/chenshuo/muduo)
 
-结合之前 [TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/#6-%E6%BA%90%E7%A0%81%E4%B8%AD%E5%90%84%E9%98%B6%E6%AE%B5%E7%AE%80%E8%A6%81%E6%B5%81%E7%A8%8B) 里梳理走读的[内核](https://github.com/xiaodongQ/linux-5.10.10)相关结构定义和流程，加深印象和理解。
+结合之前 [TCP半连接全连接（一） -- 全连接队列相关过程](https://aletheics.github.io/2024/05/18/tcp_connect/#6-%E6%BA%90%E7%A0%81%E4%B8%AD%E5%90%84%E9%98%B6%E6%AE%B5%E7%AE%80%E8%A6%81%E6%B5%81%E7%A8%8B) 里梳理走读的相关结构定义和流程，加深印象和理解。
 
 ## 2. epoll一般使用流程
 
@@ -69,7 +69,7 @@ close(epoll_fd);
 
 ## 3. demo中epoll使用流程走读
 
-项目代码：[ioserver_demo](https://github.com/xiaodongQ/prog-playground/tree/main/ioserver_demo)
+项目代码：
 
 来看下demo里的实现，作为基准以便和优秀的开源项目对比，识别坏味道和值得借鉴学习的部分。
 

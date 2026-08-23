@@ -31,7 +31,7 @@ Redis应用场景很多，比如缓存系统、消息队列、分布式锁等，
 
 ## 2. 前置说明
 
-梳理代码基于支持了多线程特性的6.0版本：[redis 6.0](https://github.com/redis/redis/tree/6.0)。并进行 [fork](https://github.com/xiaodongQ/redis/tree/6.0)。
+梳理代码基于支持了多线程特性的6.0版本：[redis 6.0](https://github.com/redis/redis/tree/6.0)。并进行 。
 
 几个参考：
 

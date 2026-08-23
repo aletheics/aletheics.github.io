@@ -176,7 +176,7 @@ EOF
 
 使用`kubeadm`创建集群，具体见：[使用 kubeadm 创建集群](https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)。
 
-初始化集群：`kubeadm init` 报错了（完整内容可见：[kubeadm_init.log](https://github.com/xiaodongQ/prog-playground/tree/main/kubernetes/hello/kubeadm_init.log)）
+初始化集群：`kubeadm init` 报错了（完整内容可见：）
 
 ```sh
 [root@xdlinux ➜ first git:(main) ]$ kubeadm init

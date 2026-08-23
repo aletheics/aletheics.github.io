@@ -15,7 +15,7 @@ Rust学习实践，实现简易Redis Demo，学习`tokio`异步运行时用法�
 * [Rust语言圣经(Rust Course) -- 进阶实战: 实现一个简单 redis](https://course.rs/advance-practice/intro.html)
 * 也可见tokio官网教程：[hello-tokio](https://tokio.rs/tokio/tutorial/hello-tokio)
 
-下面的练习代码可见：[my-redis demo](https://github.com/xiaodongQ/rust_learning/tree/master/demo/my-redis)
+下面的练习代码可见：
 
 *说明：本博客作为个人学习实践笔记，可供参考但非系统教程，可能存在错误或遗漏，欢迎指正。若需系统学习，建议参考原链接。*
 

@@ -23,7 +23,7 @@ tags: 网络
 
 ## 2. 环境准备
 
-1、仍使用第一篇中的客户端、服务端程序，代码和编译脚本归档在 [github处](https://github.com/xiaodongQ/prog-playground/tree/main/network/)
+1、仍使用第一篇中的客户端、服务端程序，代码和编译脚本归档在 
 
 2、起2个阿里云抢占式ECS：Alibaba Cloud Linux 3.2104 LTS 64位（内核版本：5.10.134-16.1.al8.x86_64）
 
@@ -709,7 +709,7 @@ hnote over A: CLOSE
 
 在笔记本和linux PC间进行实验。笔记本作为服务端，linux PC作为客户端
 
-服务端新增accept处理，但不close，完整代码见：[server.cpp](https://github.com/xiaodongQ/prog-playground/blob/main/network/tcp_connect_fin_wait2/server.cpp)
+服务端新增accept处理，但不close，完整代码见：
 
 ```c
 // server.cpp

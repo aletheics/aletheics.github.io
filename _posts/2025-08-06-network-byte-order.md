@@ -71,7 +71,7 @@ Byte Order:                           Little Endian
 ----------------------------------------------
 ```
 
-case1完整代码见：[case1_pragma_pack1](https://github.com/xiaodongQ/prog-playground/tree/main/network/byte_order/case1_pragma_pack1)
+case1完整代码见：
 
 ### 3.1. 客户端程序
 
@@ -464,7 +464,7 @@ Raw Bytes (1e bytes):
 
 ## 4. case2：服务端不指定pragma pack
 
-case2完整代码见：[case2_no_pragma_pack](https://github.com/xiaodongQ/prog-playground/tree/main/network/byte_order/case2_no_pragma_pack)
+case2完整代码见：
 
 注释去掉C++服务端的`#pragma pack(1)`，再编译运行。
 
@@ -545,7 +545,7 @@ recv body failed
 
 ### 5.1. 方法1：struct手动添加填充字段（case3）
 
-case3完整代码见：[case3_client_padding](https://github.com/xiaodongQ/prog-playground/tree/main/network/byte_order/case3_client_padding)
+case3完整代码见：
 
 1、客户端代码如下，对`Header` 和 `Body` 结构体定义，手动添加填充字段，保证和服务端一样的内存布局。
 
@@ -751,7 +751,7 @@ struct Header {
 
 ### 5.2. 方法2：原始字节操作（case4）
 
-case4完整代码见：[case4_client_rawdata](https://github.com/xiaodongQ/prog-playground/tree/main/network/byte_order/case4_client_rawdata)
+case4完整代码见：
 
 1、客户端中，结构体定义不变（不填充，同case2），在拼接发送报文时，按照和服务端相同的布局发送。
 

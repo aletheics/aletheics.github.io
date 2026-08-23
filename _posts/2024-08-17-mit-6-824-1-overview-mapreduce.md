@@ -11,7 +11,7 @@ MIT6.824（2020）学习笔记，此为第一篇。
 有几个点促使自己近期行动起来：
 
 * TODO列表里，有一项是把Go和Rust捡起来能~~熟练~~使用，之前学过用过但是实践少，久一点不用就生疏了；
-* 梳理学习LevelDB时，就把 [goleveldb](https://github.com/xiaodongQ/goleveldb) 和 [leveldb-rs](https://github.com/xiaodongQ/leveldb-rs) 放到TODO里了，准备通过工业级项目提升Go和Rust水平。但精力有限，死磕在LevelDB上太久的话会有点缺乏正反馈，而且其他TODO会饿死；
+* 梳理学习LevelDB时，就把  和  放到TODO里了，准备通过工业级项目提升Go和Rust水平。但精力有限，死磕在LevelDB上太久的话会有点缺乏正反馈，而且其他TODO会饿死；
 * 最近一段时间来在下意识提升英语，当前阶段是先提升听力和阅读。在B站早早收藏过6.824只看了一丢丢，前段时间重看视频1尽量关字幕听原声，这种英语学习效果还可以；
 * TODO里本身就有6.824躺着，还有存储、分布式领域的经典论文，趁这个机会串起来。
 
@@ -69,7 +69,7 @@ MIT 6.824: Distributed System，这门课每节课都会精读一篇分布式系
 
 以`Lecture 1 - Introduction`为例，说明下暂时的学习方式，后面可参考该流程进行：
 
-* 1、看课程对应的论文：[Google-MapReduce-cn.pdf](https://github.com/xiaodongQ/prog-playground/blob/main/classic_papers/MapReduce/Google-MapReduce-cn.pdf)
+* 1、看课程对应的论文：
 * 2、先学习一遍B站视频：[2020 MIT 6.824 分布式系统：Lecture 1 -Introduction](https://www.bilibili.com/video/BV1R7411t71W/?spm_id_from=333.999.0.0&vd_source=477b80445c7c1a81617bbea3bdf9a3c1)
     * 可参考下别人的论文笔记和想法：[MapReduce论文阅读](https://tanxinyu.work/mapreduce-thesis/)
 * 3、跟着课程的中文翻译再学习一下：[Lecture 01 - Introduction](https://mit-public-courses-cn-translatio.gitbook.io/mit6-824/lecture-01-introduction)
@@ -85,7 +85,7 @@ MIT 6.824: Distributed System，这门课每节课都会精读一篇分布式系
 
 为了处理大量的原始数据，比如文档抓取、 Web 请求日志等；也为了计算处理各种类型的衍生数据，比如倒排索引、Web 文档的图结构的各种表示形式、每台主机上网络爬虫抓取的页面数量的汇总、每天被请求的最多的查询的集合等等，Google公司于**2004年**发表了论文：[MapReduce: Simplified Data Processing on Large Clusters](https://pdos.csail.mit.edu/6.824/papers/mapreduce.pdf)。
 
-另外找了篇中文版作为参考：[Google-MapReduce-cn.pdf](https://github.com/xiaodongQ/prog-playground/blob/main/classic_papers/MapReduce/Google-MapReduce-cn.pdf)
+另外找了篇中文版作为参考：
 
 ### 4.1. 编程模型
 

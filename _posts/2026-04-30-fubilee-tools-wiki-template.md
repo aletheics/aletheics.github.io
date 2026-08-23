@@ -7,7 +7,7 @@ tags: [Obsidian, WezTerm, Draw.io, 知识管理, 工具链]
 
 ## 1. 引言
 
-搭 Obsidian Wiki 这套系统的时候，顺手把配置打包成了一个[模板仓库](https://github.com/xiaodongq/obsidian_template)，里面的插件和配置可以分享给其他人复用。
+搭 Obsidian Wiki 这套系统的时候，顺手把配置打包成了一个，里面的插件和配置可以分享给其他人复用。
 
 另外日常积累的仓库里躺了很多工具配置和快捷键笔记，这次一并整理一下。本文涉及的工具：
 - **Obsidian** — 知识库，配合 LLM Wiki 模式管理笔记
@@ -26,7 +26,7 @@ tags: [Obsidian, WezTerm, Draw.io, 知识管理, 工具链]
 
 ## 2. Obsidian Vault 模板
 
-Obsidian的插件是不同知识库目录独立的，可直接下载使用：[obsidian_template](https://github.com/xiaodongQ/obsidian_template) - Obsidian Vault 模板。
+Obsidian的插件是不同知识库目录独立的，可直接下载使用： - Obsidian Vault 模板。
 
 ### 2.1. 目录结构
 
@@ -88,7 +88,7 @@ obsidian_xd/
 
 ## 3. WezTerm 配置
 
-配置拷贝到`~/.config/wezterm`即可使用：[xiaodongQ/wezterm-config](https://github.com/xiaodongQ/wezterm-config)。
+配置拷贝到`~/.config/wezterm`即可使用：。
 
 ### 3.1. 核心快捷键
 
@@ -142,7 +142,7 @@ obsidian_xd/
 
 ### 4.2. 默认样式配置
 
-默认配色感觉不大好看，参考了[博主 sansui233 的配置](https://www.sansui233.com/posts/2024-11-12-%E6%8A%8Adrawio%E8%A3%85%E4%BF%AE%E4%B8%BA%E7%AE%80%E5%8D%95%E7%BE%8E%E8%A7%82%E7%9A%84%E7%99%BD%E6%9D%BF%E5%BA%94%E7%94%A8)，自己也改了一版，见：[draw_io快捷键和修改默认配置.md](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/draw_io%E5%BF%AB%E6%8D%B7%E9%94%AE.md)。
+默认配色感觉不大好看，参考了[博主 sansui233 的配置](https://www.sansui233.com/posts/2024-11-12-%E6%8A%8Adrawio%E8%A3%85%E4%BF%AE%E4%B8%BA%E7%AE%80%E5%8D%95%E7%BE%8E%E8%A7%82%E7%9A%84%E7%99%BD%E6%9D%BF%E5%BA%94%E7%94%A8)，自己也改了一版，见：。
 
 效果1：  
 ![handy-tools.drawio](/images/handy-tools.drawio.svg)
@@ -190,7 +190,7 @@ zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path "$ZSH_CACHE_DIR"
 ```
 
-一些其他配置，也可见笔记：[zsh.md](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/zsh.md)
+一些其他配置，也可见笔记：
 
 ---
 
@@ -198,7 +198,7 @@ zstyle ':completion::complete:*' cache-path "$ZSH_CACHE_DIR"
 
 日常积累的 Claude Code Skills、MCPs、Commands 等工具配置，整理到一个归档仓库，便于不同环境复用。建议每个人都构建自己的市场仓库，换一个机器后可以快速搭建环境。
 
-比如我初步搭建的：[xiaodongQ/xd-self-market](https://github.com/xiaodongQ/xd-self-market) 
+比如我初步搭建的： 
 
 ```
 xd-self-market/

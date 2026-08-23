@@ -40,7 +40,7 @@ tags: [AI, Vibe Coding]
 * 数据库使用SQLite，简化环境依赖和操作
 * 页面基于简单HTML+JS+CSS，暂不引入前端框架
 
-经过几轮提示和修改，代码层次如下（代码可见：[health_app](https://github.com/xiaodongQ/health_app)）：
+经过几轮提示和修改，代码层次如下（代码可见：）：
 
 ```sh
 [MacOS-xd@qxd ➜ health_app git:(main) ✗ ]$ tree

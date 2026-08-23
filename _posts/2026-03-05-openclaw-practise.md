@@ -22,7 +22,7 @@ OpenClaw实战手记，持续更新实践和技巧。
 
 ### 2.1. 安装和配置
 
-基本步骤：通过`npm`安装（可设置一下国内镜像源） -> 初始化OpenClaw并配置API -> 而后可以接入飞书（也有开源项目可以接入微信的），步骤可见：[Open Claw安装和配置](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%90%84%E5%88%86%E7%B1%BB%E8%AE%B0%E5%BD%95/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md#%E5%AE%89%E8%A3%85-1)。
+基本步骤：通过`npm`安装（可设置一下国内镜像源） -> 初始化OpenClaw并配置API -> 而后可以接入飞书（也有开源项目可以接入微信的），步骤可见：。
 
 ```
 1、先安装Node.js，node.js官网下载二进制包 -> 解压 -> 添加PATH环境变量。node -v检查，如v24.13.0
@@ -285,7 +285,7 @@ main：默认agent，飞书角色：`小黑-管家`
                   └─────────────────┘
 ```
 
-我做了归档，可见：[一人团队设计](https://github.com/xiaodongQ/ai-playground/blob/main/design/%E4%B8%80%E4%BA%BA%E5%9B%A2%E9%98%9F%E8%AE%BE%E8%AE%A1.md)
+我做了归档，可见：
 
 ### 6.2. 实操搭建
 

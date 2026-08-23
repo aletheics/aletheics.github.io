@@ -472,7 +472,7 @@ USAGE: funcgraph [-aCDhHPtT] [-m maxdepth] [-p PID] [-L TID] [-d secs] funcstrin
 
 使用`read`系统调用读取 /etc/fstab 文件内容，代码如下：
 
-[此处](https://github.com/xiaodongQ/prog-playground/tree/main/storage/read_by_signal)也有归档。
+也有归档。
 
 ```cpp
 // read_by_signal.cpp

@@ -609,7 +609,7 @@ crewai-langchain-demos/
 
 **总耗时**：~3 小时 15 分钟（全部自动完成）
 
-**交付物提交**：已提交到 [ai-playground 仓库](https://github.com/xiaodongQ/ai-playground/tree/main/learning/crewai-langchain)
+**交付物提交**：已提交到 
 
 ---
 
@@ -895,7 +895,7 @@ git diff /root/.openclaw/scripts/message-router.mjs
 - 博客改进：挑战式交互提出改进建议
 
 **下一步**：
-- 查看完整代码：[ai-playground 仓库](https://github.com/xiaodongQ/ai-playground)
+- 查看完整代码：
 - 开始自己的 Multi-Agent 项目
 - 在群聊中体验挑战式交互
 
@@ -904,8 +904,8 @@ git diff /root/.openclaw/scripts/message-router.mjs
 ## 参考链接
 
 - [OpenClaw 官方文档](https://docs.openclaw.ai)
-- [CrewAI + LangChain 学习材料包](https://github.com/xiaodongQ/ai-playground/tree/main/learning/crewai-langchain)
-- [一人团队设计文档](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队-Multi-Agent-系统设计.md)
+- 
+- 
 
 ---
 

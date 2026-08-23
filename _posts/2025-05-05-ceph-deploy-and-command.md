@@ -52,7 +52,7 @@ usage: cephadm [-h] [--image IMAGE] [--docker] [--data-dir DATA_DIR]
 
 `cephadm`中集成了编排接口（`orchestration interface`）来管理Ceph集群。
 
-具体Python脚本内容可见：[cephadm](https://github.com/xiaodongQ/prog-playground/blob/main/storage/ceph/cephadm)。
+具体Python脚本内容可见：。
 
 ---
 
@@ -155,7 +155,7 @@ Please consider enabling telemetry to help improve Ceph:
     ceph telemetry on
 ```
 
-上面部署过程的完整输出，可见：[cephadm_bootstrap.log](https://github.com/xiaodongQ/prog-playground/blob/main/storage/ceph/cephadm_bootstrap.log)。
+上面部署过程的完整输出，可见：。
 
 `docker ps`可看到部署的集群中：
 * 包含一个`monitor`和一个`manager`，

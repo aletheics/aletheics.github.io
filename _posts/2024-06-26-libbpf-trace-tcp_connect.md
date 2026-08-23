@@ -16,7 +16,7 @@ tags: 网络
 
 基于libbpf-bootstrap框架，先参考bcc项目中的 `tcpdrop.py`和`tcplife.bpf.c`进行移植，跟踪tracepoint：`skb:kfree_skb`，后面再扩展
 
-这里摘抄部分代码内容，移植过程中可以更直观感受到BCC和libbpf（支持CO-RE）的数据结构区别，完整代码放在[这里](https://github.com/xiaodongQ/prog-playground/tree/main/network/ebpf/libbpf_tcptrace)。
+这里摘抄部分代码内容，移植过程中可以更直观感受到BCC和libbpf（支持CO-RE）的数据结构区别，完整代码放在。
 
 先说下结果：编译成功，运行报错（还准备扩展的，第一步就夭折了。。）
 
@@ -505,7 +505,7 @@ int tcp_conn_request(struct request_sock_ops *rsk_ops,
              struct sock *sk, struct sk_buff *skb)
 ```
 
-把`struct sock`结构中的`sk->sk_ack_backlog`和`sk->sk_max_ack_backlog`进行对比，即可满足调用`tcp_listendrop`的条件。编写bpftrace脚本tcp_queue.bt（[这里](https://github.com/xiaodongQ/prog-playground/blob/main/network/ebpf/bpftrace_tcp_queue/tcp_queue.bt)有归档），内容如下：
+把`struct sock`结构中的`sk->sk_ack_backlog`和`sk->sk_max_ack_backlog`进行对比，即可满足调用`tcp_listendrop`的条件。编写bpftrace脚本tcp_queue.bt（有归档），内容如下：
 
 ```sh
 #!/usr/bin/env bpftrace

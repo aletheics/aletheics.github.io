@@ -37,7 +37,7 @@ hook实现有多种方式：**动态链接**、**静态链接**，还有**内核
 
 ### 3.1. 动态库hook方式
 
-作为理解hook实现的基础，先看下编译的链接顺序、符号冲突相关的几个小实验，可了解：[关于链接与装载的几个测试代码](https://www.midlane.top/wiki/pages/viewpage.action?pageId=16418206)，代码可见：[compile](https://github.com/xiaodongQ/prog-playground/tree/main/compile)。此处只放一下结论。
+作为理解hook实现的基础，先看下编译的链接顺序、符号冲突相关的几个小实验，可了解：[关于链接与装载的几个测试代码](https://www.midlane.top/wiki/pages/viewpage.action?pageId=16418206)，代码可见：。此处只放一下结论。
 
 * 1、（未定义符号提前解决）无论动态链接还是静态链接，链接时都是**从左到右**扫描库文件。扫描时如果发现所有**未定义符号**都解决了，则后面的库就**不会再继续扫描**。
     * 对应上面链接中的 测试1 和 测试4。

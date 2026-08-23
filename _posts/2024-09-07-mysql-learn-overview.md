@@ -14,8 +14,8 @@ MySQL没太系统深入地学习梳理，前面梳理学习了一下基于`LSM-T
 
 说明：
 
-* 学习代码基于mysql-server的 [5.7.44 tag](https://github.com/mysql/mysql-server/tree/mysql-5.7.44)，由于仓库比较大，clone下来去掉log后单独创建一个自己的学习repo：[mysql-server_5.7.44](https://github.com/xiaodongQ/mysql-server_5.7.44.git)。
-    * [8.0.26 tag的学习repo](https://github.com/xiaodongQ/mysql-server_8.0.26)
+* 学习代码基于mysql-server的 [5.7.44 tag](https://github.com/mysql/mysql-server/tree/mysql-5.7.44)，由于仓库比较大，clone下来去掉log后单独创建一个自己的学习repo：。
+    * 
 * 对应的官方文档：[MySQL 5.7 Reference Manual](https://dev.mysql.com/doc/refman/5.7/en/introduction.html)
     * [MySQL 8.0文档](https://dev.mysql.com/doc/refman/8.0/en/introduction.html)
 * 网上资料很多，部分参考：

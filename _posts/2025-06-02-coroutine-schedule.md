@@ -15,7 +15,7 @@ tags: [协程, 异步编程]
 继续学习梳理下sylar里面的协程调度，并基于[coroutine-lib](https://github.com/youngyangyang04/coroutine-lib)走读。
 
 * 详情可见：[协程调度模块](https://www.midlane.top/wiki/pages/viewpage.action?pageId=10060963)
-* demo代码则可见：`coroutine-lib`（fork）中的 [3scheduler](https://github.com/xiaodongQ/coroutine-lib/tree/main/fiber_lib/3scheduler)。其中的`fiber.h/fiber.cpp`协程类代码和`2fiber`里是一样的，独立目录只是便于单独编译测试。
+* demo代码则可见：`coroutine-lib`（fork）中的 。其中的`fiber.h/fiber.cpp`协程类代码和`2fiber`里是一样的，独立目录只是便于单独编译测试。
 
 *说明：本博客作为个人学习实践笔记，可供参考但非系统教程，可能存在错误或遗漏，欢迎指正。若需系统学习，建议参考原链接。*
 
@@ -547,7 +547,7 @@ void Scheduler::SetThis()
 
 ## 4. demo运行
 
-完整demo代码可见[3scheduler/main.cpp](https://github.com/xiaodongQ/coroutine-lib/blob/main/fiber_lib/3scheduler/main.cpp)。并在`scheduler.cpp`里开启debug日志打印。
+完整demo代码可见。并在`scheduler.cpp`里开启debug日志打印。
 
 ```cpp
 int main(int argc, char const *argv[])

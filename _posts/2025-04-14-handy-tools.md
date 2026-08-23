@@ -91,7 +91,7 @@ tags: [Wireshark, eBPF, bcc, ss, bpftrace]
 
 ## 4. eBPF：bcc tools、bpftrace
 
-当前几个工具集里有些功能是重复的：`bcc tools`（也包括支持`CO-RE`的libbpf版本）、`bpftrace tools`，以平时使用的情况来看，原生安装的`bcc tools`/`bpftrace tools`通用性更好。自己归档了一份工具便于统一使用（[tools](https://github.com/xiaodongQ/prog-playground/tree/main/tools)），是基于较新的版本，里面有些实现要求更高的内核版本。
+当前几个工具集里有些功能是重复的：`bcc tools`（也包括支持`CO-RE`的libbpf版本）、`bpftrace tools`，以平时使用的情况来看，原生安装的`bcc tools`/`bpftrace tools`通用性更好。自己归档了一份工具便于统一使用（），是基于较新的版本，里面有些实现要求更高的内核版本。
 
 > 1）较高版本内核（比如5.10），可以用新工具：libbpf版本更小、更快
 >
@@ -155,7 +155,7 @@ I/O size (bytes) histograms by process name:
 * 网络相关：[eBPF学习实践系列（二） -- bcc tools网络工具集](https://aletheics.github.io/2024/06/10/bcc-tools-network/)
 * 内存相关：[CPU及内存调度（三） -- 内存问题定位工具和实验](https://aletheics.github.io/2025/04/02/memory-profiling-tools/#6-bcc-tools%E5%B7%A5%E5%85%B7)
 
-自行编译了bcc libbpf版本，工具归档在：[tools](https://github.com/xiaodongQ/prog-playground/tree/main/tools)，其中的 bcc_libbpf-tools_bin_db5b63f.tar.xz 压缩包。基于 x86_64，gcc8.5.0，bcc commitid：db5b63ff876d3346021871e2189a354bfc6d510e，20250315才提交的，项目一直在更新，后续按需编译。
+自行编译了bcc libbpf版本，工具归档在：，其中的 bcc_libbpf-tools_bin_db5b63f.tar.xz 压缩包。基于 x86_64，gcc8.5.0，bcc commitid：db5b63ff876d3346021871e2189a354bfc6d510e，20250315才提交的，项目一直在更新，后续按需编译。
 
 ### 4.3. bpftrace
 
@@ -165,7 +165,7 @@ bpftrace提供的追踪类型：
 
 介绍和工具使用，可见：[eBPF学习实践系列（六） -- bpftrace学习和使用](https://aletheics.github.io/2024/06/28/ebpf-bpftrace-learn/)
 
-bpftrace-tools 自己也归档了一份便于统一使用：[tools](https://github.com/xiaodongQ/prog-playground/tree/main/tools)，其中的bpftrace-tools_v0.23.1。
+bpftrace-tools 自己也归档了一份便于统一使用：，其中的bpftrace-tools_v0.23.1。
 
 ### 4.4. 60s系列BPF版本
 
@@ -227,7 +227,7 @@ perf的使用，可以见Brendan Gregg大佬的网站：[perf Examples](https://
 ![redis-replicaof-call-tree](/images/2025-03-30-redis-replicaof.png)
 
 * 作者对工具的介绍：[C++阅码神器cpptree.pl和calltree.pl的使用](https://zhuanlan.zhihu.com/p/339910341)
-* 自己的归档，里面也写了用法：[cpp-calltree](https://github.com/xiaodongQ/prog-playground/tree/main/tools/cpp-calltree)
+* 自己的归档，里面也写了用法：
 
 使用到该工具：
 

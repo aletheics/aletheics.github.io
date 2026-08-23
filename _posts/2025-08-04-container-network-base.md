@@ -125,7 +125,7 @@ bind(fd, serun, ...);
 listen(fd, 128);
 ```
 
-完整demo示例，可见：[unix_domain_socket](https://github.com/xiaodongQ/prog-playground/tree/main/network/unix_domain_socket/)。
+完整demo示例，可见：。
 
 服务端监听后，`netstat`和`ss`查看状态如下：
 * 查看下面的 `I-Node`，和 `uds_demo.sock` 文件的`inode`号(`stat`或者`ls -i`查看)并不相同，多次执行用的还是旧文件的引用？但是重启后发现还是不同，代码里尝试用绝对路径也不同（**TODO**）
@@ -142,7 +142,7 @@ Netid State     Recv-Q Send-Q   Local Address:Port          Peer Address:Port   
 u_str LISTEN    0      5        ./uds_demo.sock 47497885    * 0                  users:(("server",pid=1835025,fd=3))
 ```
 
-客户端执行（[uds_client.c代码](https://github.com/xiaodongQ/prog-playground/blob/main/network/unix_domain_socket/uds_client.c)）：
+客户端执行（）：
 ```sh
 [root@xdlinux ➜ unix_domain_socket git:(main) ✗ ]$ ./client 
 Connected to server.
@@ -150,7 +150,7 @@ Received from server: Hello from server!
 Client closed.
 ```
 
-服务端执行（[uds_server.c代码](https://github.com/xiaodongQ/prog-playground/blob/main/network/unix_domain_socket/uds_server.c)）：
+服务端执行（）：
 ```sh
 [root@xdlinux ➜ unix_domain_socket git:(main) ✗ ]$ ./server 
 Server listening on ./uds_demo.sock...
@@ -391,7 +391,7 @@ listening on veth4, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 `veth`的创建、发送/接收等内核源码过程，具体可见[参考链接](https://kfngxl.cn/index.php/archives/415/)进行学习，本篇暂只跟踪下数据发送接口：`veth_xmit`。
 
 追踪内核正反调用栈，还是用`bpftrace`（也可用`perf record -e`+`perf report`） + `funcgraph`。可了解之前的实践用法：[追踪内核网络堆栈的几种方式](https://aletheics.github.io/2024/07/03/strace-kernel-network-stack/) 和 [Linux存储IO栈梳理（三） -- eBPF和ftrace跟踪IO写流程](https://aletheics.github.io/2024/08/15/linux-write-io-stack/)，还是得结合场景多实践内化，要不时间一长又弱化了。
-* `perf-tools`需要从 [GitHub项目主页](https://github.com/brendangregg/perf-tools) 下载使用，可以自行本地归档一份，比如我的归档：[tools/perf-tools](https://github.com/xiaodongQ/prog-playground/tree/main/tools/perf-tools)。
+* `perf-tools`需要从 [GitHub项目主页](https://github.com/brendangregg/perf-tools) 下载使用，可以自行本地归档一份，比如我的归档：。
 
 查看对应的符号和追踪点：
 ```sh

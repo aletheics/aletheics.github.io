@@ -119,7 +119,7 @@ Counting cache functions... Output every 1 seconds.
     * `/usr/share/bcc/tools/biosnoop > out.biosnoop`，用`stress -c 8 -m 4 -i 4`加点压力采集
     * `awk 'NR > 1 { print $1, 1000 * $NF }' out.biosnoop | /home/local/HeatMap/trace2heatmap.pl --unitstime=s --unitslabel=us --maxlat=2000 > out.biosnoop.svg`
 
-生成的图长这样（可见[heatmap_sample实验归档](https://github.com/xiaodongQ/prog-playground/tree/main/heatmap_sample)）：  
+生成的图长这样（可见）：  
 ![biosnoop-heatmap](/images/out.biosnoop.svg)
 
 ### 2.2. 软中断案例

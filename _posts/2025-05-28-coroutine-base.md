@@ -12,7 +12,7 @@ tags: [协程, 异步编程]
 
 相关参考：
 
-* 代码随想录的协程库项目：[coroutine-lib](https://github.com/youngyangyang04/coroutine-lib)。并进行[fork](https://github.com/xiaodongQ/coroutine-lib)。
+* 代码随想录的协程库项目：[coroutine-lib](https://github.com/youngyangyang04/coroutine-lib)。并进行。
 * [从零开始重写sylar C++高性能分布式服务器框架](https://www.midlane.top/wiki/pages/viewpage.action?pageId=10060952)
     * [协程模块](https://www.midlane.top/wiki/pages/viewpage.action?pageId=10060957)
     * [协程调度模块](https://www.midlane.top/wiki/pages/viewpage.action?pageId=10060963)
@@ -241,7 +241,7 @@ public:
 
 ### 3.3. 协程类实现说明
 
-上述协程类定义的成员函数不做一一展开，可见 [2fiber/fiber.cpp](https://github.com/xiaodongQ/coroutine-lib/blob/main/fiber_lib/2fiber/fiber.cpp) 中的注释说明。
+上述协程类定义的成员函数不做一一展开，可见  中的注释说明。
 
 通过`thread_local`线程局部变量定义每个线程中各协程共享的结构，包括线程中**当前运行的协程**、**主协程**、**调度协程**。`协程计数器`和`协程id`则用于全局统计和id分配。
 

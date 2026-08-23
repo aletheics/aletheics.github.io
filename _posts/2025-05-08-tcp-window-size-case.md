@@ -191,7 +191,7 @@ net.ipv4.tcp_moderate_rcvbuf = 1
 
 在不同环境实验过，对于硬件配置、负载不同的客户端和服务端，两端抓包可能相差会比较大，比如：接收端处理不过来，发送端多次重传。所以此处把两端的包还是都对比下。
 
-下述抓包文件做了归档，可见：[ecs_bdp_case](https://github.com/xiaodongQ/assets_archive/tree/main/ecs_bdp_case)。
+下述抓包文件做了归档，可见：。
 
 总体统计信息如下，也可见：[google sheets](https://docs.google.com/spreadsheets/d/1SG0V5ygZeVAdyh-l7ujIFNO1s35t-eLJ-4bzGB1powQ/edit?usp=sharing)。
 
@@ -302,7 +302,7 @@ tcp   ESTAB  0  4170240    172.16.58.147:8000  172.16.58.146:59178  users:(("pyt
 [root@iZbp169scc1yz2vwe6mp31Z ~]# tcpdump -i any port 8000 -s 100 -w shot-rtt-sharp2-normal_clientside_2.cap -v
 ```
 
-跟踪抓包和`strace`（完整文件可见[这里](https://github.com/xiaodongQ/assets_archive/blob/main/ecs_bdp_case/shot-rtt-sharp2-strace_client.log)），可看到第一个最大耗时的还是创建文件，消耗了`116ms`，此时网络尖刺有`40+ms`（**但无法得出就是因为文件操作才导致了尖刺的结论**）。
+跟踪抓包和`strace`（完整文件可见），可看到第一个最大耗时的还是创建文件，消耗了`116ms`，此时网络尖刺有`40+ms`（**但无法得出就是因为文件操作才导致了尖刺的结论**）。
 
 * `write`久主要是写文件进入page cache，达到一定条件后刷脏页，增加IO延迟进而影响上层IO卡顿。（这也是`libaio`或`io_uring`的一个优势，分离I/O操作与主线程，可减小对上层应用的影响）
 

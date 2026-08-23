@@ -392,14 +392,14 @@ GitHub提供的Profile操作文档：[管理个人资料自述文件](https://do
 
 ```
 PR统计
-[![xiaodongQ's GitHub stats](https://github-readme-stats.vercel.app/api?username=xiaodongQ)](https://github.com/anuraghazra/github-readme-stats)
+[![aletheics.s GitHub stats](https://github-readme-stats.vercel.app/api?username=aletheics)](https://github.com/anuraghazra/github-readme-stats)
 
 使用语言统计
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=xiaodongQ&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=aletheics&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 
 排版到同一排
-| <img align="center" src="https://github-readme-stats.vercel.app/api?username=xiaodongQ&show_icons=true&include_all_commits=true&hide_border=true" alt="GitHub stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiaodongQ&layout=compact&hide_border=true&langs_count=10&size_weight=0.5&count_weight=0.5&hide=assembly,BitBake,yacc,M4,SmPL,Roff,Objective-C,makefile,cmake,perl" /> |
+| <img align="center" src="https://github-readme-stats.vercel.app/api?username=aletheics&show_icons=true&include_all_commits=true&hide_border=true" alt="GitHub stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aletheics&layout=compact&hide_border=true&langs_count=10&size_weight=0.5&count_weight=0.5&hide=assembly,BitBake,yacc,M4,SmPL,Roff,Objective-C,makefile,cmake,perl" /> |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 ```
 

@@ -76,9 +76,9 @@ Rust的优势此处不做过多描述，可参见这篇介绍（“自夸”）�
 
 前置说明：
 
-* 1、基于[《The Rust Programming Language》](https://doc.rust-lang.org/book/)（中文版：[Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)）大概过一下，部分术语的英文表达参考这里。之前的初步学习笔记在：[Rust.md](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%90%84%E5%88%86%E7%B1%BB%E8%AE%B0%E5%BD%95/Rust/Rust.md)
+* 1、基于[《The Rust Programming Language》](https://doc.rust-lang.org/book/)（中文版：[Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)）大概过一下，部分术语的英文表达参考这里。之前的初步学习笔记在：
 * 2、上述罗列的参考资料大概看了一下，[Rust开源教程：Rust语言圣经(Rust Course)](https://course.rs/about-book.html) 的内容比较贴合自己当前的偏好，先基于该教程学习梳理，其他作为辅助。
-* 3、代码练习还是复用之前的仓库：[rust_learning](https://github.com/xiaodongQ/rust_learning)
+* 3、代码练习还是复用之前的仓库：
 * 4、VSCode插件（结合《Rust编程第一课》和 [墙推 VSCode!](https://course.rs/first-try/editor.html) 中推荐的插件）
     + `rust-analyzer`：它会实时编译和分析你的 Rust 代码，提示代码中的错误，并对类型进行标注。你也可以使用官方的 Rust 插件取代。
         + 官方的`Rust`插件已经不维护了
@@ -103,7 +103,7 @@ Rust的优势此处不做过多描述，可参见这篇介绍（“自夸”）�
     * Rust 项目主要分为两个类型：`bin` 和 `lib`，前者是一个可运行的项目，后者是一个依赖库项目
     * 当前cargo默认就创建`bin`类型的项目，也可显式指定：`cargo new hello_world --bin`。（**早期**的cargo在创建项目时，则需要`--bin`的参数）
 
-以 [hello_cargo](https://github.com/xiaodongQ/rust_learning/tree/master/hello_cargo) 为例，说明下cargo编译生成的内容：
+以  为例，说明下cargo编译生成的内容：
 
 * `Cargo.lock`：记录了所有直接依赖和间接依赖的确切版本，确保了项目的依赖关系在每次构建时都保持一致
     * 倾向于将 Cargo.lock 文件包含在版本控制系统中

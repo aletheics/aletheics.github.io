@@ -46,7 +46,7 @@ tags: [Go, AI]
 
 ## 3. 生成项目说明
 
-生成（加上多次调试修改）的项目代码在：[simple_web_tool](https://github.com/xiaodongQ/simple_web_tool)。
+生成（加上多次调试修改）的项目代码在：。
 
 生成了2个版本的代码。
 * v1版本：基于DeepSeek-V3-0324
@@ -288,7 +288,7 @@ INSERT INTO bucket_files_7b (fid, fname, bid, fsize, status) VALUES
  
 ## 5. 程序实际功能效果
 
-> 说明：仅使用第2个版本，[simple_web_tool/v2](https://github.com/xiaodongQ/simple_web_tool/tree/main/v2)。
+> 说明：仅使用第2个版本，。
 
 功能说明：
 * 支持全局统计，统计各个用户下文件分布信息

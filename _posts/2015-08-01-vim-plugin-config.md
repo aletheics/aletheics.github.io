@@ -6,7 +6,7 @@ tags: Vim
 
 ## 1. Vim
 
-[Vim插件及配置](https://github.com/xiaodongQ/dot-vimrc)
+
 
 自己用的配置，基于[humiaozuzu/dot-vimrc](https://github.com/humiaozuzu/dot-vimrc)的配置根据需要做了少量修改。
 
@@ -14,19 +14,15 @@ tags: Vim
 
 在新机器配置时，步骤：
 
-1. 下载配置
-
-    `git clone https://github.com/xiaodongQ/dot-vimrc.git ~/.vim`
-
-2. 下载配置管理插件Vundle
+1. 下载配置管理插件Vundle
 
     `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
-3. 打开Vim窗口执行安装插件命令
+2. 打开Vim窗口执行安装插件命令
 
     `:BundleInstall`
 
-4. 已经可以用了，不过有些插件依赖于ack和ctags，进行安装(本人是Mac OS X系统)
+3. 已经可以用了，不过有些插件依赖于ack和ctags，进行安装(本人是Mac OS X系统)
 
     `brew install ack ctags               # OS X`
 

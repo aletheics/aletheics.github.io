@@ -16,7 +16,7 @@ tags: [协程, 异步编程]
 * [sylar -- IO协程调度模块](https://www.midlane.top/wiki/pages/viewpage.action?pageId=10061031)
 * [sylar -- 定时器模块](https://www.midlane.top/wiki/pages/viewpage.action?pageId=16417216)
 
-本篇涉及代码：[fiber_lib/5iomanager](https://github.com/xiaodongQ/coroutine-lib/tree/main/fiber_lib/5iomanager)。
+本篇涉及代码：。
 
 *说明：本博客作为个人学习实践笔记，可供参考但非系统教程，可能存在错误或遗漏，欢迎指正。若需系统学习，建议参考原链接。*
 

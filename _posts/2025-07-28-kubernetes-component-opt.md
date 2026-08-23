@@ -10,7 +10,7 @@ tags: [云原生, Kubernetes]
 
 通过前面对K8s的环境搭建和Redis环境的部署，已经有一些实践经验了。下面继续对环境中的组件进行操作实践，并简要对比代码，进一步了解K8s各个组件的功能和相关实现。
 
-从 [kubernetes github](https://github.com/kubernetes/kubernetes) 中 [fork](https://github.com/xiaodongQ/kubernetes) 相应代码进行学习，并切换到与当前环境一致的分支：`release-1.33`。
+从 [kubernetes github](https://github.com/kubernetes/kubernetes) 中  相应代码进行学习，并切换到与当前环境一致的分支：`release-1.33`。
 
 先贴一下梳理后的简要架构图：  
 ![kubernetes-process](/images/kubernetes-process.svg)

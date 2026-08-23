@@ -24,7 +24,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 
 ### 2.1 整体架构
 
-详细架构图和说明请参考：[一人团队 Multi-Agent 系统设计](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队-Multi-Agent-系统设计.md)
+详细架构图和说明请参考：
 
 ![一人团队 Multi-Agent 系统架构图](/images/2026-03-09-multi-agent-architecture.png)
 *图 2：一人团队 Multi-Agent 系统架构 - 用户通过小黑 - 管家与 4 个专业 Agent 交互*
@@ -49,7 +49,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 | **Wri·执笔人**  | 写作、润色、博客创作         | 写博客、文章、润色、写作     |
 | **Fin·财多多**  | 理财建议、投资分析           | 理财、投资、股票、基金、预算 |
 
-**详细配置**：参见 [一人团队配置文件归档](https://github.com/xiaodongQ/ai-playground/tree/main/design/一人团队配置文件归档)
+**详细配置**：参见 
 
 **实操步骤**：详见 [OpenClaw 实战手记 - 进阶搭建一人团队](https://aletheics.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队)
 
@@ -83,7 +83,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 
 **实现脚本**：`/root/.openclaw/scripts/message-router.mjs`
 
-**详细说明**：[ROUTING.md](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队配置文件归档/小黑 - 管家/ROUTING.md)
+**详细说明**：
 
 ---
 
@@ -108,7 +108,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 - P2 违规：参考执行
 ```
 
-**完整规则**：[RULES.md](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队配置文件归档/小黑 - 管家/RULES.md)
+**完整规则**：
 
 ---
 
@@ -128,7 +128,7 @@ tags: [AI, OpenClaw, Multi-Agent, 自动化]
 子 Agent → 发现重要信息 → 通知小黑 → 小黑确认 → 写入 MEMORY.md
 ```
 
-**详细说明**：[MEMORY-SHARING.md](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队配置文件归档/小黑 - 管家/MEMORY-SHARING.md)
+**详细说明**：
 
 ---
 
@@ -175,7 +175,7 @@ cp -r ~/.openclaw/workspace/* ~/.openclaw/workspace-dev-agent/
 
 路由规则由 AI 自动编写，位于 `~/.openclaw/workspace/ROUTING.md`。
 
-**完整内容**：[ROUTING.md](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队配置文件归档/小黑 - 管家/ROUTING.md)
+**完整内容**：
 
 ---
 
@@ -272,14 +272,14 @@ tail -f ~/.openclaw/logs/*.log
 ## 9. 参考链接
 
 ### 设计文档
-- [一人团队设计文档](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队设计.md)
-- [一人团队 Multi-Agent 系统设计](https://github.com/xiaodongQ/ai-playground/blob/main/design/一人团队-Multi-Agent-系统设计.md)
-- [一人团队配置文件归档](https://github.com/xiaodongQ/ai-playground/tree/main/design/一人团队配置文件归档)
+- 
+- 
+- 
 
 ### 实战文档
 - [OpenClaw 实战手记](https://aletheics.github.io/2026/03/05/openclaw-practise.html)
 - [OpenClaw 进阶搭建一人团队](https://aletheics.github.io/2026/03/05/openclaw-practise/#5-进阶搭建一人团队) ⭐ **重点参考**
-- [CrewAI + LangChain 学习材料包](https://github.com/xiaodongQ/ai-playground/tree/main/learning/crewai-langchain)
+- 
 
 ---
 

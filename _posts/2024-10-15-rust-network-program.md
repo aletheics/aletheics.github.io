@@ -26,7 +26,7 @@ Rust学习实践，学习Rust网络编程，并编写Web服务器Demo。
 
 此处先只关注基于TCP的网络服务，学习 `TcpListener` 和 `TcpStream` 用法。
 
-下述涉及代码，也可见：[test_network](https://github.com/xiaodongQ/rust_learning/tree/master/test_network)
+下述涉及代码，也可见：
 
 ### 2.1. TcpListener 和 TcpStream
 
@@ -103,7 +103,7 @@ Request: [
 
 上述代码补全逻辑后的demo：单线程解析请求，并根据不同请求内容，返回不同页面提示
 
-完整代码可见：[web_single_thread.rs](https://github.com/xiaodongQ/rust_learning/tree/master/test_network/src/bin/web_single_thread.rs)
+完整代码可见：
 
 ```rust
 fn handle_client(mut stream: TcpStream) {
@@ -176,7 +176,7 @@ request_line: "GET /sd HTTP/1.1"
 
 基于线程池的多线程webserver稍微有点复杂，暂不展开，具体见：[构建多线程 Web 服务器](https://course.rs/advance-practice1/multi-threads.html)，可以看到设计迭代过程和要考虑的点。
 
-demo练习代码见：[web_multi_thread.rs](https://github.com/xiaodongQ/rust_learning/tree/master/test_network/src/bin/web_multi_thread.rs) 和 [lib.rs](https://github.com/xiaodongQ/rust_learning/tree/master/test_network/src/lib.rs)
+demo练习代码见： 和 
 
 线程池实现在lib.rs中，main函数如下：
 

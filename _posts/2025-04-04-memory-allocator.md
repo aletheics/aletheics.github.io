@@ -89,7 +89,7 @@ tags: 内存
 * `Wolfram Gloger` 是一位德国计算机科学家，以其在内存管理和动态内存分配器方面的贡献而闻名
     * 他对于 Doug Lea 的 dlmalloc 的改进版本：ptmalloc（Per-Thread Malloc），支持多线程环境下的高效内存分配，并被集成到 glibc（GNU C Library）中，成为 Linux 系统默认的 malloc 实现
 
-dlmalloc介绍：[A Memory Allocator](https://gee.cs.oswego.edu/dl/html/malloc.html)，代码：[malloc.c](https://gee.cs.oswego.edu/pub/misc/malloc.c)。自己也归档了一份用于对比学习：[dlmalloc_src](https://github.com/xiaodongQ/prog-playground/tree/main/memory/dlmalloc_src)。
+dlmalloc介绍：[A Memory Allocator](https://gee.cs.oswego.edu/dl/html/malloc.html)，代码：[malloc.c](https://gee.cs.oswego.edu/pub/misc/malloc.c)。自己也归档了一份用于对比学习：。
 
 当前glibc（本地fork并切换了2.28版本）的代码注释中，也展示了上述迭代经过。并且说明了为什么用这个版本的malloc：
 

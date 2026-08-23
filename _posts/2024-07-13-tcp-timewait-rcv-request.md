@@ -62,7 +62,7 @@ tcp_tw_reuse - INTEGER
 
 1、服务端：192.168.1.150，**CentOS8.5**，开不同终端分别进行监听、开启抓包、tcpstates观测
 
-代码：accept连接后就close，[github noread](https://github.com/xiaodongQ/prog-playground/tree/main/network/tcp_timewait_rcv_syn/mac_nc_case_noread/server.cpp)
+代码：accept连接后就close，
 
 ```sh
 # 终端1
@@ -306,7 +306,7 @@ net.ipv4.tcp_tw_timeout_inherit = 0
 
 开不同终端分别进行监听、开启抓包、tcpstates观测
 
-代码：accept连接后就close，[github noread](https://github.com/xiaodongQ/prog-playground/tree/main/network/tcp_timewait_rcv_syn/mac_nc_case_noread/server.cpp)，`g++ server.cpp -o server`。
+代码：accept连接后就close，，`g++ server.cpp -o server`。
 
 ```sh
 # 终端1
@@ -475,7 +475,7 @@ Ncat: Broken pipe.
 
 `curl`的`--local-port`选项，可指定本地端口（`--local-port 12345`）或端口范围（`--local-port 4000-4200`）
 
-代码：accept连接后read再close，read下curl请求要不curl会请求失败，[github withread](https://github.com/xiaodongQ/prog-playground/tree/main/network/tcp_timewait_rcv_syn/server.cpp)
+代码：accept连接后read再close，read下curl请求要不curl会请求失败，
 
 *下述IP说明：重新拉了2个ECS，服务端172.23.133.151、客户端172.23.133.152。*
 

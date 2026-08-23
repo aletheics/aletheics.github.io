@@ -28,7 +28,7 @@ CPUPROFILE=./prof.out ./thread_pool_withwait
 pprof --pdf ./thread_pool_withwait prof.out > prof.pdf
 ```
 
-2、采集各种火焰图，新增一个pro_commond.sh脚本手动在不同终端启动，形式如下，完整脚本见：[pro_commond.sh](https://github.com/xiaodongQ/prog-playground/tree/main/concurrent/base/pro_commond.sh)
+2、采集各种火焰图，新增一个pro_commond.sh脚本手动在不同终端启动，形式如下，完整脚本见：
 
 ```sh
 [CentOS-root@xdlinux ➜ base git:(main) ✗ ]$ ./pro_commond.sh -h
@@ -127,7 +127,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-完整程序见：[GitHub链接](https://github.com/xiaodongQ/prog-playground/tree/main/concurrent/base) 里的thread_pool_withwait.cpp
+完整程序见： 里的thread_pool_withwait.cpp
 
 ### 3.2. 运行并采集结果
 
@@ -160,7 +160,7 @@ int main(int argc, char *argv[]) {
 └── thread_pool_withwait.cpp
 ```
 
-下面对各部分结果做简要分析。结果相关文件可见：[base/results](https://github.com/xiaodongQ/prog-playground/tree/main/concurrent/base/results)
+下面对各部分结果做简要分析。结果相关文件可见：
 
 #### 3.2.1. perf stat结果
 
@@ -390,7 +390,7 @@ Tracing "ttwu_do_wakeup" for PID 1308... Ctrl-C to end.
     * 调用std::packaged_task对象的`operator()`，可以开始执行任务
     * 对比：std::promise包装的是一个值，std::packaged_task包装的是一个可调用对象
 
-异步改造，完整代码见：[GitHub链接](https://github.com/xiaodongQ/prog-playground/tree/main/concurrent/std_async)。主要是任务入队时，`std::packaged_task`将其包装成异步任务，并通过其`std::future`用来获取结果：
+异步改造，完整代码见：。主要是任务入队时，`std::packaged_task`将其包装成异步任务，并通过其`std::future`用来获取结果：
 
 ```cpp
 class ThreadPool {
@@ -448,7 +448,7 @@ int main(int argc, char *argv[]) {
 
 ### 4.1. 结果
 
-结果文件可见：[std_async/results](https://github.com/xiaodongQ/prog-playground/tree/main/concurrent/std_async/results)
+结果文件可见：
 
 简单贴一下。
 

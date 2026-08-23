@@ -344,7 +344,7 @@ Superpowers 会自动：
 
 提供实时会话状态监控（Token 用量、上下文进度、工具调用状态等）
 
-> 除了在线安装，这里也补充下离线方式，见 [claude-hud-offline-install](https://github.com/xiaodongQ/ai-playground/blob/main/docs/claude-hud-offline-install.md)
+> 除了在线安装，这里也补充下离线方式，见 
 
 ```sh
 # 1. 添加插件市场源（首次安装）
@@ -776,7 +776,7 @@ Claude Code会话周期各个阶段支持的hooks事件，示意图：
 
 ### 8.1. 初步搭建的市场
 
-如之前在 [复利工程 -- Obsidian Wiki模板仓库与实用工具分享](https://aletheics.github.io/2026/04/30/fubilee-tools-wiki-template/) 所说的，创建的个人AI工具集市场：[xiaodongQ/xd-self-market](https://github.com/xiaodongQ/xd-self-market)。
+如之前在 [复利工程 -- Obsidian Wiki模板仓库与实用工具分享](https://aletheics.github.io/2026/04/30/fubilee-tools-wiki-template/) 所说的，创建的个人AI工具集市场：。
 
 目录结构如下：
 

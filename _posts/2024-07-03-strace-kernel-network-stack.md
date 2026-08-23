@@ -144,7 +144,7 @@ comm:swapper/9, call stack:
 
 可自己找结构体字段，也可直接参考下bpftrace项目里面的[tools](https://github.com/bpftrace/bpftrace/tree/master/tools)，里面的网络相关`.bt`脚本基本都涉及常用的字段。
 
-还是用[之前](https://github.com/xiaodongQ/prog-playground/tree/main/network/tcp_connect)全连接队列的demo程序：`./server`监听8080，客户端仅用`curl 192.168.1.150:8080`，由于客户端不发数据，会阻塞住，打断`./server`程序即会向客户端发送RST，监测结果如下：
+还是用全连接队列的demo程序：`./server`监听8080，客户端仅用`curl 192.168.1.150:8080`，由于客户端不发数据，会阻塞住，打断`./server`程序即会向客户端发送RST，监测结果如下：
 
 ```sh
 [root@xdlinux ➜ bpftrace_tcp_reset git:(main) ✗ ]$ bpftrace -e 'kprobe:tcp_v4_send_reset, kprobe:tcp_send_active_reset { printf("comm:%s, foreign:%s:%d, call stack:%s\n", comm, ntop( ((struct sock*)arg0)->__sk_common.skc_daddr ),  ((struct sock*)arg0)->__sk_common.skc_dport, kstack()); }'

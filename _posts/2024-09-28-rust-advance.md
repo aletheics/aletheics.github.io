@@ -26,7 +26,7 @@ Rust学习实践，进一步学习梳理Rust特性。
 * [Rust语言圣经(Rust Course) -- 进阶学习：生命周期](https://course.rs/advance/lifetime/intro.html)
 * [The Rust Programming Language -- Validating References with Lifetimes](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)
 
-对应代码练习，在 [test_lifetime](https://github.com/xiaodongQ/rust_learning/tree/master/test_lifetime)。
+对应代码练习，在 。
 
 > 在大多数时候，我们无需手动的声明生命周期，因为编译器可以自动进行推导。但是当多个生命周期存在，且编译器无法推导出某个引用的生命周期时，就需要我们手动标明生命周期。
 
@@ -406,7 +406,7 @@ fn get_memory_location() -> (usize, usize) {
 
 ### 3.1. 闭包基本示例
 
-[第一篇](https://aletheics.github.io/2024/09/17/rust-relearn-overview/) 简单介绍过闭包，下面用一个简单示例看闭包的好处（完整代码见 [github work_example](https://github.com/xiaodongQ/rust_learning/tree/master/test_functional/bin/work_example.rs)）。
+[第一篇](https://aletheics.github.io/2024/09/17/rust-relearn-overview/) 简单介绍过闭包，下面用一个简单示例看闭包的好处（完整代码见 ）。
 
 1、基础代码：不同公司工作不同工作时长，工作内容是写代码
 
@@ -608,7 +608,7 @@ fn exec_fn<'a, F: Fn(&'a str)>(f: F) {
 }
 ```
 
-上述完整代码([test_fn_trait](https://github.com/xiaodongQ/rust_learning/tree/master/test_functional/bin/test_fn_trait.rs))运行结果：
+上述完整代码()运行结果：
 
 ```sh
 # cargo run --bin test_fn_trait

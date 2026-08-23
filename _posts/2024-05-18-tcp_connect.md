@@ -423,7 +423,7 @@ int main(int argc, char *argv[]) {
 
 编译：`g++ client.cpp -o client -std=c++11 -lpthread`
 
-上述代码和编译脚本也可从 [github处](https://github.com/xiaodongQ/prog-playground/tree/main/network/tcp_connect) 获取。
+上述代码和编译脚本也可从  获取。
 
 ### 5.2. 观察过程
 
@@ -624,7 +624,7 @@ const struct proto_ops inet_stream_ops = {
 
 ### 6.1. listen流程
 
-结合内核源码跟踪流程，具体见：[笔记记录](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%90%84%E5%88%86%E7%B1%BB%E8%AE%B0%E5%BD%95/Linux%E5%86%85%E6%A0%B8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
+结合内核源码跟踪流程，具体见：
 
 代码位置：`__sys_listen`，linux-5.10.10/net/socket.c
 （Linux的系统调用在内核中的入口函数都是 `sys_xxx` ，但是如果我们拿着内核源码去搜索的话，就会发现根本找不到 `sys_xxx` 的函数定义，这是因为Linux的系统调用对应的函数全部都是由 `SYSCALL_DEFINE` 相关的宏来定义的。）
@@ -713,7 +713,7 @@ int inet_stream_connect(struct socket *sock, struct sockaddr *uaddr,
 ```
 
 跟踪`__inet_stream_connect`及socket创建等过程，可知tcp协议实际会调用 `tcp_v4_connect`
-(具体跟踪过程可参考：[Linux内核学习笔记](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%90%84%E5%88%86%E7%B1%BB%E8%AE%B0%E5%BD%95/Linux%E5%86%85%E6%A0%B8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md))
+(具体跟踪过程可参考：)
 
 ```cpp
 // linux-5.10.10/net/ipv4/tcp_ipv4.c

@@ -20,7 +20,7 @@ CPU和内存调度系列，梳理进程、线程、系统调用、协程上下�
 
 又一点想法（最近感慨稍微多一点）：
 
-当时池老师他们的极客时间APP刚出来时，很多课程刚出来就买得看，笔记记了一堆，比如 [Linux性能优化实践.md](https://github.com/xiaodongQ/devNoteBackup/blob/master/%E5%90%84%E5%88%86%E7%B1%BB%E8%AE%B0%E5%BD%95/Linux%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5.md)，却是低效学习，时间越长，内化越少。去年走通了一点：看书、学英语、写博客、软考，而且基本都在工作之余，跟以往有所不同，虽然也有内耗但多了一点渴望和热情。
+当时池老师他们的极客时间APP刚出来时，很多课程刚出来就买得看，笔记记了一堆，比如 ，却是低效学习，时间越长，内化越少。去年走通了一点：看书、学英语、写博客、软考，而且基本都在工作之余，跟以往有所不同，虽然也有内耗但多了一点渴望和热情。
 
 分享几篇时常会拎出来出来看的文章，受益匪浅：
 
@@ -179,7 +179,7 @@ perf命令查看事件：`perf stat -e dTLB-loads,dTLB-load-misses,iTLB-loads,iT
 
 4、实验
 
-1）上面测试进程上下文切换的代码，可见：[process_ctxswitch.c](https://github.com/xiaodongQ/prog-playground/blob/main/cpu/cswch_demo/process_ctxswch.c)，以及同级目录的统计平均脚本
+1）上面测试进程上下文切换的代码，可见：，以及同级目录的统计平均脚本
 
 TODO：自己运行demo统计的耗时基本都在 `0.8 us`左右
 
@@ -290,7 +290,7 @@ nonvoluntary_ctxt_switches:	0
 
 ## 4. 线程池demo开销
 
-上篇的demo代码：[thread_pool.cpp](https://github.com/xiaodongQ/prog-playground/blob/main/thread_pool/thread_pool.cpp)
+上篇的demo代码：
 
 ```sh
 [CentOS-root@xdlinux ➜ thread_pool git:(main) ✗ ]$ perf stat ./thread_pool

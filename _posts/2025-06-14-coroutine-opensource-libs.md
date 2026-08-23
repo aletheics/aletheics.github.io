@@ -13,7 +13,7 @@ tags: [协程, 异步编程]
 协程库和相关链接：
 
 * libco
-    * [libco](https://github.com/Tencent/libco)，并进行[fork](https://github.com/xiaodongQ/libco)
+    * [libco](https://github.com/Tencent/libco)，并进行
     * [漫谈微信libco协程设计及实现（万字长文）](https://runzhiwang.github.io/2019/06/21/libco/)
     * [微信 libco 协程库源码分析](https://www.cyhone.com/articles/analysis-of-libco/)
     * [C++20 Coroutine 性能测试 (附带和libcopp/libco/libgo/goroutine/linux ucontext对比)](https://cloud.tencent.com/developer/article/1563255)

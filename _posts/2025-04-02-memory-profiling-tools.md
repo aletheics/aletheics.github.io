@@ -15,7 +15,7 @@ tags: 内存
 
 ## 2. 测试程序demo
 
-生成一个测试demo，也可见：[leak_test.cpp](https://github.com/xiaodongQ/prog-playground/blob/main/memory/leak/leak_test.cpp)，下述实验的结果均可见该目录。
+生成一个测试demo，也可见：，下述实验的结果均可见该目录。
 
 * 模拟内存泄漏：在单独线程中，随机申请 1KB~1MB 之间的内存，并且50%的概率不释放
 * 模拟空悬指针和野指针
@@ -227,7 +227,7 @@ total 56K
 
 #### 3.2.2. 结果分析和说明
 
-`ms_print massif.out.24161`结果分析，完整结果可见：[1_ms_print_24161.result](https://github.com/xiaodongQ/prog-playground/tree/main/memory/leak/massif_profiler/1_ms_print_24161.result)。（该目录下也可查看其他选项的结果，比如`pages-as-heap=no`、`stacks=yes`）
+`ms_print massif.out.24161`结果分析，完整结果可见：。（该目录下也可查看其他选项的结果，比如`pages-as-heap=no`、`stacks=yes`）
 
 * ms_print结果中，最前面是一个字符组成的柱状图，不同字符表示不同含义
     * 每条竖线表示一次快照（snapshot），体现当前的内存使用，下面的`Number of snapshots: 47`表示有47次快照
@@ -659,7 +659,7 @@ All Tests Done.
 ^C
 ```
 
-完整代码可分别见：[leak_test_no-while-wait.cpp](https://github.com/xiaodongQ/prog-playground/blob/main/memory/leak/leak_test_no-while-wait.cpp) 和 [leak_test.cpp](https://github.com/xiaodongQ/prog-playground/blob/main/memory/leak/leak_test.cpp)。
+完整代码可分别见： 和 。
 
 #### 4.2.3. ThreadSanitizer
 

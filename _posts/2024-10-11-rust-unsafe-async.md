@@ -35,7 +35,7 @@ Rust学习实践，进一步学习梳理Rust特性：unsafe、macro宏编程、�
 
 注意：`unsafe` 并不会关闭借用检查器或禁用任何其他 Rust 安全检查；此外，`unsafe`不意味着块中的代码就一定是危险的或者必然导致内存安全问题：其意图在于作为程序员你将会确保`unsafe` 块中的代码以有效的方式访问内存。
 
-下述涉及代码，也可见：[test_unsafe](https://github.com/xiaodongQ/rust_learning/tree/master/test_unsafe)
+下述涉及代码，也可见：
 
 ### 2.1. 解引用裸指针
 
@@ -244,7 +244,7 @@ Rust 经过权衡取舍后，最终选择了同时提供 `多线程编程` 和 `
 
 ### 4.1. 基本示例
 
-下述涉及代码，也可见：[test_async](https://github.com/xiaodongQ/rust_learning/tree/master/test_async)
+下述涉及代码，也可见：
 
 1、使用`async`，需要先引入 `futures` 包，在Cargo.toml中新增：
 

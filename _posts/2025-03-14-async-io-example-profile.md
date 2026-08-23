@@ -187,7 +187,7 @@ Off-CPU 能够识别的类型包含：阻塞在 I/O、锁、定时器、缺页�
     * `git clone --recurse-submodules https://github.com/iovisor/bcc.git`
         * 其中：src/cc/libbpf、libbpf-tools/blazesym、libbpf-tools/bpftool 都是子模块
 
-自己在 [bcc_libbpf-tools_bin_db5b63f](https://github.com/xiaodongQ/prog-playground/tree/main/tools) 也归档了一份基于bcc编译的libbpf-tools工具进行备用（x86_64，gcc8.5.0），基于bcc commitid：db5b63ff876d3346021871e2189a354bfc6d510e，20250315才提交的，如上所述项目一直在更新，后续按需编译。
+自己在  也归档了一份基于bcc编译的libbpf-tools工具进行备用（x86_64，gcc8.5.0），基于bcc commitid：db5b63ff876d3346021871e2189a354bfc6d510e，20250315才提交的，如上所述项目一直在更新，后续按需编译。
 
 ## 5. Off-CPU采集实验
 
@@ -196,7 +196,7 @@ Off-CPU 能够识别的类型包含：阻塞在 I/O、锁、定时器、缺页�
 * `make menuconfig`，搜索`CONFIG_DEBUG_INFO_BTF`并设置`y`保存到`.config`
 * `make -j6`，得到 bzImage，拷贝到`/boot/`替换vmlinuzxxx，或者只拷贝并在grub里新增一个menuentry项
 
-下面的实验结果，也归档在：[flamegraph_sample](https://github.com/xiaodongQ/prog-playground/tree/main/flamegraph_sample)
+下面的实验结果，也归档在：
 
 ### 5.1. Off-CPU采集和分析
 
@@ -597,7 +597,7 @@ red-blue-diff-flamegraph_based1-negate.svg，**可以明显看到io相关函数�
 
 将上面的内容提炼为脚本，供平常使用。生成两种差分火焰图，一个是默认方式：以堆栈2为基础，展示变化；一个是以堆栈1为基础，以防止堆栈2（比如代码优化后的程序）删除部分逻辑后，遗漏这部分差别。
 
-利用LLM生成（这部分工作最好基于推理来做，勾选“深度思考”，要不车轱辘话很磨人），完整脚本见：[gen_diff_flamegraph](https://github.com/xiaodongQ/prog-playground/tree/main/flamegraph_sample/red-blue-diff/gen_diff_flamegraph.sh)。
+利用LLM生成（这部分工作最好基于推理来做，勾选“深度思考”，要不车轱辘话很磨人），完整脚本见：。
 
 ```sh
 # 生成主对比图（新版本变化视图）

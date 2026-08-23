@@ -122,7 +122,7 @@ RocksDB在**内存态**使用时，`锁`更容易成为瓶颈。RocksDB中的一
 
 `Iterator` 和 `MultiGet` 中利用异步IO优化性能。`ReadOptions`中新增了 **`async_io`选项**，使用`FSRandomAccessFile::ReadAsync`接口进行<mark>异步读</mark>。
 
-> 注意，[6.15.5](https://github.com/xiaodongQ/rocksdb/tree/rocksdb-v6.15.5) 分支还不包含这部分，下面基于`v7.9.2`分支查看代码。  
+> 注意， 分支还不包含这部分，下面基于`v7.9.2`分支查看代码。  
 > 从 HISTORY.md 中可看到是 `7.0.0 (02/20/2022)` 中开始新增的 `ReadAsync`。
 {: .prompt-info }
 
@@ -231,7 +231,7 @@ RocksDB统计信息非常全面，单独一个小节特别说明下。（相比�
     * 包含`iostats_context.h` 和 `perf_context.h`，头文件中各自介绍了有哪些指标字段
     * 其使用示例，也可见 [这篇文章](https://vigourtyy-zhg.blog.csdn.net/article/details/108137659)
 
-统计使用示例（完整代码可见 [这里](https://github.com/xiaodongQ/prog-playground/tree/main/storage/rocksdb)）：
+统计使用示例（完整代码可见 ）：
 
 ```cpp
     rocksdb::Options options;

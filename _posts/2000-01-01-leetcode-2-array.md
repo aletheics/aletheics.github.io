@@ -401,7 +401,7 @@ impl Solution {
 
 核心是保持循环不变量。左闭右开区间，每圈依次按 上->右->下->左 的顺序遍历。
 
-理解点：记住每轮开始的起点，`(top, left)` 或 `(startx, starty)`，感觉前者更易理解。可以查看提交代码的对比：[59.spiral-matrix-ii_test](https://github.com/xiaodongQ/LeetCode/blob/master/cpp_exercise/59.spiral-matrix-ii_test.cpp)
+理解点：记住每轮开始的起点，`(top, left)` 或 `(startx, starty)`，感觉前者更易理解。可以查看提交代码的对比：
 
 ```cpp
 class Solution {
@@ -582,7 +582,7 @@ int main() {
 
 可参考：[GoogleTest Quickstart: Building with CMake](https://google.github.io/googletest/quickstart-cmake.html)
 
-下面的完整代码，见：[range_sum/unit_test](https://github.com/xiaodongQ/LeetCode/tree/master/cpp_exercise/range_sum/unit_test)
+下面的完整代码，见：
 
 #### 6.2.1. 实现
 
