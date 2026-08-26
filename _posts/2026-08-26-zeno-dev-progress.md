@@ -17,7 +17,7 @@ pin: true
 
 代码位于 [aletheics/zeno](https://github.com/aletheics/zeno)，本文记录截至 v0.1.5 的开发进程，后续持续更新。
 
-![Zeno desktop](/images/2026-08-28-zeno-desktop.png)
+![Zeno desktop](/images/2026-08-26-zeno-desktop.png)
 
 ---
 
